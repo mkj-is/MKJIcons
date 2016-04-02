@@ -18,7 +18,7 @@ public class MKJCheckmarkIcon: MKJAnimatedIcon {
         willSet {
             
             if newValue != checked {
-                animateTo(checked ? maximumAnimationValue : 0.0)
+                animateTo(checked ? 0.0 : maximumAnimationValue)
             }
         }
     }
