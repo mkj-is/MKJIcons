@@ -32,13 +32,7 @@ public class MKJBurgerIcon: MKJAnimatedIcon {
         
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         
-        // Calculate color
-        let r = burgerColor.red + (crossColor.red - burgerColor.red) / maximumAnimationValue * time
-        let g = burgerColor.green + (crossColor.green - burgerColor.green) / maximumAnimationValue * time
-        let b = burgerColor.blue + (crossColor.blue - burgerColor.blue) / maximumAnimationValue * time
-        let a = burgerColor.alpha + (crossColor.alpha - burgerColor.alpha) / maximumAnimationValue * time
-        
-        let currentColor = UIColor(red: r, green: g, blue: b, alpha: a)
+        let currentColor = UIColor.hsbColorBetween(burgerColor, and: crossColor, ratio: time / maximumAnimationValue)
         
         //// Variable Declarations
         let angle: CGFloat = time * 45
