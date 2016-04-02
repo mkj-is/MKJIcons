@@ -1,25 +1,28 @@
 import UIKit
 
+public enum UIColorMode {
+    case RGB
+    case HSB
+}
+
+typealias UIColorComponents = (CGFloat, CGFloat, CGFloat, CGFloat)
+
 public extension UIColor {
     
-    class func rgbColorBetween(color1: UIColor, and color2: UIColor, ratio: CGFloat) -> UIColor {
-
-        let r = color1.red + (color2.red - color1.red) * ratio
-        let g = color1.green + (color2.green - color1.green) * ratio
-        let b = color1.blue + (color2.blue - color1.blue) * ratio
-        let a = color1.alpha + (color2.alpha - color1.alpha) * ratio
+    convenience init(between color1: UIColor, and color2: UIColor, using: UIColorMode, ratio: CGFloat) {
+        let components1: UIColorComponents = (using == .RGB ? color1.rgbComponents : color1.hsbComponents)
+        let components2: UIColorComponents = (using == .RGB ? color2.rgbComponents : color2.hsbComponents)
         
-        return UIColor(red: r, green: g, blue: b, alpha: a)
-    }
-    
-    class func hsbColorBetween(color1: UIColor, and color2: UIColor, ratio: CGFloat) -> UIColor {
+        let c0 = components1.0 + (components2.0 - components1.0) * ratio
+        let c1 = components1.1 + (components2.1 - components1.1) * ratio
+        let c2 = components1.2 + (components2.2 - components1.2) * ratio
+        let c3 = components1.3 + (components2.3 - components1.3) * ratio
         
-        let h = color1.hue + (color2.hue - color1.hue) * ratio
-        let s = color1.saturation + (color2.saturation - color1.saturation) * ratio
-        let b = color1.brightness + (color2.brightness - color1.brightness) * ratio
-        let a = color1.alpha + (color2.alpha - color1.alpha) * ratio
-        
-        return UIColor(hue: h, saturation: s, brightness: b, alpha: a)
+        if using == .RGB {
+            self.init(red: c0, green: c1, blue: c2, alpha: c3)
+        } else {
+            self.init(hue: c0, saturation: c1, brightness: c2, alpha: c3)
+        }
     }
     
 }

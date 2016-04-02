@@ -30,8 +30,7 @@ public class MKJCheckmarkIcon: MKJAnimatedIcon {
         
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         
-        let currentColor = UIColor.hsbColorBetween(crossColor, and: checkmarkColor, ratio: time / maximumAnimationValue)
-        
+        let currentColor = UIColor(between: crossColor, and: checkmarkColor, using: colorAnimationMode, ratio: time / maximumAnimationValue)
         
         //// Variable Declarations
         let phase: CGFloat = -time * 111

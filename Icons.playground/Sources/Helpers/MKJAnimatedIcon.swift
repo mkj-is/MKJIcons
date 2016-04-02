@@ -5,6 +5,7 @@ public class MKJAnimatedIcon: UIView {
     
     @IBInspectable public var duration = 0.4
     @IBInspectable public var strokeWidth: CGFloat = 2.0
+    @IBInspectable public var colorAnimationMode: UIColorMode = .HSB
     
     let maximumAnimationValue: CGFloat = 1.0
     
