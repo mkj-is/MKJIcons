@@ -9,66 +9,22 @@
 import UIKit
 
 @IBDesignable
-public class MKJCheckmark: UIView {
+public class MKJCheckmarkIcon: MKJAnimatedIcon {
     
     @IBInspectable public var checkmarkColor = UIColor.greenColor()
     @IBInspectable public var crossColor = UIColor.redColor()
-    @IBInspectable public var strokeWidth: CGFloat = 2.0
-    
-    @IBInspectable public var duration = 0.4
-    
-    let maximumAnimationValue: CGFloat = 100.0
     
     @IBInspectable public var checked = false {
         willSet {
             
-            if newValue != checked
-            {
+            if newValue != checked {
                 animateTo(checked ? maximumAnimationValue : 0.0)
             }
         }
     }
     
-    public func animateTo(goal: CGFloat) {
-
-        let timing: CAMediaTimingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
-        let animation = CABasicAnimation(keyPath: "value")
-        animation.duration = duration
-        animation.fillMode = kCAFillModeBoth
-        animation.timingFunction = timing
-        animation.fromValue = (layer as! MKJAnimationLayer).value
-        animation.toValue = goal
-        layer.addAnimation(animation, forKey: nil)
+    override func draw(time: CGFloat = 0) {
         
-        CATransaction.begin()
-        CATransaction.setDisableActions(true)
-        (layer as! MKJAnimationLayer).value = goal
-        CATransaction.commit()
-    }
-    
-    override public class func layerClass() -> AnyClass
-    {
-        return MKJAnimationLayer.self
-    }
-    
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-        layer.setNeedsDisplay()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        layer.setNeedsDisplay()
-    }
-    
-    override public func drawLayer(layer: CALayer, inContext ctx: CGContext)
-    {
-        UIGraphicsPushContext(ctx)
-        drawCheckmark(time: (layer as! MKJAnimationLayer).value)
-        UIGraphicsPopContext()
-    }
-    
-    func drawCheckmark(time time: CGFloat = 0) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         
@@ -84,8 +40,8 @@ public class MKJCheckmark: UIView {
         
         
         //// Variable Declarations
-        let phase: CGFloat = -time * 1.11
-        let dash: CGFloat = 57 - time / 100.0 / 2.0 * 57
+        let phase: CGFloat = -time * 111
+        let dash: CGFloat = 57 - time / 2.0 * 57
         
         //// Static line Drawing
         let staticLinePath = UIBezierPath()
@@ -112,10 +68,5 @@ public class MKJCheckmark: UIView {
         animatedLinePath.stroke()
         CGContextRestoreGState(context)
     }
-    
-    public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        checked = !checked
-    }
-    
     
 }

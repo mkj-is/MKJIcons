@@ -9,68 +9,24 @@
 import UIKit
 
 @IBDesignable
-public class MKJBurgerIcon: UIView {
+public class MKJBurgerIcon: MKJAnimatedIcon {
     
     @IBInspectable public var burgerColor = UIColor.whiteColor()
     @IBInspectable public var crossColor = UIColor.redColor()
-    @IBInspectable public var strokeWidth: CGFloat = 2.0
-    
-    @IBInspectable public var duration = 0.4
-    
-    let maximumAnimationValue: CGFloat = 1.0
     
     @IBInspectable public var open = false {
         willSet {
             
-            if newValue != open
-            {
+            if newValue != open {
                 animateTo(open ? 0.0 : maximumAnimationValue)
             }
         }
     }
     
-    public func animateTo(goal: CGFloat) {
-        
-        let timing: CAMediaTimingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
-        let animation = CABasicAnimation(keyPath: "value")
-        animation.duration = duration
-        animation.fillMode = kCAFillModeBoth
-        animation.timingFunction = timing
-        animation.fromValue = (layer as! MKJAnimationLayer).value
-        animation.toValue = goal
-        layer.addAnimation(animation, forKey: nil)
-        
-        CATransaction.begin()
-        CATransaction.setDisableActions(true)
-        (layer as! MKJAnimationLayer).value = goal
-        CATransaction.commit()
-    }
-    
-    override public class func layerClass() -> AnyClass
-    {
-        return MKJAnimationLayer.self
-    }
-    
-    override public init(frame: CGRect) {
-        super.init(frame: frame)
-        layer.setNeedsDisplay()
-    }
-    
-    required public init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
-        layer.setNeedsDisplay()
-    }
-    
-    override public func drawLayer(layer: CALayer, inContext ctx: CGContext)
-    {
-        UIGraphicsPushContext(ctx)
-        drawIcon(time: (layer as! MKJAnimationLayer).value)
-        UIGraphicsPopContext()
-    }
-    
-    func drawIcon(time time: CGFloat = 0) {
+    override func draw(time: CGFloat = 0) {
         
         let offset: CGFloat = 5
+        
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         
@@ -144,11 +100,5 @@ public class MKJBurgerIcon: UIView {
         
         CGContextRestoreGState(context)
     }
-
-    
-    public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        open = !open
-    }
-    
     
 }
