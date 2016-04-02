@@ -4,29 +4,29 @@ public extension UIColor {
     
     var red: CGFloat {
         get {
-            return components.red
+            return rgbComponents.red
         }
     }
     
     var green: CGFloat {
         get {
-            return components.green
+            return rgbComponents.green
         }
     }
     
     var blue: CGFloat {
         get {
-            return components.blue
+            return rgbComponents.blue
         }
     }
     
     var alpha: CGFloat {
         get {
-            return components.alpha
+            return rgbComponents.alpha
         }
     }
     
-    var components: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+    var rgbComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
         get {
             var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
             
