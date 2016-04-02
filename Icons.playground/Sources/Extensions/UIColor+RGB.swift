@@ -1,5 +1,7 @@
 import UIKit
 
+public typealias UIColorRGBComponents = (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat)
+
 public extension UIColor {
     
     var red: CGFloat {
@@ -26,7 +28,7 @@ public extension UIColor {
         }
     }
     
-    var rgbComponents: (red: CGFloat, green: CGFloat, blue: CGFloat, alpha: CGFloat) {
+    var rgbComponents: UIColorRGBComponents {
         get {
             var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
             

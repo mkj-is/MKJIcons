@@ -1,5 +1,7 @@
 import UIKit
 
+public typealias UIColorHSBComponents = (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat)
+
 public extension UIColor {
     
     var hue: CGFloat {
@@ -20,7 +22,7 @@ public extension UIColor {
         }
     }
     
-    var hsbComponents: (hue: CGFloat, saturation: CGFloat, brightness: CGFloat, alpha: CGFloat) {
+    var hsbComponents: UIColorHSBComponents {
         get {
             var hue: CGFloat = 0, saturation: CGFloat = 0, brightness: CGFloat = 0, alpha: CGFloat = 0
             
