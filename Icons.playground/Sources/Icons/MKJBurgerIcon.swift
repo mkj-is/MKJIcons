@@ -11,8 +11,16 @@ import UIKit
 @IBDesignable
 public class MKJBurgerIcon: MKJAnimatedIcon {
     
-    @IBInspectable public var burgerColor = UIColor.whiteColor()
-    @IBInspectable public var crossColor = UIColor.redColor()
+    @IBInspectable public var burgerColor = UIColor.whiteColor() {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    @IBInspectable public var crossColor = UIColor.redColor() {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
     
     @IBInspectable public var open = false {
         willSet {
@@ -41,7 +49,7 @@ public class MKJBurgerIcon: MKJAnimatedIcon {
         let opacity = UIColor(red: burgerColor.red, green: burgerColor.green, blue: burgerColor.blue, alpha: burgerColor.alpha - time * burgerColor.alpha)
         let timedOffset: CGFloat = time * offset
         let negativeTimedOffset: CGFloat = -timedOffset
-        let timeLineWidth: CGFloat = strokeWidth / scale
+        let timeLineWidth: CGFloat = lineWidth / scale
         
         //// Bottom Drawing
         CGContextSaveGState(context)
@@ -52,7 +60,7 @@ public class MKJBurgerIcon: MKJAnimatedIcon {
         let bottomPath = UIBezierPath()
         bottomPath.moveToPoint(CGPoint(x: 40, y: 0))
         bottomPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        bottomPath.lineCapStyle = .Square;
+        bottomPath.lineCapStyle = lineCapStyle;
         
         currentColor.setStroke()
         bottomPath.lineWidth = timeLineWidth
@@ -68,10 +76,10 @@ public class MKJBurgerIcon: MKJAnimatedIcon {
         let middlePath = UIBezierPath()
         middlePath.moveToPoint(CGPoint(x: 20, y: 0))
         middlePath.addLineToPoint(CGPoint(x: -20, y: 0))
-        middlePath.lineCapStyle = .Square;
+        middlePath.lineCapStyle = lineCapStyle;
         
         opacity.setStroke()
-        middlePath.lineWidth = strokeWidth
+        middlePath.lineWidth = lineWidth
         middlePath.stroke()
         
         CGContextRestoreGState(context)
@@ -86,7 +94,7 @@ public class MKJBurgerIcon: MKJAnimatedIcon {
         let topPath = UIBezierPath()
         topPath.moveToPoint(CGPoint(x: 40, y: 0))
         topPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        topPath.lineCapStyle = .Square;
+        topPath.lineCapStyle = lineCapStyle;
         
         currentColor.setStroke()
         topPath.lineWidth = timeLineWidth

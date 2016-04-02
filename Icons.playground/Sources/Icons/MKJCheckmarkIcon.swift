@@ -11,8 +11,16 @@ import UIKit
 @IBDesignable
 public class MKJCheckmarkIcon: MKJAnimatedIcon {
     
-    @IBInspectable public var checkmarkColor = UIColor.greenColor()
-    @IBInspectable public var crossColor = UIColor.redColor()
+    @IBInspectable public var checkmarkColor = UIColor.greenColor() {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    @IBInspectable public var crossColor = UIColor.redColor() {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
     
     @IBInspectable public var checked = false {
         willSet {
@@ -40,10 +48,10 @@ public class MKJCheckmarkIcon: MKJAnimatedIcon {
         let staticLinePath = UIBezierPath()
         staticLinePath.moveToPoint(CGPoint(x: 70, y: 30))
         staticLinePath.addLineToPoint(CGPoint(x: 30, y: 70))
-        staticLinePath.lineCapStyle = .Square;
+        staticLinePath.lineCapStyle = lineCapStyle;
         
         currentColor.setStroke()
-        staticLinePath.lineWidth = strokeWidth
+        staticLinePath.lineWidth = lineWidth
         staticLinePath.stroke()
         
         
@@ -53,9 +61,9 @@ public class MKJCheckmarkIcon: MKJAnimatedIcon {
         animatedLinePath.addCurveToPoint(CGPoint(x: 70, y: 70), controlPoint1: CGPoint(x: 30, y: 30), controlPoint2: CGPoint(x: 56.58, y: 56.58))
         animatedLinePath.addCurveToPoint(CGPoint(x: 30, y: 70), controlPoint1: CGPoint(x: 83.42, y: 83.42), controlPoint2: CGPoint(x: 46.03, y: 86.03))
         animatedLinePath.addCurveToPoint(CGPoint(x: 10, y: 50), controlPoint1: CGPoint(x: 13.97, y: 53.97), controlPoint2: CGPoint(x: 10, y: 50))
-        animatedLinePath.lineCapStyle = .Square;
+        animatedLinePath.lineCapStyle = lineCapStyle;
         
-        animatedLinePath.lineWidth = strokeWidth
+        animatedLinePath.lineWidth = lineWidth
         CGContextSaveGState(context)
         CGContextSetLineDash(context, phase, [dash, 200], 2)
         animatedLinePath.stroke()

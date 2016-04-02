@@ -4,8 +4,18 @@ import UIKit
 public class MKJAnimatedIcon: UIView {
     
     @IBInspectable public var duration = 0.4
-    @IBInspectable public var strokeWidth: CGFloat = 2.0
     @IBInspectable public var colorAnimationMode: UIColorMode = .HSB
+    
+    @IBInspectable public var lineCapStyle: CGLineCap = .Square {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    @IBInspectable public var lineWidth: CGFloat = 2.0 {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
     
     let maximumAnimationValue: CGFloat = 1.0
     
@@ -16,6 +26,7 @@ public class MKJAnimatedIcon: UIView {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = UIColor.clearColor()
         layer.setNeedsDisplay()
     }
     
