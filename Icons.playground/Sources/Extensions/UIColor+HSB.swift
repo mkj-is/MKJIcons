@@ -4,6 +4,8 @@ public typealias UIColorHSBComponents = (hue: CGFloat, saturation: CGFloat, brig
 
 public extension UIColor {
     
+    // MARK: - Getting HSB components
+    
     var hue: CGFloat {
         get {
             return hsbComponents.hue
@@ -30,6 +32,20 @@ public extension UIColor {
             
             return (hue, saturation, brightness, alpha)
         }
+    }
+    
+    // MARK: Creating from HSB components
+    
+    func colorWithHueComponent(hue: CGFloat) -> UIColor {
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    }
+    
+    func colorWithBrightnessComponent(brightness: CGFloat) -> UIColor {
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+    }
+    
+    func colorWithSaturationComponent(saturation: CGFloat) -> UIColor {
+        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
     }
     
 }

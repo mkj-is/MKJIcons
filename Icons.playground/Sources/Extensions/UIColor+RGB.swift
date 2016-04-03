@@ -4,6 +4,8 @@ public typealias UIColorRGBComponents = (red: CGFloat, green: CGFloat, blue: CGF
 
 public extension UIColor {
     
+    // MARK: Getting RGB components
+    
     var red: CGFloat {
         get {
             return rgbComponents.red
@@ -36,6 +38,20 @@ public extension UIColor {
             
             return (red, green, blue, alpha)
         }
+    }
+    
+    // MARK: Creating from RGB components
+    
+    func colorWithRedComponent(red: CGFloat) -> UIColor {
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    func colorWithGreenComponent(green: CGFloat) -> UIColor {
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
+    }
+    
+    func colorWithBlueComponent(blue: CGFloat) -> UIColor {
+        return UIColor(red: red, green: green, blue: blue, alpha: alpha)
     }
     
 }
