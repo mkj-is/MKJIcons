@@ -1,7 +1,7 @@
 import UIKit
 
 @IBDesignable
-public class MKJAnimatedIcon: UIView {
+public class AnimatedIcon: UIView {
     
     @IBInspectable public var duration = 0.4
     @IBInspectable public var colorAnimationMode: UIColorMode = .HSB
@@ -21,7 +21,7 @@ public class MKJAnimatedIcon: UIView {
     
     override public class func layerClass() -> AnyClass
     {
-        return MKJAnimationLayer.self
+        return AnimationLayer.self
     }
     
     override public init(frame: CGRect) {
@@ -38,7 +38,7 @@ public class MKJAnimatedIcon: UIView {
     override public func drawLayer(layer: CALayer, inContext ctx: CGContext)
     {
         UIGraphicsPushContext(ctx)
-        draw((layer as! MKJAnimationLayer).value)
+        draw((layer as! AnimationLayer).value)
         UIGraphicsPopContext()
     }
     
@@ -53,13 +53,13 @@ public class MKJAnimatedIcon: UIView {
         animation.duration = duration
         animation.fillMode = kCAFillModeBoth
         animation.timingFunction = timing
-        animation.fromValue = (layer as! MKJAnimationLayer).value
+        animation.fromValue = (layer as! AnimationLayer).value
         animation.toValue = goal
         layer.addAnimation(animation, forKey: nil)
         
         CATransaction.begin()
         CATransaction.setDisableActions(true)
-        (layer as! MKJAnimationLayer).value = goal
+        (layer as! AnimationLayer).value = goal
         CATransaction.commit()
     }
     

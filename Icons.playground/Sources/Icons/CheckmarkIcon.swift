@@ -1,5 +1,5 @@
 //
-//  MKJCheckmark.swift
+//  Checkmark.swift
 //
 //
 //  Created by Matěj Jirásek on 31/03/16.
@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class MKJCheckmarkIcon: MKJAnimatedIcon {
+public class CheckmarkIcon: AnimatedIcon {
     
     @IBInspectable public var checkmarkColor = UIColor.greenColor() {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var crossColor = UIColor.redColor() {
+    @IBInspectable public var crossColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }

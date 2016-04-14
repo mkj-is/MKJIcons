@@ -1,5 +1,5 @@
 //
-//  MKJHeartIcon.swift
+//  HeartIcon.swift
 //
 //
 //  Created by Matěj Jirásek on 3/04/16.
@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class MKJHeartIcon: MKJAnimatedIcon {
+public class HeartIcon: AnimatedIcon {
     
-    @IBInspectable public var strokeColor = UIColor.mkjRedColor {
+    @IBInspectable public var strokeColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor = UIColor.mkjRedColor.colorWithBrightnessComponent(UIColor.mkjRedColor.brightness - 0.5) {
+    @IBInspectable public var fillColor = UIColor.iconRedColor.colorWithBrightnessComponent(UIColor.iconRedColor.brightness - 0.5) {
         didSet {
             layer.setNeedsDisplay()
         }

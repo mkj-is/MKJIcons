@@ -1,6 +1,6 @@
 import UIKit
 
-class MKJAnimationLayer: CALayer {
+class AnimationLayer: CALayer {
     
     @NSManaged var value: CGFloat
     
@@ -12,7 +12,7 @@ class MKJAnimationLayer: CALayer {
     override init(layer: AnyObject) {
         super.init(layer: layer)
         
-        if let layer = layer as? MKJAnimationLayer {
+        if let layer = layer as? AnimationLayer {
             value = layer.value
         }
         

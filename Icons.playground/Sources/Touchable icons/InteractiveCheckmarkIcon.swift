@@ -1,6 +1,6 @@
 import UIKit
 
-public class MKJInteractiveCheckmarkIcon: MKJCheckmarkIcon {
+public class InteractiveCheckmarkIcon: CheckmarkIcon {
     
     public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         checked = !checked

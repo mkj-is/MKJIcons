@@ -1,9 +1,9 @@
 import UIKit
 
-public class MKJInteractiveBurgerIcon: MKJBurgerIcon {
+public class InteractiveHeartIcon: HeartIcon {
     
     public override func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
-        open = !open
+        visible = !visible
     }
     
 }

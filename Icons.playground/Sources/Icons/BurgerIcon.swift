@@ -1,5 +1,5 @@
 //
-//  MKJBurgerIcon.swift
+//  BurgerIcon.swift
 //
 //
 //  Created by Matěj Jirásek on 31/03/16.
@@ -9,14 +9,14 @@
 import UIKit
 
 @IBDesignable
-public class MKJBurgerIcon: MKJAnimatedIcon {
+public class BurgerIcon: AnimatedIcon {
     
     @IBInspectable public var burgerColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var crossColor = UIColor.redColor() {
+    @IBInspectable public var crossColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
