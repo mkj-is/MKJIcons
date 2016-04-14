@@ -17,6 +17,7 @@ public class AnimatedIcon: UIView {
         }
     }
     
+    let timingFunction = kCAMediaTimingFunctionEaseInEaseOut
     let maximumAnimationValue: CGFloat = 1.0
     
     override public class func layerClass() -> AnyClass
@@ -48,7 +49,7 @@ public class AnimatedIcon: UIView {
     
     public func animateTo(goal: CGFloat) {
         
-        let timing: CAMediaTimingFunction = CAMediaTimingFunction.init(name: kCAMediaTimingFunctionEaseOut)
+        let timing: CAMediaTimingFunction = CAMediaTimingFunction.init(name: timingFunction)
         let animation = CABasicAnimation(keyPath: "value")
         animation.duration = duration
         animation.fillMode = kCAFillModeBoth
