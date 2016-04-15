@@ -11,6 +11,11 @@ public class AnimatedIcon: UIView {
             layer.setNeedsDisplay()
         }
     }
+    @IBInspectable public var lineJoinStyle: CGLineJoin = .Miter {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
     @IBInspectable public var lineWidth: CGFloat = 2.0 {
         didSet {
             layer.setNeedsDisplay()

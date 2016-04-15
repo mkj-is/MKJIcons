@@ -70,6 +70,7 @@ public class HeartIcon: AnimatedIcon {
         bezierPath.addCurveToPoint(CGPoint(x: 30, y: -30.19), controlPoint1: CGPoint(x: 23.22, y: -45), controlPoint2: CGPoint(x: 29.9, y: -38.39))
         bezierPath.closePath()
         bezierPath.lineCapStyle = lineCapStyle
+        bezierPath.lineJoinStyle = lineJoinStyle
         bezierPath.lineWidth = lineWidth
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time).setFill()
