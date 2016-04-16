@@ -54,7 +54,7 @@ public class AnimatedIcon: UIView {
     
     public func animateTo(goal: CGFloat) {
         
-        let timing: CAMediaTimingFunction = CAMediaTimingFunction.init(name: timingFunction)
+        let timing: CAMediaTimingFunction = CAMediaTimingFunction(name: timingFunction)
         let animation = CABasicAnimation(keyPath: "value")
         animation.duration = duration
         animation.fillMode = kCAFillModeBoth
