@@ -34,16 +34,28 @@ public class AnimatedIconExporter {
     }
     
     func position(i: Int) -> CGFloat {
-        let value = (CGFloat(i) / CGFloat(count)) % 1
+        var value = (CGFloat(i) / CGFloat(count))
         
-        switch direction {
-        case .Forward:
-            return value
-        case .Backward:
-            return 1 - value
-        case .ForwardAndBack:
-            return (value % 0.5) * 2 * (value >= 0.5 ? -1 : 1) + (value >= 0.5 ? 1 : 0)
+        // calculate position of animation on timeline
+        if direction == .Backward {
+            value = 1 - value
+        } else if direction == .ForwardAndBack {
+            value = (value % 0.5) * 2 * (value % 1 >= 0.5 ? -1 : 1) + (value % 1 >= 0.5 ? 1 : 0)
         }
+        
+        // apply animation function
+        switch icon.timingFunction {
+        case kCAMediaTimingFunctionEaseInEaseOut:
+            value = AnimationFunctions.sinEaseInOut(value)
+        case kCAMediaTimingFunctionEaseIn:
+            value = AnimationFunctions.sinEaseOut(value)
+        case kCAMediaTimingFunctionEaseOut:
+            value = AnimationFunctions.sinEaseIn(value)
+        default:
+            value = AnimationFunctions.linear(value)
+        }
+        
+        return value
     }
     
     public func save() -> Bool {
