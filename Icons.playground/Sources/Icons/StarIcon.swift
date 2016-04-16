@@ -21,7 +21,12 @@ public class StarIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor = UIColor.iconOrangeColor.colorWithBrightnessComponent(UIColor.iconRedColor.brightness - 0.5) {
+    @IBInspectable public var fillColor = UIColor.iconOrangeColor {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -92,7 +97,7 @@ public class StarIcon: AnimatedIcon {
         path.closePath()
         
         strokeColor.setStroke()
-        fillColor.colorWithAlphaComponent(time).setFill()
+        fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         
         path.lineWidth = lineWidth
         path.lineCapStyle = lineCapStyle

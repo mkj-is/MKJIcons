@@ -16,7 +16,12 @@ public class HeartIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor = UIColor.iconRedColor.colorWithBrightnessComponent(UIColor.iconRedColor.brightness - 0.5) {
+    @IBInspectable public var fillColor = UIColor.iconRedColor {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -73,7 +78,7 @@ public class HeartIcon: AnimatedIcon {
         bezierPath.lineJoinStyle = lineJoinStyle
         bezierPath.lineWidth = lineWidth
         strokeColor.setStroke()
-        fillColor.colorWithAlphaComponent(time).setFill()
+        fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         CGContextSaveGState(context)
         CGContextSetLineDash(context, phase, [dash, gap], 2)
         bezierPath.fill()
