@@ -67,11 +67,15 @@ public class AnimatedIconExporter {
         if !NSFileManager.defaultManager().fileExistsAtPath(folder.path!) {
             try! NSFileManager.defaultManager().createDirectoryAtURL(folder, withIntermediateDirectories: true, attributes: nil)
         }
+
+        let formatter = NSDateFormatter()
+        formatter.dateFormat = "YYYY-MM-dd_HH-mm-SS"
+        let date = formatter.stringFromDate(NSDate())
         
         let images = export()
         for i in 0...(images.count - 1) {
             
-            let fileName = String(format: "%@_%03d.png", arguments: [name!, i])
+            let fileName = String(format: "%@_%@_%03d.png", arguments: [date, name!, i])
             let filePath = folder.URLByAppendingPathComponent(fileName)
             let data = UIImagePNGRepresentation(images[i])
             
