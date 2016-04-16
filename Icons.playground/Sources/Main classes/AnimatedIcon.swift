@@ -22,7 +22,13 @@ public class AnimatedIcon: UIView {
         }
     }
     
-    let timingFunction = kCAMediaTimingFunctionEaseInEaseOut
+    public var scale: CGFloat {
+        get {
+            return min(frame.size.width, frame.size.height) / 100
+        }
+    }
+    public let timingFunction = kCAMediaTimingFunctionEaseInEaseOut
+    
     let maximumAnimationValue: CGFloat = 1.0
     
     override public class func layerClass() -> AnyClass
