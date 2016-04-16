@@ -69,7 +69,7 @@ public class AnimatedIconExporter {
         }
 
         let formatter = NSDateFormatter()
-        formatter.dateFormat = "YYYY-MM-dd_HH-mm-SS"
+        formatter.dateFormat = "YYYY-MM-dd_HH-mm-ss"
         let date = formatter.stringFromDate(NSDate())
         
         let images = export()
