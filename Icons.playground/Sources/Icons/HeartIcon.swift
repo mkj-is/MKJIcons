@@ -80,7 +80,10 @@ public class HeartIcon: AnimatedIcon {
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         CGContextSaveGState(context)
-        CGContextSetLineDash(context, phase, [dash, gap], 2)
+        
+        if time < 1 {
+            CGContextSetLineDash(context, phase, [dash, gap], 2)
+        }
         bezierPath.fill()
         bezierPath.stroke()
         CGContextRestoreGState(context)

@@ -104,10 +104,13 @@ public class StarIcon: AnimatedIcon {
         path.lineJoinStyle = lineJoinStyle
         
         CGContextSaveGState(context)
-        CGContextSetLineDash(context, animationCenteredOnCorners ? inOutPhase : linePhase, [
-            animationCenteredOnCorners ? doubleDash : varyingDash,
-            animationCenteredOnCorners ? doubleGap : varyingGap
-        ], 2)
+        
+        if time < 1 {
+            CGContextSetLineDash(context, animationCenteredOnCorners ? inOutPhase : linePhase, [
+                animationCenteredOnCorners ? doubleDash : varyingDash,
+                animationCenteredOnCorners ? doubleGap : varyingGap
+                ], 2)
+        }
         path.fill()
         path.stroke()
         CGContextRestoreGState(context)
