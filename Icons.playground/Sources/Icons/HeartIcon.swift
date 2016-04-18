@@ -89,7 +89,7 @@ public class HeartIcon: AnimatedIcon {
         CGContextSaveGState(context)
         
         if time < 1 {
-            CGContextSetLineDash(context, phase, [dash, gap], 2)
+            CGContextSetLineDash(context, phase, [(dash < 0 ? 0 : dash), (gap < 0 ? 0 : gap)], 2)
         }
         bezierPath.fill()
         bezierPath.stroke()

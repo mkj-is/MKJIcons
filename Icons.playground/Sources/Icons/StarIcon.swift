@@ -113,9 +113,11 @@ public class StarIcon: AnimatedIcon {
         CGContextSaveGState(context)
         
         if time < 1 {
+            let calculatedDash = (animationCenteredOnCorners ? doubleDash : varyingDash)
+            let calculatedGap = (animationCenteredOnCorners ? doubleGap : varyingGap)
             CGContextSetLineDash(context, animationCenteredOnCorners ? inOutPhase : linePhase, [
-                animationCenteredOnCorners ? doubleDash : varyingDash,
-                animationCenteredOnCorners ? doubleGap : varyingGap
+                calculatedDash < 0 ? 0 : calculatedDash,
+                calculatedGap < 0 ? 0 : calculatedGap
                 ], 2)
         }
         path.fill()
