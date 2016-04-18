@@ -31,6 +31,13 @@ public class BurgerIcon: AnimatedIcon {
         }
     }
     
+    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+        if enabled {
+            open = !open
+            value = open ? 1 : 0
+        }
+    }
+    
     override func draw(time: CGFloat = 0) {
         
         let offset: CGFloat = 5 * scale

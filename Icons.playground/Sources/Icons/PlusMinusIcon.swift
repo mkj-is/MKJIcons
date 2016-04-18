@@ -36,6 +36,13 @@ public class PlusMinusIcon: AnimatedIcon {
         }
     }
     
+    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+        if enabled {
+            minus = !minus
+            value = minus ? 1 : 0
+        }
+    }
+    
     override func draw(time: CGFloat = 0) {
         
         //// General Declarations

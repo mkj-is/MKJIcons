@@ -6,7 +6,7 @@
 import UIKit
 import XCPlayground
 
-let icon = InteractiveStarIcon(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+let icon = StarIcon(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
 
 icon.lineCapStyle = .Round
 icon.lineJoinStyle = .Round

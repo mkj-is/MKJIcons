@@ -1,7 +1,7 @@
 import UIKit
 
 @IBDesignable
-public class AnimatedIcon: UIView {
+public class AnimatedIcon: UIControl {
     
     @IBInspectable public var duration = 0.4
     @IBInspectable public var colorAnimationMode: UIColorMode = .HSB
@@ -18,6 +18,15 @@ public class AnimatedIcon: UIView {
     }
     @IBInspectable public var lineWidth: CGFloat = 2.0 {
         didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    
+    public var value = 0.0 {
+        didSet {
+            if enabled {
+                self.sendActionsForControlEvents(.ValueChanged)
+            }
             layer.setNeedsDisplay()
         }
     }
@@ -73,6 +82,12 @@ public class AnimatedIcon: UIView {
         CATransaction.setDisableActions(true)
         (layer as! AnimationLayer).value = goal
         CATransaction.commit()
+    }
+    
+    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+        if enabled {
+            value = (value == 0 ? 1 : 0)
+        }
     }
     
 }

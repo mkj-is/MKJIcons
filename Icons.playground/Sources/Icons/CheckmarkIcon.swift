@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class CheckmarkIcon: AnimatedIcon {
     
-    @IBInspectable public var checkmarkColor = UIColor.greenColor() {
+    @IBInspectable public var checkmarkColor = UIColor.iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -28,6 +28,13 @@ public class CheckmarkIcon: AnimatedIcon {
             if newValue != checked {
                 animateTo(checked ? 0.0 : maximumAnimationValue)
             }
+        }
+    }
+    
+    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
+        if enabled {
+            checked = !checked
+            value = checked ? 1 : 0
         }
     }
     
