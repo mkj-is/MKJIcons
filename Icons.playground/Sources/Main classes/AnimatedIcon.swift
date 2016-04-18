@@ -49,11 +49,19 @@ public class AnimatedIcon: UIControl {
         super.init(frame: frame)
         backgroundColor = UIColor.clearColor()
         layer.setNeedsDisplay()
+        
+        let scale = UIScreen.mainScreen().scale
+        layer.contentsScale = scale
+        contentScaleFactor = scale
     }
     
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         layer.setNeedsDisplay()
+        
+        let scale = UIScreen.mainScreen().scale
+        layer.contentsScale = scale
+        contentScaleFactor = scale
     }
     
     override public func drawLayer(layer: CALayer, inContext ctx: CGContext)
