@@ -105,6 +105,8 @@ public class AnimatedIcon: UIControl {
             layer.setNeedsDisplay()
         
         #else
+            
+            layer.removeAllAnimations()
         
             let timing: CAMediaTimingFunction = CAMediaTimingFunction(name: timingFunction)
             let animation = CABasicAnimation(keyPath: "value")
