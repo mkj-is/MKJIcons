@@ -11,22 +11,22 @@ import UIKit
 @IBDesignable
 public class CheckmarkIcon: AnimatedIcon {
     
-    @IBInspectable public var checkmarkColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var checkmarkColor: UIColor = UIColor.iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var crossColor = UIColor.iconRedColor {
+    @IBInspectable public var crossColor: UIColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var checked = false {
+    @IBInspectable public var checked: Bool = false {
         willSet {
             
             if newValue != checked {
-                animateTo(checked ? 0.0 : maximumAnimationValue)
+                animateTo(checked ? 0 : 1)
             }
         }
     }
@@ -34,7 +34,7 @@ public class CheckmarkIcon: AnimatedIcon {
     public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if enabled {
             checked = !checked
-            value = checked ? 1 : 0
+            internalValue = checked ? 1 : 0
         }
     }
     
@@ -45,7 +45,7 @@ public class CheckmarkIcon: AnimatedIcon {
         
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         
-        let currentColor = UIColor(between: crossColor, and: checkmarkColor, using: colorAnimationMode, ratio: time / maximumAnimationValue)
+        let currentColor = UIColor(between: crossColor, and: checkmarkColor, using: colorMode, ratio: time)
         
         //// Variable Declarations
         let phase: CGFloat = -time * 111 * scale
@@ -55,7 +55,7 @@ public class CheckmarkIcon: AnimatedIcon {
         let staticLinePath = UIBezierPath()
         staticLinePath.moveToPoint(CGPoint(x: 70 * scale, y: 30 * scale))
         staticLinePath.addLineToPoint(CGPoint(x: 30 * scale, y: 70 * scale))
-        staticLinePath.lineCapStyle = lineCapStyle;
+        staticLinePath.lineCapStyle = lineCap;
         
         currentColor.setStroke()
         staticLinePath.lineWidth = lineWidth
@@ -69,9 +69,9 @@ public class CheckmarkIcon: AnimatedIcon {
         animatedLinePath.addCurveToPoint(CGPoint(x: 30 * scale, y: 70 * scale), controlPoint1: CGPoint(x: 83.42 * scale, y: 83.42 * scale), controlPoint2: CGPoint(x: 46.03 * scale, y: 86.03 * scale))
         animatedLinePath.addCurveToPoint(CGPoint(x: 10 * scale, y: 50 * scale), controlPoint1: CGPoint(x: 13.97 * scale, y: 53.97 * scale), controlPoint2: CGPoint(x: 10 * scale, y: 50 * scale))
 
-        animatedLinePath.lineCapStyle = lineCapStyle
+        animatedLinePath.lineCapStyle = lineCap
         animatedLinePath.lineWidth = lineWidth
-        animatedLinePath.lineJoinStyle = lineJoinStyle
+        animatedLinePath.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
         CGContextSetLineDash(context, phase, [dash, 200 * scale], 2)

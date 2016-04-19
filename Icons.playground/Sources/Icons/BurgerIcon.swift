@@ -11,22 +11,22 @@ import UIKit
 @IBDesignable
 public class BurgerIcon: AnimatedIcon {
     
-    @IBInspectable public var burgerColor = UIColor.whiteColor() {
+    @IBInspectable public var burgerColor: UIColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var crossColor = UIColor.iconRedColor {
+    @IBInspectable public var crossColor: UIColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var open = false {
+    @IBInspectable public var open: Bool = false {
         willSet {
             
             if newValue != open {
-                animateTo(open ? 0.0 : maximumAnimationValue)
+                animateTo(open ? 0 : 1)
             }
         }
     }
@@ -34,7 +34,7 @@ public class BurgerIcon: AnimatedIcon {
     public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if enabled {
             open = !open
-            value = open ? 1 : 0
+            internalValue = open ? 1 : 0
         }
     }
     
@@ -47,7 +47,7 @@ public class BurgerIcon: AnimatedIcon {
         
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         
-        let currentColor = UIColor(between: burgerColor, and: crossColor, using: colorAnimationMode, ratio: time / maximumAnimationValue)
+        let currentColor = UIColor(between: burgerColor, and: crossColor, using: colorMode, ratio: time)
         
         //// Variable Declarations
         let angle: CGFloat = time * 45
@@ -67,7 +67,7 @@ public class BurgerIcon: AnimatedIcon {
         let bottomPath = UIBezierPath()
         bottomPath.moveToPoint(CGPoint(x: 40 * scale, y: 0))
         bottomPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        bottomPath.lineCapStyle = lineCapStyle;
+        bottomPath.lineCapStyle = lineCap;
         
         currentColor.setStroke()
         bottomPath.lineWidth = timeLineWidth
@@ -83,7 +83,7 @@ public class BurgerIcon: AnimatedIcon {
         let middlePath = UIBezierPath()
         middlePath.moveToPoint(CGPoint(x: 20 * scale, y: 0))
         middlePath.addLineToPoint(CGPoint(x: -20 * scale, y: 0))
-        middlePath.lineCapStyle = lineCapStyle;
+        middlePath.lineCapStyle = lineCap;
         
         opacity.setStroke()
         middlePath.lineWidth = lineWidth
@@ -101,7 +101,7 @@ public class BurgerIcon: AnimatedIcon {
         let topPath = UIBezierPath()
         topPath.moveToPoint(CGPoint(x: 40 * scale, y: 0))
         topPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        topPath.lineCapStyle = lineCapStyle;
+        topPath.lineCapStyle = lineCap;
         
         currentColor.setStroke()
         topPath.lineWidth = timeLineWidth

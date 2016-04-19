@@ -11,27 +11,27 @@ import UIKit
 @IBDesignable
 public class PlusMinusIcon: AnimatedIcon {
     
-    @IBInspectable public var plusColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var plusColor: UIColor = UIColor.iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var minusColor = UIColor.iconRedColor {
+    @IBInspectable public var minusColor: UIColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var circle = true {
+    @IBInspectable public var circle: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var minus = false {
+    @IBInspectable public var minus: Bool = false {
         willSet {
             
             if newValue != minus {
-                animateTo(minus ? 0.0 : maximumAnimationValue)
+                animateTo(minus ? 0 : 1)
             }
         }
     }
@@ -39,7 +39,7 @@ public class PlusMinusIcon: AnimatedIcon {
     public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if enabled {
             minus = !minus
-            value = minus ? 1 : 0
+            internalValue = minus ? 1 : 0
         }
     }
     
@@ -68,8 +68,8 @@ public class PlusMinusIcon: AnimatedIcon {
         verticalLinePath.addLineToPoint(CGPoint(x: negativePointPosition, y: 0))
 
         verticalLinePath.lineWidth = lineWidth
-        verticalLinePath.lineJoinStyle  = lineJoinStyle
-        verticalLinePath.lineCapStyle  = lineCapStyle
+        verticalLinePath.lineJoinStyle  = lineJoin
+        verticalLinePath.lineCapStyle  = lineCap
 
         verticalLinePath.stroke()
         
@@ -85,8 +85,8 @@ public class PlusMinusIcon: AnimatedIcon {
         horizontalLinePath.addLineToPoint(CGPoint(x: negativePointPosition, y: 0))
         
         horizontalLinePath.lineWidth = lineWidth
-        horizontalLinePath.lineJoinStyle  = lineJoinStyle
-        horizontalLinePath.lineCapStyle  = lineCapStyle
+        horizontalLinePath.lineJoinStyle  = lineJoin
+        horizontalLinePath.lineCapStyle  = lineCap
 
         horizontalLinePath.stroke()
         

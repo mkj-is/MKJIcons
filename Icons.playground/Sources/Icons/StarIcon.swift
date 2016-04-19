@@ -16,12 +16,12 @@ public enum AnimationDirection {
 @IBDesignable
 public class StarIcon: AnimatedIcon {
     
-    @IBInspectable public var strokeColor = UIColor.iconOrangeColor {
+    @IBInspectable public var strokeColor: UIColor = UIColor.iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor = UIColor.iconOrangeColor {
+    @IBInspectable public var fillColor: UIColor = UIColor.iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -31,7 +31,7 @@ public class StarIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var doubleLines = true {
+    @IBInspectable public var doubleLines: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -43,17 +43,17 @@ public class StarIcon: AnimatedIcon {
         }
     }
     
-    public var animationCenteredOnCorners = true {
+    @IBInspectable public var animationCenteredOnCorners: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var visible = false {
+    @IBInspectable public var visible: Bool = false {
         willSet {
             
             if newValue != visible {
-                animateTo(newValue ? maximumAnimationValue : 0.0)
+                animateTo(newValue ? 1 : 0)
             }
         }
     }
@@ -61,7 +61,7 @@ public class StarIcon: AnimatedIcon {
     public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if enabled {
             visible = !visible
-            value = visible ? 1 : 0
+            internalValue = visible ? 1 : 0
         }
     }
     
@@ -107,8 +107,8 @@ public class StarIcon: AnimatedIcon {
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         
         path.lineWidth = lineWidth
-        path.lineCapStyle = lineCapStyle
-        path.lineJoinStyle = lineJoinStyle
+        path.lineCapStyle = lineCap
+        path.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
         

@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class HeartIcon: AnimatedIcon {
     
+    // MARK: Inspectable attributes
+    
     @IBInspectable public var strokeColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
@@ -26,17 +28,17 @@ public class HeartIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var twoLines = true {
+    @IBInspectable public var twoLines: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
     }
     
-    @IBInspectable public var visible = false {
+    @IBInspectable public var visible: Bool = false {
         willSet {
             
             if newValue != visible {
-                animateTo(newValue ? maximumAnimationValue : 0.0)
+                animateTo(newValue ? 1 : 0)
             }
         }
     }
@@ -44,7 +46,7 @@ public class HeartIcon: AnimatedIcon {
     public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if enabled {
             visible = !visible
-            value = visible ? 1 : 0
+            internalValue = visible ? 1 : 0
         }
     }
     
@@ -81,8 +83,8 @@ public class HeartIcon: AnimatedIcon {
         bezierPath.addCurveToPoint(CGPoint(x: 15 * scale, y: -45 * scale), controlPoint1: CGPoint(x: 8.53 * scale, y: -43.89 * scale), controlPoint2: CGPoint(x: 11.64 * scale, y: -45 * scale))
         bezierPath.addCurveToPoint(CGPoint(x: 30 * scale, y: -30.19 * scale), controlPoint1: CGPoint(x: 23.22 * scale, y: -45 * scale), controlPoint2: CGPoint(x: 29.9 * scale, y: -38.39 * scale))
         bezierPath.closePath()
-        bezierPath.lineCapStyle = lineCapStyle
-        bezierPath.lineJoinStyle = lineJoinStyle
+        bezierPath.lineCapStyle = lineCap
+        bezierPath.lineJoinStyle = lineJoin
         bezierPath.lineWidth = lineWidth
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
