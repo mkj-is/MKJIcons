@@ -93,6 +93,14 @@ public class AnimatedIcon: UIControl {
         UIGraphicsPopContext()
     }
     
+    public func image(at: CGFloat = 0) -> UIImage {
+        UIGraphicsBeginImageContextWithOptions(frame.size, false, contentScaleFactor)
+        draw(at)
+        let image = UIGraphicsGetImageFromCurrentImageContext()
+        UIGraphicsEndImageContext()
+        return image
+    }
+    
     func draw(time: CGFloat = 0) {
         fatalError("Method must be overriden in subclasses. Do not instantiate this class directly.")
     }

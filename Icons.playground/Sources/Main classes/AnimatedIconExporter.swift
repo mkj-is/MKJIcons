@@ -25,10 +25,7 @@ public class AnimatedIconExporter {
     public func export() -> [UIImage] {
         frames = []
         for i in 0...count {
-            UIGraphicsBeginImageContext(icon.frame.size)
-            icon.draw(position(i))
-            frames.append(UIGraphicsGetImageFromCurrentImageContext())
-            UIGraphicsEndImageContext()
+            frames.append(icon.image(position(i)))
         }
         return frames
     }
