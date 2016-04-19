@@ -8,11 +8,11 @@ import XCPlayground
 
 let icon = StarIcon(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
 
-icon.lineCapStyle = .Round
-icon.lineJoinStyle = .Round
+icon.lineCap = .Round
+icon.lineJoin = .Round
 icon.lineWidth = 4
-icon.duration = 1
-icon.colorAnimationMode = .HSB
+icon.animationDuration = 1
+icon.colorMode = .HSB
 
 XCPlaygroundPage.currentPage.liveView = icon
 
