@@ -1,14 +1,14 @@
 import UIKit
 
-public class AnimationFunctions {
+public struct AnimationFunctions {
     
     static let π = CGFloat(M_PI)
     
-    class func linear(x: CGFloat) -> CGFloat {
+    static func linear(x: CGFloat) -> CGFloat {
         return x
     }
     
-    class func sinEaseIn(x: CGFloat) -> CGFloat {
+    static func sinEaseIn(x: CGFloat) -> CGFloat {
         if x <= 0 {
             return 0
         } else if x >= 1 {
@@ -18,7 +18,7 @@ public class AnimationFunctions {
         }
     }
     
-    class func sinEaseOut(x: CGFloat) -> CGFloat {
+    static func sinEaseOut(x: CGFloat) -> CGFloat {
         if x <= 0 {
             return 0
         } else if x >= 1 {
@@ -28,7 +28,7 @@ public class AnimationFunctions {
         }
     }
     
-    class func sinEaseInOut(x: CGFloat) -> CGFloat {
+    static func sinEaseInOut(x: CGFloat) -> CGFloat {
         if x <= 0 {
             return 0
         } else if x >= 1 {
