@@ -37,7 +37,7 @@ public class StarIcon: AnimatedIcon {
         }
     }
     
-    public var animationDirection = AnimationDirection.In {
+    @IBInspectable public var animationInsideDirection: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -86,8 +86,8 @@ public class StarIcon: AnimatedIcon {
         let innerPhase: CGFloat = lineLength + dash
         let varyingGap: CGFloat = doubleLines ? doubleGap : gap
         let varyingDash: CGFloat = doubleLines ? doubleDash : dash
-        let inOutPhase = animationDirection == .In ? outerPhase : innerPhase
-        let linePhase = animationDirection == .In ? 0 : lineLength
+        let inOutPhase = animationInsideDirection ? outerPhase : innerPhase
+        let linePhase = animationInsideDirection ? 0 : lineLength
         
         //// Path Drawing
         let path = UIBezierPath()
