@@ -22,12 +22,6 @@ public class SettingsIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
-        didSet {
-            layer.setNeedsDisplay()
-        }
-    }
-    
     @IBInspectable public var handleSize: CGFloat = 6 {
         didSet {
             layer.setNeedsDisplay()

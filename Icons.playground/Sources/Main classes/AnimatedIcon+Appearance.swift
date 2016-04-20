@@ -19,6 +19,15 @@ public extension AnimatedIcon {
     }
     
     
+    public func appearanceFillAlpha() -> CGFloat {
+        return fillAlpha
+    }
+    
+    public func setAppearanceFillAlpha(property: CGFloat) {
+        fillAlpha = property
+    }
+    
+    
     public func appearanceLineCapStyle() -> Int {
         return lineCapStyle
     }

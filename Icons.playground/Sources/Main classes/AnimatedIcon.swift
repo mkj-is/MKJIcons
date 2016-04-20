@@ -13,6 +13,12 @@ public class AnimatedIcon: UIControl {
         }
     }
     
+    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    
     // MARK: - Standard properties
     
     public var colorMode: UIColorMode = .HSB {

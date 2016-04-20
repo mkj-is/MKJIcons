@@ -23,11 +23,6 @@ public class DropPinIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
-        didSet {
-            layer.setNeedsDisplay()
-        }
-    }
     @IBInspectable public var circle: Bool = true {
         didSet {
             layer.setNeedsDisplay()

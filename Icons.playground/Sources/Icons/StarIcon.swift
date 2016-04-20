@@ -26,11 +26,6 @@ public class StarIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
-        didSet {
-            layer.setNeedsDisplay()
-        }
-    }
     @IBInspectable public var doubleLines: Bool = true {
         didSet {
             layer.setNeedsDisplay()
