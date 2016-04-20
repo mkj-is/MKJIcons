@@ -25,6 +25,8 @@
 		E7BE8DE61CC57E5E007DADED /* AnimationLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DD91CC57E5E007DADED /* AnimationLayer.swift */; };
 		E7BE8E171CC581A3007DADED /* MKJIcons.h in Headers */ = {isa = PBXBuildFile; fileRef = E7BE8E0F1CC5805B007DADED /* MKJIcons.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E7BE8E251CC59D49007DADED /* AnimatedIcon+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8E241CC59D49007DADED /* AnimatedIcon+Inspectable.swift */; };
+		E7DCB3F41CC78E8500F166F4 /* PlayPauseIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB3F21CC78E8500F166F4 /* PlayPauseIcon.swift */; };
+		E7DCB3F51CC78E8500F166F4 /* PlayStopIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +50,8 @@
 		E7BE8E0E1CC5805B007DADED /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = SOURCE_ROOT; };
 		E7BE8E0F1CC5805B007DADED /* MKJIcons.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MKJIcons.h; path = Resources/MKJIcons.h; sourceTree = SOURCE_ROOT; };
 		E7BE8E241CC59D49007DADED /* AnimatedIcon+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Inspectable.swift"; sourceTree = "<group>"; };
+		E7DCB3F21CC78E8500F166F4 /* PlayPauseIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseIcon.swift; sourceTree = "<group>"; };
+		E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStopIcon.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,11 +109,13 @@
 			isa = PBXGroup;
 			children = (
 				E7BE8DD01CC57E5E007DADED /* BurgerIcon.swift */,
-				E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */,
-				E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */,
 				E7BE8DD11CC57E5E007DADED /* CheckmarkIcon.swift */,
+				E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */,
 				E7BE8DD21CC57E5E007DADED /* HeartIcon.swift */,
+				E7DCB3F21CC78E8500F166F4 /* PlayPauseIcon.swift */,
+				E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */,
 				E7BE8DD31CC57E5E007DADED /* PlusMinusIcon.swift */,
+				E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */,
 				E7BE8DD41CC57E5E007DADED /* StarIcon.swift */,
 			);
 			name = Icons;
@@ -213,12 +219,14 @@
 				E7BE8DDC1CC57E5E007DADED /* UIColor+IconColors.swift in Sources */,
 				E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */,
 				E7BE8DE01CC57E5E007DADED /* HeartIcon.swift in Sources */,
+				E7DCB3F41CC78E8500F166F4 /* PlayPauseIcon.swift in Sources */,
 				E7BE8E251CC59D49007DADED /* AnimatedIcon+Inspectable.swift in Sources */,
 				E7BE8DE41CC57E5E007DADED /* AnimatedIconExporter.swift in Sources */,
 				E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */,
 				E7BE8DDB1CC57E5E007DADED /* UIColor+HSB.swift in Sources */,
 				E7BE8DDE1CC57E5E007DADED /* BurgerIcon.swift in Sources */,
 				E7BE8DE31CC57E5E007DADED /* AnimatedIcon.swift in Sources */,
+				E7DCB3F51CC78E8500F166F4 /* PlayStopIcon.swift in Sources */,
 				E7BE8DDF1CC57E5E007DADED /* CheckmarkIcon.swift in Sources */,
 				E79C86741CC6822200C3B906 /* AnimatedIcon+Appearance.swift in Sources */,
 				E7BE8DE51CC57E5E007DADED /* AnimationFunctions.swift in Sources */,
