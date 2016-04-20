@@ -22,6 +22,12 @@ public class SettingsIcon: AnimatedIcon {
         }
     }
     
+    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    
     @IBInspectable public var handleSize: CGFloat = 6 {
         didSet {
             layer.setNeedsDisplay()
@@ -55,8 +61,10 @@ public class SettingsIcon: AnimatedIcon {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         
-        let color = UIColor(between: primaryColor, and: secondaryColor, using: .HSB, ratio: time)
-        color.setStroke()
+        let strokeColor = UIColor(between: primaryColor, and: secondaryColor, using: .HSB, ratio: time)
+        strokeColor.setStroke()
+        let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
+        fillColor.setFill()
         
         CGContextScaleCTM(context, scale, scale)
         
@@ -128,6 +136,7 @@ public class SettingsIcon: AnimatedIcon {
         handlePath.lineCapStyle = lineCap
         handlePath.lineJoinStyle = lineJoin
         
+        handlePath.fill()
         handlePath.stroke()
         
         CGContextRestoreGState(context)
@@ -141,7 +150,7 @@ public class SettingsIcon: AnimatedIcon {
         topLinePath.lineWidth = scaledLineWidth
         topLinePath.lineCapStyle = lineCap
         topLinePath.lineJoinStyle = lineJoin
-        
+
         topLinePath.stroke()
         
         

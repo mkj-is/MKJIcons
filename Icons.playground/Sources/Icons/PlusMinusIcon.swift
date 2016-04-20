@@ -21,6 +21,13 @@ public class PlusMinusIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
+    
+    @IBInspectable public var fillAlpha: CGFloat = 0.5 {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+    
     @IBInspectable public var circle: Bool = true {
         didSet {
             layer.setNeedsDisplay()
@@ -48,8 +55,10 @@ public class PlusMinusIcon: AnimatedIcon {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         
-        let color = UIColor(between: plusColor, and: minusColor, using: .HSB, ratio: time)
-        color.setStroke()
+        let strokeColor = UIColor(between: plusColor, and: minusColor, using: .HSB, ratio: time)
+        strokeColor.setStroke()
+        let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
+        fillColor.setFill()
         
         //// Variable Declarations
         let verticalAngle: CGFloat = (minus ? -90 - time * 90 : -180 - (1 - time) * 90)
@@ -59,9 +68,19 @@ public class PlusMinusIcon: AnimatedIcon {
         let negativePointPosition: CGFloat = -pointPosition
         
         CGContextScaleCTM(context, scale, scale)
+        CGContextTranslateCTM(context, 50, 50)
+        
+        //// Circle Drawing
+        if (circle) {
+            
+            let circlePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
+            circlePath.lineWidth = scaledLineWidth
+            circlePath.fill()
+            circlePath.stroke()
+            
+        }
         
         //// Vertical line Drawing
-        CGContextTranslateCTM(context, 50, 50)
         CGContextSaveGState(context)
         CGContextRotateCTM(context, -horizontalAngle * CGFloat(M_PI) / 180)
         
@@ -93,16 +112,6 @@ public class PlusMinusIcon: AnimatedIcon {
         horizontalLinePath.stroke()
         
         CGContextRestoreGState(context)
-        
-        
-        if (circle) {
-            //// Circle Drawing
-            
-            let circlePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
-            circlePath.lineWidth = scaledLineWidth
-            circlePath.stroke()
-
-        }
 
     }
     
