@@ -64,29 +64,30 @@ public class DropPinIcon: AnimatedIcon {
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         
         //// Variable Declarations
-        let circleLineLength: CGFloat = 20 * CGFloat(M_PI) * time * scale
-        let pinLineLength: CGFloat = time * 154 * scale
+        let circleLineLength: CGFloat = 20 * CGFloat(M_PI) * time
+        let pinLineLength: CGFloat = time * 154
         
-        CGContextTranslateCTM(context, 50 * scale, 40 * scale)
+        CGContextScaleCTM(context, scale, scale)
+        CGContextTranslateCTM(context, 50, 40)
         
         //// Fill Drawing
         let fillPath = UIBezierPath()
         
         if circle {
-            fillPath.moveToPoint(CGPoint(x: 0, y: -10 * scale))
-            fillPath.addCurveToPoint(CGPoint(x: -10 * scale, y: 0), controlPoint1: CGPoint(x: -5 * scale, y: -10 * scale), controlPoint2: CGPoint(x: -10 * scale, y: -5 * scale))
-            fillPath.addCurveToPoint(CGPoint(x: -10 * scale, y: 0), controlPoint1: CGPoint(x: -10 * scale, y: 0), controlPoint2: CGPoint(x: -10 * scale, y: 0))
-            fillPath.addCurveToPoint(CGPoint(x: 0, y: 10 * scale), controlPoint1: CGPoint(x: -10 * scale, y: 5 * scale), controlPoint2: CGPoint(x: -5 * scale, y: 10 * scale))
-            fillPath.addCurveToPoint(CGPoint(x: 10 * scale, y: 0), controlPoint1: CGPoint(x: 5 * scale, y: 10 * scale), controlPoint2: CGPoint(x: 10 * scale, y: 5 * scale))
-            fillPath.addCurveToPoint(CGPoint(x: 0, y: -10 * scale), controlPoint1: CGPoint(x: 10 * scale, y: -5 * scale), controlPoint2: CGPoint(x: 5 * scale, y: -10 * scale))
+            fillPath.moveToPoint(CGPoint(x: 0, y: -10))
+            fillPath.addCurveToPoint(CGPoint(x: -10, y: 0), controlPoint1: CGPoint(x: -5, y: -10), controlPoint2: CGPoint(x: -10, y: -5))
+            fillPath.addCurveToPoint(CGPoint(x: -10, y: 0), controlPoint1: CGPoint(x: -10, y: 0), controlPoint2: CGPoint(x: -10, y: 0))
+            fillPath.addCurveToPoint(CGPoint(x: 0, y: 10), controlPoint1: CGPoint(x: -10, y: 5), controlPoint2: CGPoint(x: -5, y: 10))
+            fillPath.addCurveToPoint(CGPoint(x: 10, y: 0), controlPoint1: CGPoint(x: 5, y: 10), controlPoint2: CGPoint(x: 10, y: 5))
+            fillPath.addCurveToPoint(CGPoint(x: 0, y: -10), controlPoint1: CGPoint(x: 10, y: -5), controlPoint2: CGPoint(x: 5, y: -10))
             fillPath.closePath()
         }
         
-        fillPath.moveToPoint(CGPoint(x: 0, y: 40 * scale))
-        fillPath.addCurveToPoint(CGPoint(x: -20 * scale, y: 0), controlPoint1: CGPoint(x: -20 * scale, y: 15 * scale), controlPoint2: CGPoint(x: -20 * scale, y: 10 * scale))
-        fillPath.addCurveToPoint(CGPoint(x: 0, y: -20 * scale), controlPoint1: CGPoint(x: -20 * scale, y: -10 * scale), controlPoint2: CGPoint(x: -10 * scale, y: -20 * scale))
-        fillPath.addCurveToPoint(CGPoint(x: 20 * scale, y: 0), controlPoint1: CGPoint(x: 10 * scale, y: -20 * scale), controlPoint2: CGPoint(x: 20 * scale, y: -10 * scale))
-        fillPath.addCurveToPoint(CGPoint(x: 0, y: 40 * scale), controlPoint1: CGPoint(x: 20 * scale, y: 10 * scale), controlPoint2: CGPoint(x: 20 * scale, y: 15 * scale))
+        fillPath.moveToPoint(CGPoint(x: 0, y: 40))
+        fillPath.addCurveToPoint(CGPoint(x: -20, y: 0), controlPoint1: CGPoint(x: -20, y: 15), controlPoint2: CGPoint(x: -20, y: 10))
+        fillPath.addCurveToPoint(CGPoint(x: 0, y: -20), controlPoint1: CGPoint(x: -20, y: -10), controlPoint2: CGPoint(x: -10, y: -20))
+        fillPath.addCurveToPoint(CGPoint(x: 20, y: 0), controlPoint1: CGPoint(x: 10, y: -20), controlPoint2: CGPoint(x: 20, y: -10))
+        fillPath.addCurveToPoint(CGPoint(x: 0, y: 40), controlPoint1: CGPoint(x: 20, y: 10), controlPoint2: CGPoint(x: 20, y: 15))
         fillPath.closePath()
         
         fillPath.fill()
@@ -97,16 +98,16 @@ public class DropPinIcon: AnimatedIcon {
             CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
             
             let circlePath = UIBezierPath()
-            circlePath.moveToPoint(CGPoint(x: 0, y: -10 * scale))
-            circlePath.addCurveToPoint(CGPoint(x: 10 * scale, y: 0), controlPoint1: CGPoint(x: 5 * scale, y: -10 * scale), controlPoint2: CGPoint(x: 10 * scale, y: -5 * scale))
-            circlePath.addCurveToPoint(CGPoint(x: 0, y: 10 * scale), controlPoint1: CGPoint(x: 10 * scale, y: 5 * scale), controlPoint2: CGPoint(x: 5 * scale, y: 10 * scale))
-            circlePath.addCurveToPoint(CGPoint(x: -10 * scale, y: 0), controlPoint1: CGPoint(x: -5 * scale, y: 10 * scale), controlPoint2: CGPoint(x: -10 * scale, y: 5 * scale))
-            circlePath.addCurveToPoint(CGPoint(x: 0, y: -10 * scale), controlPoint1: CGPoint(x: -10 * scale, y: -5 * scale), controlPoint2: CGPoint(x: -5 * scale, y: -10 * scale))
+            circlePath.moveToPoint(CGPoint(x: 0, y: -10))
+            circlePath.addCurveToPoint(CGPoint(x: 10, y: 0), controlPoint1: CGPoint(x: 5, y: -10), controlPoint2: CGPoint(x: 10, y: -5))
+            circlePath.addCurveToPoint(CGPoint(x: 0, y: 10), controlPoint1: CGPoint(x: 10, y: 5), controlPoint2: CGPoint(x: 5, y: 10))
+            circlePath.addCurveToPoint(CGPoint(x: -10, y: 0), controlPoint1: CGPoint(x: -5, y: 10), controlPoint2: CGPoint(x: -10, y: 5))
+            circlePath.addCurveToPoint(CGPoint(x: 0, y: -10), controlPoint1: CGPoint(x: -10, y: -5), controlPoint2: CGPoint(x: -5, y: -10))
             circlePath.closePath()
             
             circlePath.lineCapStyle = lineCap
             circlePath.lineJoinStyle = lineJoin
-            circlePath.lineWidth = lineWidth
+            circlePath.lineWidth = scaledLineWidth
 
             if time < 1 {
                 CGContextSetLineDash(context, 0, [circleLineLength, 400], 2)
@@ -120,16 +121,16 @@ public class DropPinIcon: AnimatedIcon {
         //// Drop Drawing
         
         let dropPath = UIBezierPath()
-        dropPath.moveToPoint(CGPoint(x: 0, y: 40 * scale))
-        dropPath.addCurveToPoint(CGPoint(x: -20 * scale, y: 0), controlPoint1: CGPoint(x: -20 * scale, y: 15 * scale), controlPoint2: CGPoint(x: -20 * scale, y: 10 * scale))
-        dropPath.addCurveToPoint(CGPoint(x: 0, y: -20 * scale), controlPoint1: CGPoint(x: -20 * scale, y: -10 * scale), controlPoint2: CGPoint(x: -10 * scale, y: -20 * scale))
-        dropPath.addCurveToPoint(CGPoint(x: 20 * scale, y: 0), controlPoint1: CGPoint(x: 10 * scale, y: -20 * scale), controlPoint2: CGPoint(x: 20 * scale, y: -10 * scale))
-        dropPath.addCurveToPoint(CGPoint(x: 0, y: 40 * scale), controlPoint1: CGPoint(x: 20 * scale, y: 10 * scale), controlPoint2: CGPoint(x: 20 * scale, y: 15 * scale))
+        dropPath.moveToPoint(CGPoint(x: 0, y: 40))
+        dropPath.addCurveToPoint(CGPoint(x: -20, y: 0), controlPoint1: CGPoint(x: -20, y: 15), controlPoint2: CGPoint(x: -20, y: 10))
+        dropPath.addCurveToPoint(CGPoint(x: 0, y: -20), controlPoint1: CGPoint(x: -20, y: -10), controlPoint2: CGPoint(x: -10, y: -20))
+        dropPath.addCurveToPoint(CGPoint(x: 20, y: 0), controlPoint1: CGPoint(x: 10, y: -20), controlPoint2: CGPoint(x: 20, y: -10))
+        dropPath.addCurveToPoint(CGPoint(x: 0, y: 40), controlPoint1: CGPoint(x: 20, y: 10), controlPoint2: CGPoint(x: 20, y: 15))
         dropPath.closePath()
         
         dropPath.lineCapStyle = lineCap
         dropPath.lineJoinStyle = lineJoin
-        dropPath.lineWidth = lineWidth
+        dropPath.lineWidth = scaledLineWidth
 
         if time < 1 {
             CGContextSetLineDash(context, 0, [pinLineLength, 154], 2)

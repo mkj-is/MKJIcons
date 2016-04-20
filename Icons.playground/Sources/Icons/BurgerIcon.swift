@@ -40,7 +40,7 @@ public class BurgerIcon: AnimatedIcon {
     
     override func draw(time: CGFloat = 0) {
         
-        let offset: CGFloat = 5 * scale
+        let offset: CGFloat = 5
         
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
@@ -56,16 +56,18 @@ public class BurgerIcon: AnimatedIcon {
         let opacity = UIColor(red: burgerColor.red, green: burgerColor.green, blue: burgerColor.blue, alpha: burgerColor.alpha - time * burgerColor.alpha)
         let timedOffset: CGFloat = time * offset
         let negativeTimedOffset: CGFloat = -timedOffset
-        let timeLineWidth: CGFloat = lineWidth / localScale
+        let timeLineWidth: CGFloat = scaledLineWidth / localScale
+        
+        CGContextScaleCTM(context, scale, scale)
         
         //// Bottom Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 30 * scale, (timedOffset + 65 * scale))
+        CGContextTranslateCTM(context, 30, (timedOffset + 65))
         CGContextRotateCTM(context, -angle * CGFloat(M_PI) / 180)
         CGContextScaleCTM(context, localScale, localScale)
         
         let bottomPath = UIBezierPath()
-        bottomPath.moveToPoint(CGPoint(x: 40 * scale, y: 0))
+        bottomPath.moveToPoint(CGPoint(x: 40, y: 0))
         bottomPath.addLineToPoint(CGPoint(x: 0, y: 0))
         bottomPath.lineCapStyle = lineCap;
         
@@ -78,15 +80,15 @@ public class BurgerIcon: AnimatedIcon {
         
         //// Middle Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50 * scale, 50 * scale)
+        CGContextTranslateCTM(context, 50, 50)
         
         let middlePath = UIBezierPath()
-        middlePath.moveToPoint(CGPoint(x: 20 * scale, y: 0))
-        middlePath.addLineToPoint(CGPoint(x: -20 * scale, y: 0))
-        middlePath.lineCapStyle = lineCap;
+        middlePath.moveToPoint(CGPoint(x: 20, y: 0))
+        middlePath.addLineToPoint(CGPoint(x: -20, y: 0))
+        middlePath.lineCapStyle = lineCap
         
         opacity.setStroke()
-        middlePath.lineWidth = lineWidth
+        middlePath.lineWidth = scaledLineWidth
         middlePath.stroke()
         
         CGContextRestoreGState(context)
@@ -94,14 +96,14 @@ public class BurgerIcon: AnimatedIcon {
         
         //// Top Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 30 * scale, (negativeTimedOffset + 35 * scale))
+        CGContextTranslateCTM(context, 30, (negativeTimedOffset + 35))
         CGContextRotateCTM(context, -negativeAngle * CGFloat(M_PI) / 180)
         CGContextScaleCTM(context, localScale, localScale)
         
         let topPath = UIBezierPath()
-        topPath.moveToPoint(CGPoint(x: 40 * scale, y: 0))
+        topPath.moveToPoint(CGPoint(x: 40, y: 0))
         topPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        topPath.lineCapStyle = lineCap;
+        topPath.lineCapStyle = lineCap
         
         currentColor.setStroke()
         topPath.lineWidth = timeLineWidth

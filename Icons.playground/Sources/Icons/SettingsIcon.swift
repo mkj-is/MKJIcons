@@ -58,12 +58,14 @@ public class SettingsIcon: AnimatedIcon {
         let color = UIColor(between: primaryColor, and: secondaryColor, using: .HSB, ratio: time)
         color.setStroke()
         
+        CGContextScaleCTM(context, scale, scale)
+        
         //// Slider 1 Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50 * scale, 50 * scale)
+        CGContextTranslateCTM(context, 50, 50)
         CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
         
-        let slider1Rect = CGRect(x: -10 * scale, y: -25 * scale, width: 20 * scale, height: 50 * scale)
+        let slider1Rect = CGRect(x: -10, y: -25, width: 20, height: 50)
         CGContextSaveGState(context)
         UIRectClip(slider1Rect)
         CGContextTranslateCTM(context, slider1Rect.origin.x, slider1Rect.origin.y)
@@ -76,9 +78,9 @@ public class SettingsIcon: AnimatedIcon {
         
         //// Slider 2 Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 65 * scale, 50 * scale)
+        CGContextTranslateCTM(context, 65, 50)
         
-        let slider2Rect = CGRect(x: -10 * scale, y: -25 * scale, width: 20 * scale, height: 50 * scale)
+        let slider2Rect = CGRect(x: -10, y: -25, width: 20, height: 50)
         CGContextSaveGState(context)
         UIRectClip(slider2Rect)
         CGContextTranslateCTM(context, slider2Rect.origin.x, slider2Rect.origin.y)
@@ -91,9 +93,9 @@ public class SettingsIcon: AnimatedIcon {
         
         //// Slider 3 Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35 * scale, 50 * scale)
+        CGContextTranslateCTM(context, 35, 50)
         
-        let slider3Rect = CGRect(x: -10 * scale, y: -25 * scale, width: 20 * scale, height: 50 * scale)
+        let slider3Rect = CGRect(x: -10, y: -25, width: 20, height: 50)
         CGContextSaveGState(context)
         UIRectClip(slider3Rect)
         CGContextTranslateCTM(context, slider3Rect.origin.x, slider3Rect.origin.y)
@@ -109,20 +111,20 @@ public class SettingsIcon: AnimatedIcon {
         let context = UIGraphicsGetCurrentContext()
         
         //// Variable Declarations
-        let handlePosition: CGFloat = (12 + time * 26) * scale
+        let handlePosition: CGFloat = (12 + time * 26)
         let halfHandleSize: CGFloat = handleSize / 2.0
         let negativeHalfHandleSize: CGFloat = -halfHandleSize
-        let longLineLength: CGFloat = -halfHandleSize + time * 26 * scale
-        let shortLineLength: CGFloat = -halfHandleSize + (1 - time) * 26 * scale
+        let longLineLength: CGFloat = -halfHandleSize + time * 26
+        let shortLineLength: CGFloat = -halfHandleSize + (1 - time) * 26
         let cornerRadius: CGFloat = roundedHandle ? halfHandleSize : 0
         
         //// Handle Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 10 * scale, handlePosition)
+        CGContextTranslateCTM(context, 10, handlePosition)
         
         let handlePath = UIBezierPath(roundedRect: CGRect(x: negativeHalfHandleSize, y: negativeHalfHandleSize, width: handleSize, height: handleSize), cornerRadius: cornerRadius)
         
-        handlePath.lineWidth = lineWidth
+        handlePath.lineWidth = scaledLineWidth
         handlePath.lineCapStyle = lineCap
         handlePath.lineJoinStyle = lineJoin
         
@@ -133,10 +135,10 @@ public class SettingsIcon: AnimatedIcon {
         
         //// Top line Drawing
         let topLinePath = UIBezierPath()
-        topLinePath.moveToPoint(CGPoint(x: 10 * scale, y: 5 * scale))
-        topLinePath.addLineToPoint(CGPoint(x: 10 * scale, y: (longLineLength + 12 * scale)))
+        topLinePath.moveToPoint(CGPoint(x: 10, y: 5))
+        topLinePath.addLineToPoint(CGPoint(x: 10, y: (longLineLength + 12)))
         
-        topLinePath.lineWidth = lineWidth
+        topLinePath.lineWidth = scaledLineWidth
         topLinePath.lineCapStyle = lineCap
         topLinePath.lineJoinStyle = lineJoin
         
@@ -145,14 +147,14 @@ public class SettingsIcon: AnimatedIcon {
         
         //// Bottom line Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 10 * scale, 45 * scale)
+        CGContextTranslateCTM(context, 10, 45)
         CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
         
         let bottomLine = UIBezierPath()
         bottomLine.moveToPoint(CGPoint(x: 0, y: 0))
-        bottomLine.addLineToPoint(CGPoint(x: 0, y: (shortLineLength + 7 * scale)))
+        bottomLine.addLineToPoint(CGPoint(x: 0, y: (shortLineLength + 7)))
         
-        bottomLine.lineWidth = lineWidth
+        bottomLine.lineWidth = scaledLineWidth
         bottomLine.lineCapStyle = lineCap
         bottomLine.lineJoinStyle = lineJoin
         

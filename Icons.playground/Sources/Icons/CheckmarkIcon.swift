@@ -48,33 +48,35 @@ public class CheckmarkIcon: AnimatedIcon {
         let currentColor = UIColor(between: crossColor, and: checkmarkColor, using: colorMode, ratio: time)
         
         //// Variable Declarations
-        let phase: CGFloat = -time * 111 * scale
-        let dash: CGFloat = (1 - time / 2.0) * 57 * scale
+        let phase: CGFloat = -time * 111
+        let dash: CGFloat = (1 - time / 2.0) * 57
+        
+        CGContextScaleCTM(context, scale, scale)
         
         //// Static line Drawing
         let staticLinePath = UIBezierPath()
-        staticLinePath.moveToPoint(CGPoint(x: 70 * scale, y: 30 * scale))
-        staticLinePath.addLineToPoint(CGPoint(x: 30 * scale, y: 70 * scale))
-        staticLinePath.lineCapStyle = lineCap;
+        staticLinePath.moveToPoint(CGPoint(x: 70, y: 30))
+        staticLinePath.addLineToPoint(CGPoint(x: 30, y: 70))
+        staticLinePath.lineCapStyle = lineCap
         
         currentColor.setStroke()
-        staticLinePath.lineWidth = lineWidth
+        staticLinePath.lineWidth = scaledLineWidth
         staticLinePath.stroke()
         
         
         //// Animated line Drawing
         let animatedLinePath = UIBezierPath()
-        animatedLinePath.moveToPoint(CGPoint(x: 30 * scale, y: 30 * scale))
-        animatedLinePath.addCurveToPoint(CGPoint(x: 70 * scale, y: 70 * scale), controlPoint1: CGPoint(x: 30 * scale, y: 30 * scale), controlPoint2: CGPoint(x: 56.58 * scale, y: 56.58 * scale))
-        animatedLinePath.addCurveToPoint(CGPoint(x: 30 * scale, y: 70 * scale), controlPoint1: CGPoint(x: 83.42 * scale, y: 83.42 * scale), controlPoint2: CGPoint(x: 46.03 * scale, y: 86.03 * scale))
-        animatedLinePath.addCurveToPoint(CGPoint(x: 10 * scale, y: 50 * scale), controlPoint1: CGPoint(x: 13.97 * scale, y: 53.97 * scale), controlPoint2: CGPoint(x: 10 * scale, y: 50 * scale))
+        animatedLinePath.moveToPoint(CGPoint(x: 30, y: 30))
+        animatedLinePath.addCurveToPoint(CGPoint(x: 70, y: 70), controlPoint1: CGPoint(x: 30, y: 30), controlPoint2: CGPoint(x: 56.58, y: 56.58))
+        animatedLinePath.addCurveToPoint(CGPoint(x: 30, y: 70), controlPoint1: CGPoint(x: 83.42, y: 83.42), controlPoint2: CGPoint(x: 46.03, y: 86.03))
+        animatedLinePath.addCurveToPoint(CGPoint(x: 10, y: 50), controlPoint1: CGPoint(x: 13.97, y: 53.97), controlPoint2: CGPoint(x: 10, y: 50))
 
         animatedLinePath.lineCapStyle = lineCap
-        animatedLinePath.lineWidth = lineWidth
+        animatedLinePath.lineWidth = scaledLineWidth
         animatedLinePath.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
-        CGContextSetLineDash(context, phase, [dash, 200 * scale], 2)
+        CGContextSetLineDash(context, phase, [dash, 200], 2)
         animatedLinePath.stroke()
         CGContextRestoreGState(context)
     }

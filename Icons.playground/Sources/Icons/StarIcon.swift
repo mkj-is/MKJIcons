@@ -77,7 +77,7 @@ public class StarIcon: AnimatedIcon {
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
         
         //// Variable Declarations
-        let lineLength: CGFloat = 18.2 * scale
+        let lineLength: CGFloat = 18.2
         let dash: CGFloat = time * lineLength
         let doubleDash: CGFloat = 2 * dash
         let outerPhase: CGFloat = dash
@@ -89,24 +89,26 @@ public class StarIcon: AnimatedIcon {
         let inOutPhase = animationInsideDirection ? outerPhase : innerPhase
         let linePhase = animationInsideDirection ? 0 : lineLength
         
+        CGContextScaleCTM(context, scale, scale)
+        
         //// Path Drawing
         let path = UIBezierPath()
-        path.moveToPoint(CGPoint(x: 50 * scale, y: 27.15 * scale))
-        path.addLineToPoint(CGPoint(x: 55.58 * scale, y: 44.46 * scale))
-        path.addLineToPoint(CGPoint(x: 73.78 * scale, y: 44.42 * scale))
-        path.addLineToPoint(CGPoint(x: 59.04 * scale, y: 55.09 * scale))
-        path.addLineToPoint(CGPoint(x: 64.69 * scale, y: 72.38 * scale))
-        path.addLineToPoint(CGPoint(x: 50 * scale, y: 61.65 * scale))
-        path.addLineToPoint(CGPoint(x: 35.31 * scale, y: 72.38 * scale))
-        path.addLineToPoint(CGPoint(x: 40.96 * scale, y: 55.09 * scale))
-        path.addLineToPoint(CGPoint(x: 26.22 * scale, y: 44.42 * scale))
-        path.addLineToPoint(CGPoint(x: 44.42 * scale, y: 44.46 * scale))
+        path.moveToPoint(CGPoint(x: 50, y: 27.15))
+        path.addLineToPoint(CGPoint(x: 55.58, y: 44.46))
+        path.addLineToPoint(CGPoint(x: 73.78, y: 44.42))
+        path.addLineToPoint(CGPoint(x: 59.04, y: 55.09))
+        path.addLineToPoint(CGPoint(x: 64.69, y: 72.38))
+        path.addLineToPoint(CGPoint(x: 50, y: 61.65))
+        path.addLineToPoint(CGPoint(x: 35.31, y: 72.38))
+        path.addLineToPoint(CGPoint(x: 40.96, y: 55.09))
+        path.addLineToPoint(CGPoint(x: 26.22, y: 44.42))
+        path.addLineToPoint(CGPoint(x: 44.42, y: 44.46))
         path.closePath()
         
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         
-        path.lineWidth = lineWidth
+        path.lineWidth = scaledLineWidth
         path.lineCapStyle = lineCap
         path.lineJoinStyle = lineJoin
         

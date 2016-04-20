@@ -56,6 +56,12 @@ public class AnimatedIcon: UIControl {
         }
     }
     
+    internal var scaledLineWidth: CGFloat {
+        get {
+            return lineWidth / scale
+        }
+    }
+    
     // MARK: - Initialization
     
     override public init(frame: CGRect) {

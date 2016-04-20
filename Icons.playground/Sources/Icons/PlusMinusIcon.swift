@@ -54,12 +54,14 @@ public class PlusMinusIcon: AnimatedIcon {
         //// Variable Declarations
         let verticalAngle: CGFloat = (minus ? -90 - time * 90 : -180 - (1 - time) * 90)
         let horizontalAngle: CGFloat = (minus ? -time * 180 : -180 - (1 - time) * 180)
-        let lineLength: CGFloat = (circle ? 20 : 40) * scale
+        let lineLength: CGFloat = (circle ? 20 : 40)
         let pointPosition: CGFloat = lineLength / 2.0
         let negativePointPosition: CGFloat = -pointPosition
         
+        CGContextScaleCTM(context, scale, scale)
+        
         //// Vertical line Drawing
-        CGContextTranslateCTM(context, 50 * scale, 50 * scale)
+        CGContextTranslateCTM(context, 50, 50)
         CGContextSaveGState(context)
         CGContextRotateCTM(context, -horizontalAngle * CGFloat(M_PI) / 180)
         
@@ -67,7 +69,7 @@ public class PlusMinusIcon: AnimatedIcon {
         verticalLinePath.moveToPoint(CGPoint(x: pointPosition, y: 0))
         verticalLinePath.addLineToPoint(CGPoint(x: negativePointPosition, y: 0))
 
-        verticalLinePath.lineWidth = lineWidth
+        verticalLinePath.lineWidth = scaledLineWidth
         verticalLinePath.lineJoinStyle  = lineJoin
         verticalLinePath.lineCapStyle  = lineCap
 
@@ -84,7 +86,7 @@ public class PlusMinusIcon: AnimatedIcon {
         horizontalLinePath.moveToPoint(CGPoint(x: pointPosition, y: 0))
         horizontalLinePath.addLineToPoint(CGPoint(x: negativePointPosition, y: 0))
         
-        horizontalLinePath.lineWidth = lineWidth
+        horizontalLinePath.lineWidth = scaledLineWidth
         horizontalLinePath.lineJoinStyle  = lineJoin
         horizontalLinePath.lineCapStyle  = lineCap
 
@@ -96,8 +98,8 @@ public class PlusMinusIcon: AnimatedIcon {
         if (circle) {
             //// Circle Drawing
             
-            let circlePath = UIBezierPath(ovalInRect: CGRect(x: -20 * scale, y: -20 * scale, width: 40 * scale, height: 40 * scale))
-            circlePath.lineWidth = lineWidth
+            let circlePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
+            circlePath.lineWidth = scaledLineWidth
             circlePath.stroke()
 
         }
