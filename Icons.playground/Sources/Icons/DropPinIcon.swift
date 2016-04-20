@@ -108,7 +108,9 @@ public class DropPinIcon: AnimatedIcon {
             circlePath.lineWidth = lineWidth
             
             CGContextSaveGState(context)
-            CGContextSetLineDash(context, 0, [circleLineLength, 400], 2)
+            if time < 1 {
+                CGContextSetLineDash(context, 0, [circleLineLength, 400], 2)
+            }
             circlePath.stroke()
             CGContextRestoreGState(context)
             
@@ -118,7 +120,7 @@ public class DropPinIcon: AnimatedIcon {
         
         //// Drop Drawing
         CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50.04, 41.53)
+        CGContextTranslateCTM(context, 50, 40)
         
         let dropPath = UIBezierPath()
         dropPath.moveToPoint(CGPoint(x: -0.12, y: 39.58))
@@ -133,7 +135,9 @@ public class DropPinIcon: AnimatedIcon {
         dropPath.lineWidth = lineWidth
         
         CGContextSaveGState(context)
-        CGContextSetLineDash(context, 0, [pinLineLength, 154], 2)
+        if time < 1 {
+            CGContextSetLineDash(context, 0, [pinLineLength, 154], 2)
+        }
         dropPath.stroke()
         CGContextRestoreGState(context)
         
