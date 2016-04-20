@@ -457,6 +457,12 @@
                             <constraint firstItem="DyB-Mi-9RK" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="30" id="oXC-cV-cqY"/>
                             <constraint firstItem="DyB-Mi-9RK" firstAttribute="centerX" secondItem="gDS-a9-8iy" secondAttribute="centerX" id="pDI-cg-UDX"/>
                         </constraints>
+                        <inset key="scrollIndicatorInsets" minX="0.0" minY="22" maxX="0.0" maxY="52"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
+                                <size key="value" width="320" height="750"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
                     </scrollView>
                     <tabBarItem key="tabBarItem" title="Icons" id="acW-dT-cKf"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
