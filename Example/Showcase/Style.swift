@@ -8,13 +8,13 @@
 
 import UIKit
 
-class Style: NSObject {
+class Style {
     
-    dynamic var lineCap = 2
-    dynamic var lineJoin = 2
-    dynamic var lineWidth: CGFloat = 2
-    dynamic var animationDuration: Double = 0.4
-    dynamic var animationColorMode = 0
-    dynamic var animationTimingFunction = 4
+    var lineCap = 2
+    var lineJoin = 2
+    var lineWidth: CGFloat = 2
+    var animationDuration: Double = 0.4
+    var animationColorMode = 0
+    var animationTimingFunction = 4
     
 }
