@@ -1,7 +1,7 @@
 engines:
-      tailor:
-        enabled: true
+  tailor:
+    enabled: true
 
-    ratings:
-      paths:
-      - "**.swift"
+ratings:
+  paths:
+    - "**.swift"
