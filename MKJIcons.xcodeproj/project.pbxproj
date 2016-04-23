@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714E8471CCA339100E18E52 /* SmileIcon.swift */; };
 		E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */; };
 		E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */; };
 		E79C86741CC6822200C3B906 /* AnimatedIcon+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C86731CC6822200C3B906 /* AnimatedIcon+Appearance.swift */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E714E8471CCA339100E18E52 /* SmileIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileIcon.swift; sourceTree = "<group>"; };
 		E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropPinIcon.swift; sourceTree = "<group>"; };
 		E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
 		E79C86731CC6822200C3B906 /* AnimatedIcon+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Appearance.swift"; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */,
 				E7BE8DD31CC57E5E007DADED /* PlusMinusIcon.swift */,
 				E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */,
+				E714E8471CCA339100E18E52 /* SmileIcon.swift */,
 				E7BE8DD41CC57E5E007DADED /* StarIcon.swift */,
 			);
 			name = Icons;
@@ -219,6 +222,7 @@
 				E7BE8DDC1CC57E5E007DADED /* UIColor+IconColors.swift in Sources */,
 				E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */,
 				E7BE8DE01CC57E5E007DADED /* HeartIcon.swift in Sources */,
+				E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */,
 				E7DCB3F41CC78E8500F166F4 /* PlayPauseIcon.swift in Sources */,
 				E7BE8E251CC59D49007DADED /* AnimatedIcon+Inspectable.swift in Sources */,
 				E7BE8DE41CC57E5E007DADED /* AnimatedIconExporter.swift in Sources */,

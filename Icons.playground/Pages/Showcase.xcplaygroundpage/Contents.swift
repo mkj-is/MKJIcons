@@ -16,6 +16,7 @@ let settings = SettingsIcon(frame: CGRect(x: 100, y: 200, width: 100, height: 10
 let pin = DropPinIcon(frame: CGRect(x: 0, y: 300, width: 100, height: 100))
 let play = PlayPauseIcon(frame: CGRect(x: 100, y: 300, width: 100, height: 100))
 let stop = PlayStopIcon(frame: CGRect(x: 0, y: 400, width: 100, height: 100))
+let smile = SmileIcon(frame: CGRect(x: 100, y: 400, width: 100, height: 100))
 
 view.addSubview(checkmark)
 view.addSubview(burger)
@@ -26,6 +27,7 @@ view.addSubview(settings)
 view.addSubview(pin)
 view.addSubview(play)
 view.addSubview(stop)
+view.addSubview(smile)
 
 XCPlaygroundPage.currentPage.liveView = view
 
