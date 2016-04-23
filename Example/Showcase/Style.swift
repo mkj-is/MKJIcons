@@ -9,12 +9,12 @@
 import UIKit
 
 class Style {
-    
+
     var lineCap = 2
     var lineJoin = 2
     var lineWidth: CGFloat = 2
     var animationDuration: Double = 0.4
     var animationColorMode = 0
     var animationTimingFunction = 4
-    
+
 }

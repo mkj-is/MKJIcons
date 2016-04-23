@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E714E8461CCA285C00E18E52 /* AnimatedIcon+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */; };
 		E796FD1C1CC6AA8A003DC351 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796FD1B1CC6AA8A003DC351 /* TabBar.swift */; };
 		E796FD1E1CC6AEAE003DC351 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796FD1D1CC6AEAE003DC351 /* Style.swift */; };
 		E79C86721CC67FBE00C3B906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C86711CC67FBE00C3B906 /* ViewController.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Style.swift"; sourceTree = "<group>"; };
 		E796FD1B1CC6AA8A003DC351 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
 		E796FD1D1CC6AEAE003DC351 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
 		E79C86711CC67FBE00C3B906 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -89,6 +91,7 @@
 				E7BE8DF81CC57FF2007DADED /* SettingsViewController.swift */,
 				E796FD1B1CC6AA8A003DC351 /* TabBar.swift */,
 				E796FD1D1CC6AEAE003DC351 /* Style.swift */,
+				E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */,
 			);
 			name = Sources;
 			path = Showcase;
@@ -192,6 +195,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E714E8461CCA285C00E18E52 /* AnimatedIcon+Style.swift in Sources */,
 				E7BE8DF91CC57FF2007DADED /* SettingsViewController.swift in Sources */,
 				E796FD1E1CC6AEAE003DC351 /* Style.swift in Sources */,
 				E7BE8DF51CC57FF2007DADED /* AppDelegate.swift in Sources */,

@@ -26,14 +26,9 @@ class ShowcaseViewController: ViewController {
             if let subviews = view.subviews.first?.subviews {
                 for subview in subviews {
                     if subview.isKindOfClass(AnimatedIcon) {
-                        let icon = (subview as! AnimatedIcon)
                         
-                        icon.lineWidth = style.lineWidth
-                        icon.lineCapStyle = style.lineCap
-                        icon.lineJoinStyle = style.lineJoin
-                        icon.animationColorMode = style.animationColorMode
-                        icon.animationTimingFunction = style.animationTimingFunction
-                        icon.animationDuration = style.animationDuration
+                        let icon = (subview as! AnimatedIcon)
+                        icon.applyStyle(style)
                     }
                 }
             }
