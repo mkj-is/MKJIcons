@@ -16,5 +16,6 @@ class Style {
     var animationDuration: Double = 0.4
     var animationColorMode = 0
     var animationTimingFunction = 4
+    var animationRepeat = false
 
 }

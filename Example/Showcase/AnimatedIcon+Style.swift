@@ -18,6 +18,7 @@ extension AnimatedIcon {
         animationColorMode = style.animationColorMode
         animationTimingFunction = style.animationTimingFunction
         animationDuration = style.animationDuration
+        animationRepeat = style.animationRepeat
     }
     
 }

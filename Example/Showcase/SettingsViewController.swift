@@ -46,10 +46,14 @@ class SettingsViewController: ViewController {
     }
     
     @IBAction func animationTimingFunctionChanged(sender: UISegmentedControl) {
-        style.animationTimingFunction = sender.selectedSegmentIndex
+        style.animationTimingFunction = sender.selectedSegmentIndex + 1
         update()
     }
     
+    @IBAction func animationRepeatChanged(sender: UISwitch) {
+        style.animationRepeat = sender.on
+        update()
+    }
     
 
 }

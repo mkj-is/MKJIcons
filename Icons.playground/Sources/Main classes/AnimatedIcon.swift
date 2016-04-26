@@ -19,6 +19,17 @@ public class AnimatedIcon: UIControl {
         }
     }
     
+    @IBInspectable public var animationRepeat: Bool = false {
+        didSet {
+            
+            if animationRepeat {
+                animateTo((!value.toBool()).toCGFloat())
+            }
+            
+            layer.setNeedsDisplay()
+        }
+    }
+    
     // MARK: - Standard properties
     
     public var colorMode: UIColorMode = .HSB {
@@ -135,6 +146,12 @@ public class AnimatedIcon: UIControl {
             animation.timingFunction = timing
             animation.fromValue = (layer as! AnimationLayer).value
             animation.toValue = goal
+            
+            if animationRepeat {
+                animation.repeatCount = Float.infinity
+                animation.autoreverses = true
+            }
+            
             layer.addAnimation(animation, forKey: nil)
             
             CATransaction.begin()
