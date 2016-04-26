@@ -1,2 +1,4 @@
 xcuserdata
 *.xctimeline
+build
+docs
