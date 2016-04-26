@@ -42,7 +42,7 @@ public class PlusMinusIcon: AnimatedIcon {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         
-        let strokeColor = UIColor(between: plusColor, and: minusColor, using: .HSB, ratio: time)
+        let strokeColor = UIColor(between: plusColor, and: minusColor, using: colorMode, ratio: time)
         strokeColor.setStroke()
         let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
         fillColor.setFill()

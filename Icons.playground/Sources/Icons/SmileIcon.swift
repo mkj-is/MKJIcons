@@ -54,7 +54,7 @@ public class SmileIcon: AnimatedIcon {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         
-        let strokeColor = UIColor(between: happyColor, and: sadColor, using: .HSB, ratio: time)
+        let strokeColor = UIColor(between: happyColor, and: sadColor, using: colorMode, ratio: time)
         strokeColor.setStroke()
         let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
         fillColor.setFill()
