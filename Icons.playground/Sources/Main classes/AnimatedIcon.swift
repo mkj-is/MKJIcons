@@ -39,22 +39,22 @@ public class AnimatedIcon: UIControl {
     
     public var timingFunction = kCAMediaTimingFunctionEaseInEaseOut
     
-    public var value: Double {
-        get {
-            return internalValue
+    public var value: CGFloat = 0 {
+        didSet {
+            
+            if oldValue != value {
+                animateTo(value)
+            }
+            
+            if enabled {
+                self.sendActionsForControlEvents(.ValueChanged)
+            }
+            
+            layer.setNeedsDisplay()
         }
     }
     
     // MARK: - Internal properties
-    
-    internal var internalValue = 0.0 {
-        didSet {
-            if enabled {
-                self.sendActionsForControlEvents(.ValueChanged)
-            }
-            layer.setNeedsDisplay()
-        }
-    }
     
     internal var scale: CGFloat {
         get {
@@ -149,7 +149,7 @@ public class AnimatedIcon: UIControl {
     
     public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
         if enabled {
-            internalValue = (internalValue == 0 ? 1 : 0)
+            value = (value == 0 ? 1 : 0)
         }
     }
 }

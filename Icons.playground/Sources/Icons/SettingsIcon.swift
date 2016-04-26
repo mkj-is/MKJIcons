@@ -34,19 +34,12 @@ public class SettingsIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var changed: Bool = false {
-        willSet {
-            
-            if newValue != changed {
-                animateTo(changed ? 0 : 1)
-            }
+    @IBInspectable public var changed: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            changed = !changed
-            internalValue = changed ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     

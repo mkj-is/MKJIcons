@@ -22,19 +22,12 @@ public class BurgerIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var open: Bool = false {
-        willSet {
-            
-            if newValue != open {
-                animateTo(open ? 0 : 1)
-            }
+    @IBInspectable public var open: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            open = !open
-            internalValue = open ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     

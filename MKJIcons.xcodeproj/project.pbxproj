@@ -28,6 +28,8 @@
 		E7BE8E251CC59D49007DADED /* AnimatedIcon+Inspectable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8E241CC59D49007DADED /* AnimatedIcon+Inspectable.swift */; };
 		E7DCB3F41CC78E8500F166F4 /* PlayPauseIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB3F21CC78E8500F166F4 /* PlayPauseIcon.swift */; };
 		E7DCB3F51CC78E8500F166F4 /* PlayStopIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */; };
+		E7FFEC981CCF76BC008D8140 /* CGFloat+ToBool.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFEC971CCF76BC008D8140 /* CGFloat+ToBool.swift */; };
+		E7FFEC9A1CCF7759008D8140 /* Bool+ToCGFloat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7FFEC991CCF7759008D8140 /* Bool+ToCGFloat.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		E7BE8E241CC59D49007DADED /* AnimatedIcon+Inspectable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Inspectable.swift"; sourceTree = "<group>"; };
 		E7DCB3F21CC78E8500F166F4 /* PlayPauseIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayPauseIcon.swift; sourceTree = "<group>"; };
 		E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlayStopIcon.swift; sourceTree = "<group>"; };
+		E7FFEC971CCF76BC008D8140 /* CGFloat+ToBool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+ToBool.swift"; sourceTree = "<group>"; };
+		E7FFEC991CCF7759008D8140 /* Bool+ToCGFloat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bool+ToCGFloat.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +106,8 @@
 				E7BE8DCC1CC57E5E007DADED /* UIColor+HSB.swift */,
 				E7BE8DCD1CC57E5E007DADED /* UIColor+IconColors.swift */,
 				E7BE8DCE1CC57E5E007DADED /* UIColor+RGB.swift */,
+				E7FFEC971CCF76BC008D8140 /* CGFloat+ToBool.swift */,
+				E7FFEC991CCF7759008D8140 /* Bool+ToCGFloat.swift */,
 			);
 			name = Extensions;
 			path = Icons.playground/Sources/Extensions;
@@ -220,6 +226,7 @@
 				E7BE8DE61CC57E5E007DADED /* AnimationLayer.swift in Sources */,
 				E7BE8DDA1CC57E5E007DADED /* UIColor+Between.swift in Sources */,
 				E7BE8DDC1CC57E5E007DADED /* UIColor+IconColors.swift in Sources */,
+				E7FFEC9A1CCF7759008D8140 /* Bool+ToCGFloat.swift in Sources */,
 				E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */,
 				E7BE8DE01CC57E5E007DADED /* HeartIcon.swift in Sources */,
 				E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */,
@@ -228,6 +235,7 @@
 				E7BE8DE41CC57E5E007DADED /* AnimatedIconExporter.swift in Sources */,
 				E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */,
 				E7BE8DDB1CC57E5E007DADED /* UIColor+HSB.swift in Sources */,
+				E7FFEC981CCF76BC008D8140 /* CGFloat+ToBool.swift in Sources */,
 				E7BE8DDE1CC57E5E007DADED /* BurgerIcon.swift in Sources */,
 				E7BE8DE31CC57E5E007DADED /* AnimatedIcon.swift in Sources */,
 				E7DCB3F51CC78E8500F166F4 /* PlayStopIcon.swift in Sources */,

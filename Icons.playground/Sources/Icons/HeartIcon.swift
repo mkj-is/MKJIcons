@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class HeartIcon: AnimatedIcon {
     
-    // MARK: Inspectable attributes
+    // MARK: - Inspectable attributes
     
     @IBInspectable public var strokeColor = UIColor.iconRedColor {
         didSet {
@@ -29,21 +29,16 @@ public class HeartIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var visible: Bool = false {
-        willSet {
-            
-            if newValue != visible {
-                animateTo(newValue ? 1 : 0)
-            }
+    @IBInspectable public var visible: Bool {
+        get {
+            return value.toBool()
+        }
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            visible = !visible
-            internalValue = visible ? 1 : 0
-        }
-    }
+    // MARK: - Drawing
     
     override func draw(time: CGFloat = 0) {
         

@@ -34,19 +34,12 @@ public class PlayPauseIcon: AnimatedIcon {
         }
     }
 
-    @IBInspectable public var playing: Bool = false {
-        willSet {
-            
-            if newValue != playing {
-                animateTo(playing ? 0 : 1)
-            }
+    @IBInspectable public var playing: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            playing = !playing
-            internalValue = playing ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     

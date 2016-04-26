@@ -28,19 +28,12 @@ public class PlusMinusIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var minus: Bool = false {
-        willSet {
-            
-            if newValue != minus {
-                animateTo(minus ? 0 : 1)
-            }
+    @IBInspectable public var minus: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            minus = !minus
-            internalValue = minus ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     

@@ -29,19 +29,12 @@ public class DropPinIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var visible: Bool = false {
-        willSet {
-            
-            if newValue != visible {
-                animateTo(newValue ? 1 : 0)
-            }
+    @IBInspectable public var visible: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            visible = !visible
-            internalValue = visible ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     

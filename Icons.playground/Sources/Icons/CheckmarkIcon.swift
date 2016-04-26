@@ -22,19 +22,12 @@ public class CheckmarkIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var checked: Bool = false {
-        willSet {
-            
-            if newValue != checked {
-                animateTo(checked ? 0 : 1)
-            }
+    @IBInspectable public var checked: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            checked = !checked
-            internalValue = checked ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     

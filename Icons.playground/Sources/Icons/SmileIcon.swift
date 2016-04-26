@@ -40,19 +40,12 @@ public class SmileIcon: AnimatedIcon {
         }
     }
     
-    @IBInspectable public var sad: Bool = false {
-        willSet {
-            
-            if newValue != sad {
-                animateTo(sad ? 0 : 1)
-            }
+    @IBInspectable public var sad: Bool {
+        get {
+            return value.toBool()
         }
-    }
-    
-    public override func endTrackingWithTouch(touch: UITouch?, withEvent event: UIEvent?) {
-        if enabled {
-            sad = !sad
-            internalValue = sad ? 1 : 0
+        set (newValue) {
+            value = newValue.toCGFloat()
         }
     }
     
