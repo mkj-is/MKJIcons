@@ -1,12 +1,18 @@
 import UIKit
 
-public struct AnimationFunctions {
+struct AnimationFunctions {
+    
+    // MARK: - Constants
     
     static let π = CGFloat(M_PI)
+    
+    // MARK: - Simple functions
     
     static func linear(x: CGFloat) -> CGFloat {
         return x
     }
+    
+    // MARK: - Sinusoidal functions
     
     static func sinEaseIn(x: CGFloat) -> CGFloat {
         if x <= 0 {

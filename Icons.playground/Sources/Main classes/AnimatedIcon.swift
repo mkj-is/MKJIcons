@@ -3,7 +3,7 @@ import UIKit
 @IBDesignable
 public class AnimatedIcon: UIControl {
     
-    // MARK: - Basic inspectable properties
+    // MARK: - Inspectable properties
     
     @IBInspectable public var animationDuration: Double = 0.4
     
@@ -30,7 +30,7 @@ public class AnimatedIcon: UIControl {
         }
     }
     
-    // MARK: - Standard properties
+    // MARK: - Properties
     
     public var colorMode: UIColorMode = .HSB {
         didSet {
@@ -49,7 +49,7 @@ public class AnimatedIcon: UIControl {
     }
     
     public var timingFunction = kCAMediaTimingFunctionEaseInEaseOut
-    
+
     public var value: CGFloat = 0 {
         didSet {
             
@@ -67,13 +67,13 @@ public class AnimatedIcon: UIControl {
     
     // MARK: - Internal properties
     
-    internal var scale: CGFloat {
+    var scale: CGFloat {
         get {
             return min(frame.size.width, frame.size.height) / 100
         }
     }
     
-    internal var scaledLineWidth: CGFloat {
+    var scaledLineWidth: CGFloat {
         get {
             return lineWidth / scale
         }
@@ -94,7 +94,9 @@ public class AnimatedIcon: UIControl {
         setContentsScale()
     }
     
-    internal func setContentsScale() {
+    // MARK: - Internal helper methods
+    
+    func setContentsScale() {
         layer.setNeedsDisplay()
         
         let scale = UIScreen.mainScreen().scale
@@ -124,6 +126,11 @@ public class AnimatedIcon: UIControl {
         return image
     }
     
+    /**
+        Draws the content of the icons. Needs to be overriden in subclasses of `AnimatedIcon`.
+     
+        - Parameter time: The position of animation, start of the animation will be 0 and the end will be 1. If the animation is reverted the value will be changing from 1 to 0.
+    */
     func draw(time: CGFloat = 0) {
         fatalError("Method must be overriden in subclasses. Do not instantiate this class directly.")
     }

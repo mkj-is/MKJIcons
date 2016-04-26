@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class PlusMinusIcon: AnimatedIcon {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable public var plusColor: UIColor = UIColor.iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
@@ -36,6 +38,8 @@ public class PlusMinusIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

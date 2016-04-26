@@ -1,6 +1,8 @@
 import UIKit
 
 public extension UIColor {
+    
+    // MARK: - Basic icon colors
 
     public static var iconRedColor: UIColor {
         get {

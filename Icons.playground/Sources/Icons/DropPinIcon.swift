@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class DropPinIcon: AnimatedIcon {
     
-    // MARK: Inspectable attributes
+    // MARK: - Inspectable properties
     
     @IBInspectable public var strokeColor = UIColor.whiteColor() {
         didSet {
@@ -37,6 +37,8 @@ public class DropPinIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class CheckmarkIcon: AnimatedIcon {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable public var checkmarkColor: UIColor = UIColor.iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
@@ -30,6 +32,8 @@ public class CheckmarkIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class BurgerIcon: AnimatedIcon {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable public var burgerColor: UIColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
@@ -30,6 +32,8 @@ public class BurgerIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

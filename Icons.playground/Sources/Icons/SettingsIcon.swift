@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class SettingsIcon: AnimatedIcon {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable public var primaryColor: UIColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
@@ -42,6 +44,8 @@ public class SettingsIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         
@@ -101,7 +105,7 @@ public class SettingsIcon: AnimatedIcon {
         CGContextRestoreGState(context)
     }
     
-    public func drawSlider(time time: CGFloat = 1) {
+    func drawSlider(time time: CGFloat = 1) {
         //// General Declarations
         let context = UIGraphicsGetCurrentContext()
         

@@ -34,7 +34,7 @@ public extension UIColor {
         }
     }
     
-    // MARK: Creating from HSB components
+    // MARK: - Creating from HSB components
     
     func colorWithHueComponent(hue: CGFloat) -> UIColor {
         return UIColor(hue: hue % 1, saturation: saturation, brightness: brightness, alpha: alpha)

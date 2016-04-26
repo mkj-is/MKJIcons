@@ -2,7 +2,11 @@ import UIKit
 
 class AnimationLayer: CALayer {
     
+    // MARK: - Properties
+    
     @NSManaged var value: CGFloat
+    
+    // MARK: - Initialization
     
     override init() {
         super.init()
@@ -18,6 +22,11 @@ class AnimationLayer: CALayer {
         
     }
     
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    // MARK: - Animation of the value
     
     override class func needsDisplayForKey(key: (String!)) -> Bool {
         
@@ -36,10 +45,5 @@ class AnimationLayer: CALayer {
         }
         
         return super.actionForKey(event)
-    }
-    
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

@@ -9,6 +9,8 @@ typealias UIColorComponents = (CGFloat, CGFloat, CGFloat, CGFloat)
 
 public extension UIColor {
     
+    // MARK: - Color between two other colors
+    
     convenience init(between color1: UIColor, and color2: UIColor, using: UIColorMode, ratio: CGFloat) {
         let components1: UIColorComponents = (using == .RGB ? color1.rgbComponents : color1.hsbComponents)
         let components2: UIColorComponents = (using == .RGB ? color2.rgbComponents : color2.hsbComponents)

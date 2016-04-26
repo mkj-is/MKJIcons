@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class SmileIcon: AnimatedIcon {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable public var sadColor: UIColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
@@ -48,6 +50,8 @@ public class SmileIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

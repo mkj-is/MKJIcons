@@ -11,6 +11,8 @@ import UIKit
 @IBDesignable
 public class PlayStopIcon: AnimatedIcon {
     
+    // MARK: - Inspectable properties
+    
     @IBInspectable public var size: CGFloat = 40 {
         didSet {
             layer.setNeedsDisplay()
@@ -36,6 +38,8 @@ public class PlayStopIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

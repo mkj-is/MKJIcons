@@ -8,13 +8,10 @@
 
 import UIKit
 
-public enum AnimationDirection {
-    case In
-    case Out
-}
-
 @IBDesignable
 public class StarIcon: AnimatedIcon {
+    
+    // MARK: - Inspectable properties
     
     @IBInspectable public var strokeColor: UIColor = UIColor.iconOrangeColor {
         didSet {
@@ -52,6 +49,8 @@ public class StarIcon: AnimatedIcon {
             value = newValue.toCGFloat()
         }
     }
+    
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         

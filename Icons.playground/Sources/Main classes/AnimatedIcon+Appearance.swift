@@ -10,6 +10,8 @@ import UIKit
 
 public extension AnimatedIcon {
     
+    // MARK: - Appearance protocol support
+    
     public func appearanceLineWidth() -> CGFloat {
         return lineWidth
     }

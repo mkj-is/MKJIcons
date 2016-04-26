@@ -11,7 +11,7 @@ import UIKit
 @IBDesignable
 public class HeartIcon: AnimatedIcon {
     
-    // MARK: - Inspectable attributes
+    // MARK: - Inspectable properties
     
     @IBInspectable public var strokeColor = UIColor.iconRedColor {
         didSet {
@@ -38,7 +38,7 @@ public class HeartIcon: AnimatedIcon {
         }
     }
     
-    // MARK: - Drawing
+    // MARK: - Drawing methods
     
     override func draw(time: CGFloat = 0) {
         
