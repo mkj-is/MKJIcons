@@ -13,12 +13,12 @@ public class DropPinIcon: AnimatedIcon {
     
     // MARK: - Inspectable properties
     
-    @IBInspectable public var strokeColor = UIColor.whiteColor() {
+    @IBInspectable public var strokeColor: UIColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor = UIColor.whiteColor() {
+    @IBInspectable public var fillColor: UIColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
         }

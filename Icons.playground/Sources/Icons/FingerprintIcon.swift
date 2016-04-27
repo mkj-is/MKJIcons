@@ -13,7 +13,7 @@ public class FingerprintIcon: AnimatedIcon {
     
     // MARK: - Inspectable properties
     
-    @IBInspectable public var strokeColor = UIColor.whiteColor() {
+    @IBInspectable public var strokeColor: UIColor = UIColor.whiteColor() {
         didSet {
             layer.setNeedsDisplay()
         }
