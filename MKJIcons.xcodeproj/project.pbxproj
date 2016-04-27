@@ -10,6 +10,7 @@
 		E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714E8471CCA339100E18E52 /* SmileIcon.swift */; };
 		E718A78B1CD0C7ED004C6B83 /* PaperclipIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */; };
 		E718A78D1CD0D802004C6B83 /* SoundwaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */; };
+		E718A78F1CD0F538004C6B83 /* BikeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78E1CD0F538004C6B83 /* BikeIcon.swift */; };
 		E72222861CCFB00B004C08BF /* FingerprintIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72222851CCFB00B004C08BF /* FingerprintIcon.swift */; };
 		E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */; };
 		E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */; };
@@ -39,6 +40,7 @@
 		E714E8471CCA339100E18E52 /* SmileIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileIcon.swift; sourceTree = "<group>"; };
 		E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperclipIcon.swift; sourceTree = "<group>"; };
 		E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundwaveIcon.swift; sourceTree = "<group>"; };
+		E718A78E1CD0F538004C6B83 /* BikeIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeIcon.swift; sourceTree = "<group>"; };
 		E72222851CCFB00B004C08BF /* FingerprintIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintIcon.swift; sourceTree = "<group>"; };
 		E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropPinIcon.swift; sourceTree = "<group>"; };
 		E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		E7BE8DCF1CC57E5E007DADED /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				E718A78E1CD0F538004C6B83 /* BikeIcon.swift */,
 				E7BE8DD01CC57E5E007DADED /* BurgerIcon.swift */,
 				E7BE8DD11CC57E5E007DADED /* CheckmarkIcon.swift */,
 				E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */,
@@ -133,8 +136,8 @@
 				E7BE8DD31CC57E5E007DADED /* PlusMinusIcon.swift */,
 				E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */,
 				E714E8471CCA339100E18E52 /* SmileIcon.swift */,
-				E7BE8DD41CC57E5E007DADED /* StarIcon.swift */,
 				E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */,
+				E7BE8DD41CC57E5E007DADED /* StarIcon.swift */,
 			);
 			name = Icons;
 			path = Icons.playground/Sources/Icons;
@@ -235,6 +238,7 @@
 				E7BE8DE61CC57E5E007DADED /* AnimationLayer.swift in Sources */,
 				E7BE8DDA1CC57E5E007DADED /* UIColor+Between.swift in Sources */,
 				E7BE8DDC1CC57E5E007DADED /* UIColor+IconColors.swift in Sources */,
+				E718A78F1CD0F538004C6B83 /* BikeIcon.swift in Sources */,
 				E7FFEC9A1CCF7759008D8140 /* Bool+ToCGFloat.swift in Sources */,
 				E718A78D1CD0D802004C6B83 /* SoundwaveIcon.swift in Sources */,
 				E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */,
