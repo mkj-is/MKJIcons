@@ -61,17 +61,13 @@ public class PlayStopIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 50, 50)
         
-        let leftLinePath = UIBezierPath()
+        let leftLinePath = UIBezierPath(style: self)
         leftLinePath.moveToPoint(CGPoint(x: -halfSize, y: halfSize))
         leftLinePath.addLineToPoint(CGPoint(x: halfSize, y: halfSize * time))
         leftLinePath.addLineToPoint(CGPoint(x: halfSize, y: -halfSize * time))
         leftLinePath.addLineToPoint(CGPoint(x: -halfSize, y: -halfSize))
         leftLinePath.addLineToPoint(CGPoint(x: -halfSize, y: halfSize))
         leftLinePath.closePath()
-        
-        leftLinePath.lineWidth = scaledLineWidth
-        leftLinePath.lineJoinStyle = lineJoin
-        leftLinePath.lineCapStyle = lineCap
         
         leftLinePath.stroke()
         leftLinePath.fill()

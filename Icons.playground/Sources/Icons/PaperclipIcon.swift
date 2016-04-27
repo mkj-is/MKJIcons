@@ -45,7 +45,7 @@ public class PaperclipIcon: AnimatedIcon {
         strokeColor.setStroke()
         
         //// Bezier Drawing
-        let bezierPath = UIBezierPath()
+        let bezierPath = UIBezierPath(style: self)
         bezierPath.moveToPoint(CGPoint(x: 41.28, y: 51.66))
         bezierPath.addCurveToPoint(CGPoint(x: 55, y: 37.44), controlPoint1: CGPoint(x: 43.98, y: 48.87), controlPoint2: CGPoint(x: 52.76, y: 39.57))
         bezierPath.addCurveToPoint(CGPoint(x: 60.49, y: 35.61), controlPoint1: CGPoint(x: 56.56, y: 35.96), controlPoint2: CGPoint(x: 58.52, y: 35.22))
@@ -60,10 +60,6 @@ public class PaperclipIcon: AnimatedIcon {
         bezierPath.addCurveToPoint(CGPoint(x: 64.59, y: 29.62), controlPoint1: CGPoint(x: 56.28, y: 28.18), controlPoint2: CGPoint(x: 60.81, y: 27.82))
         bezierPath.addCurveToPoint(CGPoint(x: 67.67, y: 50.58), controlPoint1: CGPoint(x: 72.55, y: 33.41), controlPoint2: CGPoint(x: 73.63, y: 44.42))
         bezierPath.addCurveToPoint(CGPoint(x: 50.09, y: 68.77), controlPoint1: CGPoint(x: 61.81, y: 56.65), controlPoint2: CGPoint(x: 55.95, y: 62.71))
-        
-        bezierPath.lineWidth = lineWidth
-        bezierPath.lineCapStyle = lineCap
-        bezierPath.lineJoinStyle = lineJoin
         
         CGContextSetLineDash(context, 0, [188 * time, 200], 2)
         bezierPath.stroke()

@@ -123,10 +123,6 @@ public class SettingsIcon: AnimatedIcon {
         
         let handlePath = UIBezierPath(roundedRect: CGRect(x: negativeHalfHandleSize, y: negativeHalfHandleSize, width: handleSize, height: handleSize), cornerRadius: cornerRadius)
         
-        handlePath.lineWidth = scaledLineWidth
-        handlePath.lineCapStyle = lineCap
-        handlePath.lineJoinStyle = lineJoin
-        
         handlePath.fill()
         handlePath.stroke()
         
@@ -134,13 +130,9 @@ public class SettingsIcon: AnimatedIcon {
         
         
         //// Top line Drawing
-        let topLinePath = UIBezierPath()
+        let topLinePath = UIBezierPath(style: self)
         topLinePath.moveToPoint(CGPoint(x: 10, y: 5))
         topLinePath.addLineToPoint(CGPoint(x: 10, y: (longLineLength + 12)))
-        
-        topLinePath.lineWidth = scaledLineWidth
-        topLinePath.lineCapStyle = lineCap
-        topLinePath.lineJoinStyle = lineJoin
 
         topLinePath.stroke()
         
@@ -150,13 +142,9 @@ public class SettingsIcon: AnimatedIcon {
         CGContextTranslateCTM(context, 10, 45)
         CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
         
-        let bottomLine = UIBezierPath()
+        let bottomLine = UIBezierPath(style: self)
         bottomLine.moveToPoint(CGPoint(x: 0, y: 0))
         bottomLine.addLineToPoint(CGPoint(x: 0, y: (shortLineLength + 7)))
-        
-        bottomLine.lineWidth = scaledLineWidth
-        bottomLine.lineCapStyle = lineCap
-        bottomLine.lineJoinStyle = lineJoin
         
         bottomLine.stroke()
         

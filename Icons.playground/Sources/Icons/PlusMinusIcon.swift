@@ -75,13 +75,9 @@ public class PlusMinusIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextRotateCTM(context, -horizontalAngle * CGFloat(M_PI) / 180)
         
-        let verticalLinePath = UIBezierPath()
+        let verticalLinePath = UIBezierPath(style: self)
         verticalLinePath.moveToPoint(CGPoint(x: pointPosition, y: 0))
         verticalLinePath.addLineToPoint(CGPoint(x: negativePointPosition, y: 0))
-
-        verticalLinePath.lineWidth = scaledLineWidth
-        verticalLinePath.lineJoinStyle  = lineJoin
-        verticalLinePath.lineCapStyle  = lineCap
 
         verticalLinePath.stroke()
         
@@ -92,13 +88,9 @@ public class PlusMinusIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextRotateCTM(context, -verticalAngle * CGFloat(M_PI) / 180)
         
-        let horizontalLinePath = UIBezierPath()
+        let horizontalLinePath = UIBezierPath(style: self)
         horizontalLinePath.moveToPoint(CGPoint(x: pointPosition, y: 0))
         horizontalLinePath.addLineToPoint(CGPoint(x: negativePointPosition, y: 0))
-        
-        horizontalLinePath.lineWidth = scaledLineWidth
-        horizontalLinePath.lineJoinStyle  = lineJoin
-        horizontalLinePath.lineCapStyle  = lineCap
 
         horizontalLinePath.stroke()
         

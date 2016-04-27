@@ -62,17 +62,13 @@ public class BikeIcon: AnimatedIcon {
         CGContextTranslateCTM(context, 29.5, 64.5)
         CGContextRotateCTM(context, 90 * CGFloat(M_PI) / 180)
         
-        let firstWheel = UIBezierPath()
+        let firstWheel = UIBezierPath(style: self)
         firstWheel.moveToPoint(CGPoint(x: -11, y: 0))
         firstWheel.addCurveToPoint(CGPoint(x: 0, y: 11), controlPoint1: CGPoint(x: -11, y: 6.08), controlPoint2: CGPoint(x: -6.08, y: 11))
         firstWheel.addCurveToPoint(CGPoint(x: 11, y: 0), controlPoint1: CGPoint(x: 6.08, y: 11), controlPoint2: CGPoint(x: 11, y: 6.08))
         firstWheel.addCurveToPoint(CGPoint(x: 0, y: -11), controlPoint1: CGPoint(x: 11, y: -6.08), controlPoint2: CGPoint(x: 6.08, y: -11))
         firstWheel.addCurveToPoint(CGPoint(x: -11, y: 0), controlPoint1: CGPoint(x: -6.08, y: -11), controlPoint2: CGPoint(x: -11, y: -6.08))
         firstWheel.closePath()
-        
-        firstWheel.lineWidth = lineWidth
-        firstWheel.lineCapStyle = lineCap
-        firstWheel.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
         CGContextSetLineDash(context, 0, [bikeLine, 100], 2)
@@ -87,17 +83,13 @@ public class BikeIcon: AnimatedIcon {
         CGContextTranslateCTM(context, 70.5, 64.5)
         CGContextRotateCTM(context, -90 * CGFloat(M_PI) / 180)
         
-        let secondWheel = UIBezierPath()
+        let secondWheel = UIBezierPath(style: self)
         secondWheel.moveToPoint(CGPoint(x: 11, y: 0))
         secondWheel.addCurveToPoint(CGPoint(x: 0, y: 11), controlPoint1: CGPoint(x: 11, y: 6.08), controlPoint2: CGPoint(x: 6.08, y: 11))
         secondWheel.addCurveToPoint(CGPoint(x: -11, y: 0), controlPoint1: CGPoint(x: -6.08, y: 11), controlPoint2: CGPoint(x: -11, y: 6.08))
         secondWheel.addCurveToPoint(CGPoint(x: 0, y: -11), controlPoint1: CGPoint(x: -11, y: -6.08), controlPoint2: CGPoint(x: -6.08, y: -11))
         secondWheel.addCurveToPoint(CGPoint(x: 11, y: 0), controlPoint1: CGPoint(x: 6.08, y: -11), controlPoint2: CGPoint(x: 11, y: -6.08))
         secondWheel.closePath()
-        
-        secondWheel.lineWidth = lineWidth
-        secondWheel.lineCapStyle = lineCap
-        secondWheel.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
         CGContextSetLineDash(context, 0, [bikeLine, 100], 2)
@@ -108,17 +100,13 @@ public class BikeIcon: AnimatedIcon {
         
         // Frame
         if two > 0 {
-            let framePath = UIBezierPath()
+            let framePath = UIBezierPath(style: self)
             framePath.moveToPoint(CGPoint(x: 61.5, y: 46.5))
             framePath.addLineToPoint(CGPoint(x: 37.5, y: 46.5))
             framePath.addLineToPoint(CGPoint(x: 53.5, y: 65.5))
             framePath.addLineToPoint(CGPoint(x: 70.5, y: 65.5))
             framePath.addLineToPoint(CGPoint(x: 61.5, y: 46.5))
             framePath.closePath()
-            
-            framePath.lineWidth = lineWidth
-            framePath.lineCapStyle = lineCap
-            framePath.lineJoinStyle = lineJoin
             
             CGContextSaveGState(context)
             CGContextSetLineDash(context, 0, [frameLine, 400], 2)
@@ -128,28 +116,20 @@ public class BikeIcon: AnimatedIcon {
         
         // Seat and bars
         if three > 0 {
-            let bars = UIBezierPath()
+            let bars = UIBezierPath(style: self)
             bars.moveToPoint(CGPoint(x: 30.5, y: 63.5))
             bars.addLineToPoint(CGPoint(x: 39.5, y: 41.5))
             bars.addLineToPoint(CGPoint(x: 30.5, y: 41.5))
-            
-            bars.lineWidth = lineWidth
-            bars.lineCapStyle = lineCap
-            bars.lineJoinStyle = lineJoin
             
             CGContextSaveGState(context)
             CGContextSetLineDash(context, 0, [barLine, 100], 2)
             bars.stroke()
             CGContextRestoreGState(context)
             
-            let seat = UIBezierPath()
+            let seat = UIBezierPath(style: self)
             seat.moveToPoint(CGPoint(x: 53.5, y: 65.5))
             seat.addLineToPoint(CGPoint(x: 64.5, y: 38.5))
             seat.addLineToPoint(CGPoint(x: 56.5, y: 38.5))
-            
-            seat.lineWidth = lineWidth
-            seat.lineCapStyle = lineCap
-            seat.lineJoinStyle = lineJoin
             
             CGContextSaveGState(context)
             CGContextSetLineDash(context, 0, [seatLine, 100], 2)

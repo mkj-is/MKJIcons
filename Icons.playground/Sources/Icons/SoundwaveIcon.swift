@@ -89,13 +89,10 @@ public class SoundwaveIcon: AnimatedIcon {
             CGContextSaveGState(context)
             CGContextTranslateCTM(context, x, y)
             
-            let bezierPath = UIBezierPath()
+            let bezierPath = UIBezierPath(style: self)
             bezierPath.moveToPoint(CGPoint.zero)
             bezierPath.addLineToPoint(CGPoint(x: 0, y: length))
             
-            bezierPath.lineWidth = lineWidth
-            bezierPath.lineCapStyle = lineCap
-            bezierPath.lineJoinStyle = lineJoin
             bezierPath.stroke()
             
             CGContextRestoreGState(context)

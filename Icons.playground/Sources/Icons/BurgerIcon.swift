@@ -63,10 +63,9 @@ public class BurgerIcon: AnimatedIcon {
         CGContextRotateCTM(context, -angle * CGFloat(M_PI) / 180)
         CGContextScaleCTM(context, localScale, localScale)
         
-        let bottomPath = UIBezierPath()
+        let bottomPath = UIBezierPath(style: self)
         bottomPath.moveToPoint(CGPoint(x: 40, y: 0))
         bottomPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        bottomPath.lineCapStyle = lineCap;
         
         currentColor.setStroke()
         bottomPath.lineWidth = timeLineWidth
@@ -79,13 +78,11 @@ public class BurgerIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 50, 50)
         
-        let middlePath = UIBezierPath()
+        let middlePath = UIBezierPath(style: self)
         middlePath.moveToPoint(CGPoint(x: 20, y: 0))
         middlePath.addLineToPoint(CGPoint(x: -20, y: 0))
-        middlePath.lineCapStyle = lineCap
         
         opacity.setStroke()
-        middlePath.lineWidth = scaledLineWidth
         middlePath.stroke()
         
         CGContextRestoreGState(context)
@@ -97,10 +94,9 @@ public class BurgerIcon: AnimatedIcon {
         CGContextRotateCTM(context, -negativeAngle * CGFloat(M_PI) / 180)
         CGContextScaleCTM(context, localScale, localScale)
         
-        let topPath = UIBezierPath()
+        let topPath = UIBezierPath(style: self)
         topPath.moveToPoint(CGPoint(x: 40, y: 0))
         topPath.addLineToPoint(CGPoint(x: 0, y: 0))
-        topPath.lineCapStyle = lineCap
         
         currentColor.setStroke()
         topPath.lineWidth = timeLineWidth

@@ -11,6 +11,7 @@
 		E718A78B1CD0C7ED004C6B83 /* PaperclipIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */; };
 		E718A78D1CD0D802004C6B83 /* SoundwaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */; };
 		E718A78F1CD0F538004C6B83 /* BikeIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78E1CD0F538004C6B83 /* BikeIcon.swift */; };
+		E718A7911CD0F9A1004C6B83 /* UIBezierPath+IconInit.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A7901CD0F9A1004C6B83 /* UIBezierPath+IconInit.swift */; };
 		E72222861CCFB00B004C08BF /* FingerprintIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72222851CCFB00B004C08BF /* FingerprintIcon.swift */; };
 		E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */; };
 		E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */; };
@@ -41,6 +42,7 @@
 		E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperclipIcon.swift; sourceTree = "<group>"; };
 		E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundwaveIcon.swift; sourceTree = "<group>"; };
 		E718A78E1CD0F538004C6B83 /* BikeIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BikeIcon.swift; sourceTree = "<group>"; };
+		E718A7901CD0F9A1004C6B83 /* UIBezierPath+IconInit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBezierPath+IconInit.swift"; sourceTree = "<group>"; };
 		E72222851CCFB00B004C08BF /* FingerprintIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintIcon.swift; sourceTree = "<group>"; };
 		E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropPinIcon.swift; sourceTree = "<group>"; };
 		E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
@@ -116,6 +118,7 @@
 				E7BE8DCE1CC57E5E007DADED /* UIColor+RGB.swift */,
 				E7FFEC971CCF76BC008D8140 /* CGFloat+ToBool.swift */,
 				E7FFEC991CCF7759008D8140 /* Bool+ToCGFloat.swift */,
+				E718A7901CD0F9A1004C6B83 /* UIBezierPath+IconInit.swift */,
 			);
 			name = Extensions;
 			path = Icons.playground/Sources/Extensions;
@@ -241,6 +244,7 @@
 				E718A78F1CD0F538004C6B83 /* BikeIcon.swift in Sources */,
 				E7FFEC9A1CCF7759008D8140 /* Bool+ToCGFloat.swift in Sources */,
 				E718A78D1CD0D802004C6B83 /* SoundwaveIcon.swift in Sources */,
+				E718A7911CD0F9A1004C6B83 /* UIBezierPath+IconInit.swift in Sources */,
 				E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */,
 				E7BE8DE01CC57E5E007DADED /* HeartIcon.swift in Sources */,
 				E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */,

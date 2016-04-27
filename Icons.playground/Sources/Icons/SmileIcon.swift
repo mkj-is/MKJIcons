@@ -64,7 +64,7 @@ public class SmileIcon: AnimatedIcon {
         fillColor.setFill()
         
         //// Variable Declarations
-        let minusHalfLineWidth: CGFloat = -lineWidth / 2.0
+        let minusHalfLineWidth: CGFloat = -scaledLineWidth / 2.0
         let eyeOffset: CGFloat = -eyeMovement / 2.0 + eyeMovement * time
         let lipY: CGFloat = -mouthMovement / 2.0 + time * mouthMovement
         
@@ -73,7 +73,7 @@ public class SmileIcon: AnimatedIcon {
         //// Face Drawing
         if (showFace) {
             let facePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
-            facePath.lineWidth = lineWidth
+            facePath.lineWidth = scaledLineWidth
             facePath.stroke()
             facePath.fill()
         }
@@ -84,7 +84,7 @@ public class SmileIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, -8, (eyeOffset - 9))
         
-        let rightEyePath = UIBezierPath(ovalInRect: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: lineWidth, height: lineWidth))
+        let rightEyePath = UIBezierPath(ovalInRect: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: scaledLineWidth, height: scaledLineWidth))
         rightEyePath.fill()
         
         CGContextRestoreGState(context)
@@ -94,7 +94,7 @@ public class SmileIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 8, (eyeOffset - 9))
         
-        let leftEyePath = UIBezierPath(ovalInRect: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: lineWidth, height: lineWidth))
+        let leftEyePath = UIBezierPath(ovalInRect: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: scaledLineWidth, height: scaledLineWidth))
         leftEyePath.fill()
         
         CGContextRestoreGState(context)
@@ -104,13 +104,10 @@ public class SmileIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 0, 5)
         
-        let mouthPath = UIBezierPath()
+        let mouthPath = UIBezierPath(style: self)
         mouthPath.moveToPoint(CGPoint(x: -10, y: lipY))
         mouthPath.addCurveToPoint(CGPoint(x: 0, y: 0), controlPoint1: CGPoint(x: -10, y: lipY), controlPoint2: CGPoint(x: -7, y: 0))
         mouthPath.addCurveToPoint(CGPoint(x: 10, y: lipY), controlPoint1: CGPoint(x: 7, y: -0), controlPoint2: CGPoint(x: 10, y: lipY))
-
-        mouthPath.lineWidth = lineWidth
-        mouthPath.lineCapStyle = lineCap
         
         mouthPath.stroke()
         

@@ -76,17 +76,13 @@ public class PlayPauseIcon: AnimatedIcon {
             CGContextSaveGState(context)
             CGContextTranslateCTM(context, 60, 50)
             
-            let rightLinePath = UIBezierPath()
+            let rightLinePath = UIBezierPath(style: self)
             rightLinePath.moveToPoint(CGPoint(x: offsetMinusX, y: decreasingOffset))
             rightLinePath.addLineToPoint(CGPoint(x: offsetX, y: decreasingOffset))
             rightLinePath.addLineToPoint(CGPoint(x: offsetX, y: decreasingMinusOffset))
             rightLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: decreasingMinusOffset))
             rightLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: decreasingOffset))
             rightLinePath.closePath()
-            
-            rightLinePath.lineWidth = scaledLineWidth
-            rightLinePath.lineJoinStyle = lineJoin
-            rightLinePath.lineCapStyle = lineCap
             
             rightLinePath.stroke()
             rightLinePath.fill()
@@ -99,17 +95,13 @@ public class PlayPauseIcon: AnimatedIcon {
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 40, 50)
         
-        let leftLinePath = UIBezierPath()
+        let leftLinePath = UIBezierPath(style: self)
         leftLinePath.moveToPoint(CGPoint(x: offsetMinusX, y: offsetY))
         leftLinePath.addLineToPoint(bottomPoint)
         leftLinePath.addLineToPoint(topPoint)
         leftLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: offsetMinusY))
         leftLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: offsetY))
         leftLinePath.closePath()
-        
-        leftLinePath.lineWidth = scaledLineWidth
-        leftLinePath.lineJoinStyle = lineJoin
-        leftLinePath.lineCapStyle = lineCap
         
         leftLinePath.stroke()
         leftLinePath.fill()

@@ -79,7 +79,7 @@ public class StarIcon: AnimatedIcon {
         CGContextScaleCTM(context, scale, scale)
         
         //// Path Drawing
-        let path = UIBezierPath()
+        let path = UIBezierPath(style: self)
         path.moveToPoint(CGPoint(x: 50, y: 27.15))
         path.addLineToPoint(CGPoint(x: 55.58, y: 44.46))
         path.addLineToPoint(CGPoint(x: 73.78, y: 44.42))
@@ -94,10 +94,6 @@ public class StarIcon: AnimatedIcon {
         
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
-        
-        path.lineWidth = scaledLineWidth
-        path.lineCapStyle = lineCap
-        path.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
         

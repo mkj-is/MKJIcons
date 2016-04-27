@@ -51,26 +51,20 @@ public class CheckmarkIcon: AnimatedIcon {
         CGContextScaleCTM(context, scale, scale)
         
         //// Static line Drawing
-        let staticLinePath = UIBezierPath()
+        let staticLinePath = UIBezierPath(style: self)
         staticLinePath.moveToPoint(CGPoint(x: 70, y: 30))
         staticLinePath.addLineToPoint(CGPoint(x: 30, y: 70))
-        staticLinePath.lineCapStyle = lineCap
         
         currentColor.setStroke()
-        staticLinePath.lineWidth = scaledLineWidth
         staticLinePath.stroke()
         
         
         //// Animated line Drawing
-        let animatedLinePath = UIBezierPath()
+        let animatedLinePath = UIBezierPath(style: self)
         animatedLinePath.moveToPoint(CGPoint(x: 30, y: 30))
         animatedLinePath.addCurveToPoint(CGPoint(x: 70, y: 70), controlPoint1: CGPoint(x: 30, y: 30), controlPoint2: CGPoint(x: 56.58, y: 56.58))
         animatedLinePath.addCurveToPoint(CGPoint(x: 30, y: 70), controlPoint1: CGPoint(x: 83.42, y: 83.42), controlPoint2: CGPoint(x: 46.03, y: 86.03))
         animatedLinePath.addCurveToPoint(CGPoint(x: 10, y: 50), controlPoint1: CGPoint(x: 13.97, y: 53.97), controlPoint2: CGPoint(x: 10, y: 50))
-
-        animatedLinePath.lineCapStyle = lineCap
-        animatedLinePath.lineWidth = scaledLineWidth
-        animatedLinePath.lineJoinStyle = lineJoin
         
         CGContextSaveGState(context)
         CGContextSetLineDash(context, phase, [dash, 200], 2)

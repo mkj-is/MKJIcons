@@ -63,7 +63,7 @@ public class HeartIcon: AnimatedIcon {
         CGContextTranslateCTM(context, 50, 75)
         CGContextRotateCTM(context, -45 * CGFloat(M_PI) / 180)
         
-        let bezierPath = UIBezierPath()
+        let bezierPath = UIBezierPath(style: self)
         bezierPath.moveToPoint(CGPoint(x: 30, y: -30.19))
         bezierPath.addLineToPoint(CGPoint(x: 30, y: -30))
         bezierPath.addCurveToPoint(CGPoint(x: 45, y: -15), controlPoint1: CGPoint(x: 38.28, y: -30), controlPoint2: CGPoint(x: 45, y: -23.28))
@@ -75,9 +75,7 @@ public class HeartIcon: AnimatedIcon {
         bezierPath.addCurveToPoint(CGPoint(x: 15, y: -45), controlPoint1: CGPoint(x: 8.53, y: -43.89), controlPoint2: CGPoint(x: 11.64, y: -45))
         bezierPath.addCurveToPoint(CGPoint(x: 30, y: -30.19), controlPoint1: CGPoint(x: 23.22, y: -45), controlPoint2: CGPoint(x: 29.9, y: -38.39))
         bezierPath.closePath()
-        bezierPath.lineCapStyle = lineCap
-        bezierPath.lineJoinStyle = lineJoin
-        bezierPath.lineWidth = scaledLineWidth
+        
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         CGContextSaveGState(context)
