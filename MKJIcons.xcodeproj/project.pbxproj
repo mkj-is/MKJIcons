@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714E8471CCA339100E18E52 /* SmileIcon.swift */; };
+		E718A78B1CD0C7ED004C6B83 /* PaperclipIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */; };
+		E718A78D1CD0D802004C6B83 /* SoundwaveIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */; };
 		E72222861CCFB00B004C08BF /* FingerprintIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72222851CCFB00B004C08BF /* FingerprintIcon.swift */; };
 		E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */; };
 		E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */; };
@@ -35,6 +37,8 @@
 
 /* Begin PBXFileReference section */
 		E714E8471CCA339100E18E52 /* SmileIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmileIcon.swift; sourceTree = "<group>"; };
+		E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaperclipIcon.swift; sourceTree = "<group>"; };
+		E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SoundwaveIcon.swift; sourceTree = "<group>"; };
 		E72222851CCFB00B004C08BF /* FingerprintIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintIcon.swift; sourceTree = "<group>"; };
 		E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropPinIcon.swift; sourceTree = "<group>"; };
 		E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
@@ -123,12 +127,14 @@
 				E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */,
 				E7BE8DD21CC57E5E007DADED /* HeartIcon.swift */,
 				E72222851CCFB00B004C08BF /* FingerprintIcon.swift */,
+				E718A78A1CD0C7ED004C6B83 /* PaperclipIcon.swift */,
 				E7DCB3F21CC78E8500F166F4 /* PlayPauseIcon.swift */,
 				E7DCB3F31CC78E8500F166F4 /* PlayStopIcon.swift */,
 				E7BE8DD31CC57E5E007DADED /* PlusMinusIcon.swift */,
 				E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */,
 				E714E8471CCA339100E18E52 /* SmileIcon.swift */,
 				E7BE8DD41CC57E5E007DADED /* StarIcon.swift */,
+				E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */,
 			);
 			name = Icons;
 			path = Icons.playground/Sources/Icons;
@@ -230,9 +236,11 @@
 				E7BE8DDA1CC57E5E007DADED /* UIColor+Between.swift in Sources */,
 				E7BE8DDC1CC57E5E007DADED /* UIColor+IconColors.swift in Sources */,
 				E7FFEC9A1CCF7759008D8140 /* Bool+ToCGFloat.swift in Sources */,
+				E718A78D1CD0D802004C6B83 /* SoundwaveIcon.swift in Sources */,
 				E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */,
 				E7BE8DE01CC57E5E007DADED /* HeartIcon.swift in Sources */,
 				E714E8481CCA339100E18E52 /* SmileIcon.swift in Sources */,
+				E718A78B1CD0C7ED004C6B83 /* PaperclipIcon.swift in Sources */,
 				E7DCB3F41CC78E8500F166F4 /* PlayPauseIcon.swift in Sources */,
 				E72222861CCFB00B004C08BF /* FingerprintIcon.swift in Sources */,
 				E7BE8E251CC59D49007DADED /* AnimatedIcon+Inspectable.swift in Sources */,
