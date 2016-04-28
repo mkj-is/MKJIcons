@@ -49,6 +49,8 @@ let fingerprint = FingerprintIcon(frame: CGRect(x: 200, y: 200, width: 100, heig
 let clip = PaperclipIcon(frame: CGRect(x: 300, y: 200, width: 100, height: 100))
 let wave = SoundwaveIcon(frame: CGRect(x: 0, y: 300, width: 100, height: 100))
 let bike = BikeIcon(frame: CGRect(x: 100, y: 300, width: 100, height: 100))
+let earth = EarthIcon(frame: CGRect(x: 200, y: 300, width: 100, height: 100))
+let textAlign = TextAlignIcon(frame: CGRect(x: 300, y: 300, width: 100, height: 100))
 
 // We create a view to contain all the icons
 let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 400))
@@ -68,6 +70,8 @@ view.addSubview(fingerprint)
 view.addSubview(clip)
 view.addSubview(wave)
 view.addSubview(bike)
+view.addSubview(earth)
+view.addSubview(textAlign)
 
 // At last we assign the parent view with the icons to assistant editor
 XCPlaygroundPage.currentPage.liveView = view
