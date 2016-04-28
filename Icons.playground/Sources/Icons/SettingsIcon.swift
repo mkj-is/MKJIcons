@@ -123,6 +123,10 @@ public class SettingsIcon: AnimatedIcon {
         
         let handlePath = UIBezierPath(roundedRect: CGRect(x: negativeHalfHandleSize, y: negativeHalfHandleSize, width: handleSize, height: handleSize), cornerRadius: cornerRadius)
         
+        handlePath.lineWidth = scaledLineWidth
+        handlePath.lineCapStyle = lineCap
+        handlePath.lineJoinStyle = lineJoin
+        
         handlePath.fill()
         handlePath.stroke()
         
