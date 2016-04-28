@@ -15,6 +15,7 @@
 		E72222861CCFB00B004C08BF /* FingerprintIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72222851CCFB00B004C08BF /* FingerprintIcon.swift */; };
 		E734AC201CD24385009809D5 /* EarthIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734AC1F1CD24385009809D5 /* EarthIcon.swift */; };
 		E734AC221CD2460E009809D5 /* CGFloat+CutAndMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734AC211CD2460E009809D5 /* CGFloat+CutAndMap.swift */; };
+		E734AC241CD25E89009809D5 /* TextAlignIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E734AC231CD25E89009809D5 /* TextAlignIcon.swift */; };
 		E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */; };
 		E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */; };
 		E79C86741CC6822200C3B906 /* AnimatedIcon+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C86731CC6822200C3B906 /* AnimatedIcon+Appearance.swift */; };
@@ -48,6 +49,7 @@
 		E72222851CCFB00B004C08BF /* FingerprintIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FingerprintIcon.swift; sourceTree = "<group>"; };
 		E734AC1F1CD24385009809D5 /* EarthIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EarthIcon.swift; sourceTree = "<group>"; };
 		E734AC211CD2460E009809D5 /* CGFloat+CutAndMap.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "CGFloat+CutAndMap.swift"; sourceTree = "<group>"; };
+		E734AC231CD25E89009809D5 /* TextAlignIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextAlignIcon.swift; sourceTree = "<group>"; };
 		E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropPinIcon.swift; sourceTree = "<group>"; };
 		E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
 		E79C86731CC6822200C3B906 /* AnimatedIcon+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Appearance.swift"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				E718A78C1CD0D802004C6B83 /* SoundwaveIcon.swift */,
 				E7BE8DD41CC57E5E007DADED /* StarIcon.swift */,
 				E734AC1F1CD24385009809D5 /* EarthIcon.swift */,
+				E734AC231CD25E89009809D5 /* TextAlignIcon.swift */,
 			);
 			name = Icons;
 			path = Icons.playground/Sources/Icons;
@@ -269,6 +272,7 @@
 				E7BE8DDF1CC57E5E007DADED /* CheckmarkIcon.swift in Sources */,
 				E79C86741CC6822200C3B906 /* AnimatedIcon+Appearance.swift in Sources */,
 				E734AC201CD24385009809D5 /* EarthIcon.swift in Sources */,
+				E734AC241CD25E89009809D5 /* TextAlignIcon.swift in Sources */,
 				E7BE8DE51CC57E5E007DADED /* AnimationFunctions.swift in Sources */,
 				E7BE8DE21CC57E5E007DADED /* StarIcon.swift in Sources */,
 				E7BE8DDD1CC57E5E007DADED /* UIColor+RGB.swift in Sources */,
