@@ -38,10 +38,10 @@ public class SettingsIcon: AnimatedIcon {
     
     @IBInspectable public var changed: Bool {
         get {
-            return value.toBool()
+            return Bool(value)
         }
         set (newValue) {
-            value = newValue.toCGFloat()
+            value = CGFloat(newValue)
         }
     }
     

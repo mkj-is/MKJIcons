@@ -45,10 +45,10 @@ public class SoundwaveIcon: AnimatedIcon {
     
     @IBInspectable public var progress: Bool {
         get {
-            return value.toBool()
+            return Bool(value)
         }
         set (newValue) {
-            value = newValue.toCGFloat()
+            value = CGFloat(newValue)
         }
     }
     

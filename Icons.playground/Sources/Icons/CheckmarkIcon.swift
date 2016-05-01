@@ -26,10 +26,10 @@ public class CheckmarkIcon: AnimatedIcon {
     
     @IBInspectable public var checked: Bool {
         get {
-            return value.toBool()
+            return Bool(value)
         }
         set (newValue) {
-            value = newValue.toCGFloat()
+            value = CGFloat(newValue)
         }
     }
     

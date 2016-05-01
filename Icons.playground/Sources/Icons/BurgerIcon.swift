@@ -26,10 +26,10 @@ public class BurgerIcon: AnimatedIcon {
     
     @IBInspectable public var open: Bool {
         get {
-            return value.toBool()
+            return Bool(value)
         }
         set (newValue) {
-            value = newValue.toCGFloat()
+            value = CGFloat(newValue)
         }
     }
     

@@ -10,8 +10,8 @@ import UIKit
 
 extension CGFloat {
     
-    func toBool() -> Bool {
-        return self == 0 ? false : true
+    init(bool: Bool) {
+        self = (bool ? 1 : 0)
     }
     
 }

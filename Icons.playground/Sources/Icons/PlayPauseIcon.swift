@@ -38,10 +38,10 @@ public class PlayPauseIcon: AnimatedIcon {
 
     @IBInspectable public var playing: Bool {
         get {
-            return value.toBool()
+            return Bool(value)
         }
         set (newValue) {
-            value = newValue.toCGFloat()
+            value = CGFloat(newValue)
         }
     }
     

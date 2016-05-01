@@ -10,8 +10,8 @@ import UIKit
 
 extension Bool {
     
-    func toCGFloat() -> CGFloat {
-        return self ? 1 : 0
+    init(float: CGFloat) {
+        self = !float.isZero
     }
     
 }

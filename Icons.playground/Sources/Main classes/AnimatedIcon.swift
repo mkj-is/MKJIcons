@@ -23,7 +23,7 @@ public class AnimatedIcon: UIControl {
         didSet {
             
             if animationRepeat {
-                animateTo((!value.toBool()).toCGFloat())
+                animateTo(CGFloat(!Bool(value)))
             }
             
             layer.setNeedsDisplay()
