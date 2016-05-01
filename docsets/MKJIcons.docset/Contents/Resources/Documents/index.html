@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>MKJIcons  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a title="MKJIcons  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">MKJIcons Docs</a> (0% documented)</p>
+        <p class="header-right"><a href="https://github.com/mkj-is/MKJIcons"><img src="img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">MKJIcons Reference</a>
+        <img id="carat" src="img/carat.png" />
+        MKJIcons  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/AnimatedIcon.html">AnimatedIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/AnimatedIconExporter.html">AnimatedIconExporter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BikeIcon.html">BikeIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/BurgerIcon.html">BurgerIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/CheckmarkIcon.html">CheckmarkIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/DropPinIcon.html">DropPinIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/EarthIcon.html">EarthIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/FingerprintIcon.html">FingerprintIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/HeartIcon.html">HeartIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PaperclipIcon.html">PaperclipIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PlayPauseIcon.html">PlayPauseIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PlayStopIcon.html">PlayStopIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/PlusMinusIcon.html">PlusMinusIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SettingsIcon.html">SettingsIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SmileIcon.html">SmileIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SoundwaveIcon.html">SoundwaveIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/StarIcon.html">StarIcon</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TextAlignIcon.html">TextAlignIcon</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/AnimatedIconExporterDirection.html">AnimatedIconExporterDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/UIColorMode.html">UIColorMode</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/UIColor.html">UIColor</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            
+            <a href='#animated_icons' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='animated_icons'>Animated icons</h1>
+
+<p><em>Designed and developed by Matěj K. Jirásek (<a href="http://mkj.is">mkj.is</a>)</em></p>
+
+<p>Full documentation is available here: <a href="http://mkj-is.github.io/MKJIcons">http://mkj-is.github.io/MKJIcons</a></p>
+<a href='#table_of_contents' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='table_of_contents'>Table of contents</h2>
+
+<ul>
+<li><a href="#showcase">Showcase</a></li>
+<li><a href="#basics">Basics</a></li>
+<li><a href="#export">Export</a></li>
+</ul>
+<a href='#showcase' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='showcase'>Showcase</h2>
+
+<p><img src="AnimatedStar.gif" alt="Animated star"></p>
+
+<p>An icon set usable as an iOS framework. This first documentation page
+serves as an reference and showcase of all available icons.</p>
+
+<p>The icons feature</p>
+
+<ul>
+<li>Vector rendering.</li>
+<li>Independent on size.</li>
+<li>Colours can be set to your liking.</li>
+<li>Line width, caps and joins can all be configured.</li>
+<li>Animation duration and color changes can be fully configured too.</li>
+<li>Using the playground you can export PNG sequences if you like bitmaps too.</li>
+<li>Each icon has its setting for most values.</li>
+<li>Icons can be used as buttons or checkboxes,
+they are controls and you can bind actions to them
+and listen to “value changed” event.</li>
+<li>The icons are designable in the interface builder, so you can view how they will
+look in the final application and design them in Xcode!</li>
+</ul>
+
+<p><strong>You need to have the assistant editor with timeline open to view the icons.
+If you click them, then they will animate. Some of them are invisible
+by default. Do not forget to click the empty places too!</strong></p>
+<pre class="highlight swift"><code>
+
+<span class="c1">// We need to import basic frameworks so this example can work</span>
+<span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">XCPlayground</span>
+
+<span class="c1">// These are all the icons available</span>
+<span class="k">let</span> <span class="nv">checkmark</span> <span class="o">=</span> <span class="kt">CheckmarkIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">burger</span> <span class="o">=</span> <span class="kt">BurgerIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">heart</span> <span class="o">=</span> <span class="kt">HeartIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">star</span> <span class="o">=</span> <span class="kt">StarIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">plus</span> <span class="o">=</span> <span class="kt">PlusMinusIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">settings</span> <span class="o">=</span> <span class="kt">SettingsIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">pin</span> <span class="o">=</span> <span class="kt">DropPinIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">play</span> <span class="o">=</span> <span class="kt">PlayPauseIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">stop</span> <span class="o">=</span> <span class="kt">PlayStopIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">smile</span> <span class="o">=</span> <span class="kt">SmileIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">fingerprint</span> <span class="o">=</span> <span class="kt">FingerprintIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">clip</span> <span class="o">=</span> <span class="kt">PaperclipIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">wave</span> <span class="o">=</span> <span class="kt">SoundwaveIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">bike</span> <span class="o">=</span> <span class="kt">BikeIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">earth</span> <span class="o">=</span> <span class="kt">EarthIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">200</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+<span class="k">let</span> <span class="nv">textAlign</span> <span class="o">=</span> <span class="kt">TextAlignIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="c1">// We create a view to contain all the icons</span>
+<span class="k">let</span> <span class="nv">view</span> <span class="o">=</span> <span class="kt">UIView</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">400</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">400</span><span class="p">))</span>
+
+<span class="c1">// Then we add them to the large parent view</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">checkmark</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">burger</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">heart</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">star</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">plus</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">pin</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">play</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">stop</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">smile</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">fingerprint</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">clip</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">wave</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">bike</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">earth</span><span class="p">)</span>
+<span class="n">view</span><span class="o">.</span><span class="nf">addSubview</span><span class="p">(</span><span class="n">textAlign</span><span class="p">)</span>
+
+<span class="c1">// At last we assign the parent view with the icons to assistant editor</span>
+<span class="kt">XCPlaygroundPage</span><span class="o">.</span><span class="n">currentPage</span><span class="o">.</span><span class="n">liveView</span> <span class="o">=</span> <span class="n">view</span>
+
+
+
+</code></pre>
+<a href='#basics' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='basics'>Basics</h2>
+
+<p>This chapter shows how to configure the icon style and appearance.</p>
+
+<p>Properties listed below can be changed for all the icons, but many of them have much more settings. Also,
+these basic values can be set using <code>UIAppearance</code> on the application start. If you choose to use this way,
+then all the icons created after will inherit these properties.</p>
+
+<p>And the best thing is, that the icons are <code>IBDesignable</code>. That means if you add the to your <code>.xib</code> or <code>.storyboard</code>,
+you can see how they will look in your application and you can prototype the user interface really fast.</p>
+<pre class="highlight swift"><code>
+
+<span class="c1">// We need to import basic frameworks so this example can work</span>
+<span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">XCPlayground</span>
+
+<span class="c1">// Then we create the icon</span>
+<span class="k">let</span> <span class="nv">icon</span> <span class="o">=</span> <span class="kt">BikeIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">300</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">300</span><span class="p">))</span>
+
+<span class="c1">// We can set the line parameters</span>
+<span class="n">icon</span><span class="o">.</span><span class="n">lineCap</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Round</span>
+<span class="n">icon</span><span class="o">.</span><span class="n">lineJoin</span> <span class="o">=</span> <span class="o">.</span><span class="kt">Round</span>
+<span class="n">icon</span><span class="o">.</span><span class="n">lineWidth</span> <span class="o">=</span> <span class="mi">6</span>
+
+<span class="c1">// We make the icon to animate longer so we can see the animation in more detail</span>
+<span class="n">icon</span><span class="o">.</span><span class="n">animationDuration</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1">// If you animate using HSB the animation will be really colorful</span>
+<span class="c1">// (Or you can of course stock with RGB, if you are conservative)</span>
+<span class="n">icon</span><span class="o">.</span><span class="n">colorMode</span> <span class="o">=</span> <span class="o">.</span><span class="kt">HSB</span>
+
+<span class="c1">// We make the icon visible by default, the icon will animate at the beginning!</span>
+<span class="n">icon</span><span class="o">.</span><span class="n">visible</span> <span class="o">=</span> <span class="kc">true</span>
+
+<span class="c1">// Then we assign the icon to assistant editor</span>
+<span class="kt">XCPlaygroundPage</span><span class="o">.</span><span class="n">currentPage</span><span class="o">.</span><span class="n">liveView</span> <span class="o">=</span> <span class="n">icon</span>
+
+
+
+</code></pre>
+<a href='#export' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='export'>Export</h2>
+
+<p>This chapter shows us how to export bitmap image sequences.</p>
+
+<p>In the framework there is a special class for exporting images
+and their sequences from icons. You assign the icon to the exporter
+and then save the result and that is all!</p>
+
+<p><strong>If you are view this documentation in the playground and want to export the icons, then you need to have
+<em>Shared Playground Data</em> folder in your user <em>Documents</em> folder.</strong></p>
+<pre class="highlight swift"><code>
+
+<span class="kd">import</span> <span class="kt">UIKit</span>
+<span class="kd">import</span> <span class="kt">XCPlayground</span>
+
+<span class="c1">// We create the icon which will be 100x100 pixels</span>
+<span class="k">let</span> <span class="nv">icon</span> <span class="o">=</span> <span class="kt">CheckmarkIcon</span><span class="p">(</span><span class="nv">frame</span><span class="p">:</span> <span class="kt">CGRect</span><span class="p">(</span><span class="nv">x</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">y</span><span class="p">:</span> <span class="mi">0</span><span class="p">,</span> <span class="nv">width</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span> <span class="nv">height</span><span class="p">:</span> <span class="mi">100</span><span class="p">))</span>
+
+<span class="c1">// Then we tell where we would like the sequence to be stored</span>
+<span class="k">let</span> <span class="nv">folder</span> <span class="o">=</span> <span class="kt">XCPlaygroundSharedDataDirectoryURL</span>
+    <span class="o">.</span><span class="kt">URLByAppendingPathComponent</span><span class="p">(</span><span class="s">"checkmark_forward"</span><span class="p">)</span>
+
+<span class="c1">// We can tell the exporter how many frames the animation has</span>
+<span class="k">let</span> <span class="nv">frameCount</span> <span class="o">=</span> <span class="mi">50</span>
+
+<span class="c1">// Also, there is an option to export animation going once forward,</span>
+<span class="c1">// once backward or forward and back in one export</span>
+<span class="k">let</span> <span class="nv">direction</span> <span class="o">=</span> <span class="kt">AnimatedIconExporterDirection</span><span class="o">.</span><span class="kt">ForwardAndBack</span>
+
+<span class="c1">// Then we create the exporter and save the result!</span>
+<span class="k">let</span> <span class="nv">exporter</span> <span class="o">=</span> <span class="kt">AnimatedIconExporter</span><span class="p">(</span><span class="nv">icon</span><span class="p">:</span> <span class="n">icon</span><span class="p">,</span> <span class="nv">folder</span><span class="p">:</span> <span class="n">folder</span><span class="p">,</span> <span class="nv">direction</span><span class="p">:</span> <span class="n">direction</span><span class="p">,</span> <span class="nv">count</span><span class="p">:</span> <span class="n">frameCount</span><span class="p">)</span>
+
+<span class="n">exporter</span><span class="o">.</span><span class="nf">save</span><span class="p">()</span>
+
+
+</code></pre>
+
+          </section>
+        </section>
+        <section id="footer">
+          <p>Copyright 2016 Matěj Kašpar Jirásek</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ v0.6.0</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
