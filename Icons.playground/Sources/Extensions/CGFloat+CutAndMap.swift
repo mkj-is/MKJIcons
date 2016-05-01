@@ -10,12 +10,12 @@ import UIKit
 
 extension CGFloat {
     
-    func cut(from from: CGFloat, to: CGFloat) -> CGFloat {
-        if self < from {
-            return from
+    func constrain(low low: CGFloat, high: CGFloat) -> CGFloat {
+        if self < low {
+            return low
         }
-        if self > to {
-            return to
+        if self > high {
+            return high
         }
         return self
     }

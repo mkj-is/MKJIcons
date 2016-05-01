@@ -71,7 +71,7 @@ public class EarthIcon: AnimatedIcon {
         for i in 0...longitudeCount {
             
             let delayedTime = -time + (CGFloat(i) / CGFloat(longitudeCount)) * 2
-            let offset = delayedTime.cut(from: 0, to: 1)
+            let offset = delayedTime.constrain(low: 0, high: 1)
 
             let linePosition: CGFloat = offset.map(min: 0, max: 1, from: 20, to: -20)
             let controlPointPosition: CGFloat = offset.map(min: 0, max: 1, from: 11, to: -11)
