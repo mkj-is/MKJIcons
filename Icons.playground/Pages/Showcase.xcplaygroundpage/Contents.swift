@@ -3,12 +3,19 @@
 //:
 //: *Designed and developed by Matěj K. Jirásek ([mkj.is](http://mkj.is))*
 //:
+//: Full documentation is available here: <http://mkj-is.github.io/MKJIcons>
+//:
+//: - [**Go to next chapter.**](@next)
+//:
+//: -----
+//:
 //: ![Animated star](AnimatedStar.gif)
 //:
 //: An icon set usable as an iOS framework. This first documentation page
 //: serves as an reference and showcase of all available icons.
 //:
 //: The icons feature:
+//:
 //: - Vector rendering.
 //: - Independent on size.
 //: - Colours can be set to your liking.
@@ -21,14 +28,11 @@
 //:   and listen to “value changed” event.
 //: - The icons are designable in the interface builder, so you can view how they will
 //:   look in the final application and design them in Xcode!
-//: 
+//:
 //: **You need to have the assistant editor with timeline open to view the icons.
 //: If you click them, then they will animate. Some of them are invisible
 //: by default. Do not forget to click the empty places too!**
 //:
-//: The next chapter shows how to configure the icon style.
-//:
-//: [**Go to next chapter.**](@next)
 
 // We need to import basic frameworks so this example can work
 import UIKit

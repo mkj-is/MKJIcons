@@ -3,14 +3,21 @@
 //:
 //: *Designed and developed by Matěj K. Jirásek ([mkj.is](http://mkj.is))*
 //:
+//: Full documentation is available here: <http://mkj-is.github.io/MKJIcons>
+//:
 //: [**Go to previous chapter.**](@previous)
+//:
+//: -----
+//:
+//: This chapter shows us how to export bitmap image sequences.
 //:
 //: In the framework there is a special class for exporting images
 //: and their sequences from icons. You assign the icon to the exporter
 //: and then save the result and that is all!
 //:
-//: **For exporting files using playgrounds you need to have
+//: **If you are view this documentation in the playground and want to export the icons, then you need to have
 //: *Shared Playground Data* folder in your user *Documents* folder.**
+//:
 
 import UIKit
 import XCPlayground
