@@ -7,14 +7,13 @@
 //
 
 import UIKit
-import MKJIcons
 
 class SettingsViewController: ViewController {
     
     let style = Style()
     
     func update() {
-        NSNotificationCenter.defaultCenter().postNotificationName("styleChanged", object: self, userInfo: ["style": style])
+        NSNotificationCenter.defaultCenter().postNotificationName(Notification.StyleChange.rawValue, object: self, userInfo: ["style": style])
     }
     
     
