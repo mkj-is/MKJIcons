@@ -5,3 +5,5 @@ engines:
 ratings:
   paths:
     - "**.swift"
+  exclude_paths:
+    - "Icons.playground/Pages"
