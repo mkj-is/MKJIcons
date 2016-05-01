@@ -7,37 +7,27 @@ public extension UIColor {
     // MARK: - Getting RGB components
     
     var red: CGFloat {
-        get {
-            return rgbComponents.red
-        }
+        return rgbComponents.red
     }
     
     var green: CGFloat {
-        get {
-            return rgbComponents.green
-        }
+        return rgbComponents.green
     }
     
     var blue: CGFloat {
-        get {
-            return rgbComponents.blue
-        }
+        return rgbComponents.blue
     }
     
     var alpha: CGFloat {
-        get {
-            return rgbComponents.alpha
-        }
+        return rgbComponents.alpha
     }
     
     var rgbComponents: UIColorRGBComponents {
-        get {
-            var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
+        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
             
-            self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
+        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
             
-            return (red, green, blue, alpha)
-        }
+        return (red, green, blue, alpha)
     }
     
     // MARK: - Creating from RGB components

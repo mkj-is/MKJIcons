@@ -68,15 +68,11 @@ public class AnimatedIcon: UIControl {
     // MARK: - Internal properties
     
     var scale: CGFloat {
-        get {
-            return min(frame.size.width, frame.size.height) / 100
-        }
+        return min(frame.size.width, frame.size.height) / 100
     }
     
     var scaledLineWidth: CGFloat {
-        get {
-            return lineWidth / scale
-        }
+        return lineWidth / scale
     }
     
     // MARK: - Initialization
