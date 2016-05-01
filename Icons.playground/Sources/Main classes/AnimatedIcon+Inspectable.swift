@@ -9,9 +9,9 @@
 import UIKit
 
 extension AnimatedIcon {
-    
+
     // MARK: - Additional inspectable properties
-    
+
     @IBInspectable public var animationColorMode: Int {
         get {
             if colorMode == .HSB {
@@ -28,7 +28,7 @@ extension AnimatedIcon {
             }
         }
     }
-    
+
     @IBInspectable public var animationTimingFunction: Int {
         get {
             switch timingFunction {
@@ -59,7 +59,7 @@ extension AnimatedIcon {
             }
         }
     }
-    
+
     @IBInspectable public var lineCapStyle: Int {
         get {
             lineCap.rawValue
@@ -83,7 +83,7 @@ extension AnimatedIcon {
             }
         }
     }
-    
+
     @IBInspectable public var lineJoinStyle: Int {
         get {
             switch lineJoin {
@@ -106,5 +106,5 @@ extension AnimatedIcon {
             }
         }
     }
-    
+
 }

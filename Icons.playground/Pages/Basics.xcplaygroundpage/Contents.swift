@@ -1,4 +1,4 @@
-
+//:
 //: # Animated icons
 //:
 //: *Designed and developed by Matěj K. Jirásek ([mkj.is](http://mkj.is))*
@@ -44,4 +44,3 @@ icon.visible = true
 
 // Then we assign the icon to assistant editor
 XCPlaygroundPage.currentPage.liveView = icon
-

@@ -10,9 +10,9 @@ import UIKit
 
 @IBDesignable
 public class HeartIcon: AnimatedIcon {
-    
+
     // MARK: - Inspectable properties
-    
+
     @IBInspectable public var strokeColor: UIColor = UIColor.iconRedColor {
         didSet {
             layer.setNeedsDisplay()
@@ -28,7 +28,7 @@ public class HeartIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    
+
     @IBInspectable public var visible: Bool {
         get {
             return Bool(value)
@@ -37,32 +37,32 @@ public class HeartIcon: AnimatedIcon {
             value = CGFloat(newValue)
         }
     }
-    
+
     // MARK: - Drawing methods
-    
+
     override func draw(time: CGFloat = 0) {
-        
+
         if time == 0 {
             return
         }
-        
-        //// General Declarations
+
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
-        
+
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        
-        //// Variable Declarations
+
+        // Variable Declarations
         let dash: CGFloat = time * (twoLines ? 82 : 164)
         let gap: CGFloat = -5 + (1 - time) * (twoLines ? 82 : 164)
         let phase: CGFloat = -0.5
-        
+
         CGContextScaleCTM(context, scale, scale)
-        
-        //// Bezier Drawing
+
+        // Bezier Drawing
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 50, 75)
         CGContextRotateCTM(context, -45 * CGFloat(M_PI) / 180)
-        
+
         let bezierPath = UIBezierPath(style: self)
         bezierPath.moveToPoint(CGPoint(x: 30, y: -30.19))
         bezierPath.addLineToPoint(CGPoint(x: 30, y: -30))
@@ -75,20 +75,20 @@ public class HeartIcon: AnimatedIcon {
         bezierPath.addCurveToPoint(CGPoint(x: 15, y: -45), controlPoint1: CGPoint(x: 8.53, y: -43.89), controlPoint2: CGPoint(x: 11.64, y: -45))
         bezierPath.addCurveToPoint(CGPoint(x: 30, y: -30.19), controlPoint1: CGPoint(x: 23.22, y: -45), controlPoint2: CGPoint(x: 29.9, y: -38.39))
         bezierPath.closePath()
-        
+
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
         CGContextSaveGState(context)
-        
+
         if time < 1 {
-            CGContextSetLineDash(context, phase, [(dash < 0 ? 0 : dash), (gap < 0 ? 0 : gap)], 2)
+            CGContextSetLineDash(context, phase, [dash < 0 ? 0 : dash, gap < 0 ? 0 : gap], 2)
         }
         bezierPath.fill()
         bezierPath.stroke()
         CGContextRestoreGState(context)
-        
+
         CGContextRestoreGState(context)
 
     }
-    
+
 }

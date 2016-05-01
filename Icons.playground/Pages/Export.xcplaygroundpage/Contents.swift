@@ -1,4 +1,4 @@
-
+//:
 //: # Animated icons
 //:
 //: *Designed and developed by Matěj K. Jirásek ([mkj.is](http://mkj.is))*

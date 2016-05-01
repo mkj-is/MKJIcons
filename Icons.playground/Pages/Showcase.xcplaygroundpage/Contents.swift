@@ -1,4 +1,4 @@
-
+//:
 //: # Animated icons
 //:
 //: *Designed and developed by Matěj K. Jirásek ([mkj.is](http://mkj.is))*
@@ -79,4 +79,3 @@ view.addSubview(textAlign)
 
 // At last we assign the parent view with the icons to assistant editor
 XCPlaygroundPage.currentPage.liveView = view
-

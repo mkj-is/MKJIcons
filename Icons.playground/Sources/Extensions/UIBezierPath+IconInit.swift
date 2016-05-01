@@ -9,14 +9,14 @@
 import UIKit
 
 extension UIBezierPath {
-    
+
     convenience init(style: AnimatedIcon) {
-        
+
         self.init()
-        
+
         lineWidth = style.scaledLineWidth
         lineCapStyle = style.lineCap
         lineJoinStyle = style.lineJoin
-        
+
     }
 }

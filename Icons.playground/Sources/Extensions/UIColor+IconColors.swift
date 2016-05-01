@@ -1,7 +1,7 @@
 import UIKit
 
 public extension UIColor {
-    
+
     // MARK: - Basic icon colors
 
     public static var iconRedColor: UIColor {
@@ -16,5 +16,5 @@ public extension UIColor {
     public static var iconCyanColor: UIColor {
         return iconRedColor.colorWithHueComponent(iconRedColor.hue + 0.4)
     }
-    
+
 }

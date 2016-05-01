@@ -10,9 +10,9 @@ import UIKit
 
 @IBDesignable
 public class StarIcon: AnimatedIcon {
-    
+
     // MARK: - Inspectable properties
-    
+
     @IBInspectable public var strokeColor: UIColor = UIColor.iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
@@ -28,19 +28,19 @@ public class StarIcon: AnimatedIcon {
             layer.setNeedsDisplay()
         }
     }
-    
+
     @IBInspectable public var animationInsideDirection: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    
+
     @IBInspectable public var animationCenteredOnCorners: Bool = true {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    
+
     @IBInspectable public var visible: Bool {
         get {
             return Bool(value)
@@ -49,21 +49,21 @@ public class StarIcon: AnimatedIcon {
             value = CGFloat(newValue)
         }
     }
-    
+
     // MARK: - Drawing methods
-    
+
     override func draw(time: CGFloat = 0) {
-        
+
         if time == 0 {
             return
         }
-        
-        //// General Declarations
+
+        // General Declarations
         let context = UIGraphicsGetCurrentContext()
-        
+
         CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        
-        //// Variable Declarations
+
+        // Variable Declarations
         let lineLength: CGFloat = 18.2
         let dash: CGFloat = time * lineLength
         let doubleDash: CGFloat = 2 * dash
@@ -75,10 +75,10 @@ public class StarIcon: AnimatedIcon {
         let varyingDash: CGFloat = doubleLines ? doubleDash : dash
         let inOutPhase = animationInsideDirection ? outerPhase : innerPhase
         let linePhase = animationInsideDirection ? 0 : lineLength
-        
+
         CGContextScaleCTM(context, scale, scale)
-        
-        //// Path Drawing
+
+        // Path Drawing
         let path = UIBezierPath(style: self)
         path.moveToPoint(CGPoint(x: 50, y: 27.15))
         path.addLineToPoint(CGPoint(x: 55.58, y: 44.46))
@@ -91,15 +91,15 @@ public class StarIcon: AnimatedIcon {
         path.addLineToPoint(CGPoint(x: 26.22, y: 44.42))
         path.addLineToPoint(CGPoint(x: 44.42, y: 44.46))
         path.closePath()
-        
+
         strokeColor.setStroke()
         fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
-        
+
         CGContextSaveGState(context)
-        
+
         if time < 1 {
-            let calculatedDash = (animationCenteredOnCorners ? doubleDash : varyingDash)
-            let calculatedGap = (animationCenteredOnCorners ? doubleGap : varyingGap)
+            let calculatedDash = animationCenteredOnCorners ? doubleDash : varyingDash
+            let calculatedGap = animationCenteredOnCorners ? doubleGap : varyingGap
             CGContextSetLineDash(context, animationCenteredOnCorners ? inOutPhase : linePhase, [
                 calculatedDash < 0 ? 0 : calculatedDash,
                 calculatedGap < 0 ? 0 : calculatedGap
@@ -108,7 +108,7 @@ public class StarIcon: AnimatedIcon {
         path.fill()
         path.stroke()
         CGContextRestoreGState(context)
-        
+
     }
-    
+
 }

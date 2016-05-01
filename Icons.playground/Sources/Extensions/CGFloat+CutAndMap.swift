@@ -9,7 +9,7 @@
 import UIKit
 
 extension CGFloat {
-    
+
     func constrain(low low: CGFloat, high: CGFloat) -> CGFloat {
         if self < low {
             return low
@@ -19,9 +19,9 @@ extension CGFloat {
         }
         return self
     }
-    
+
     func map(min min: CGFloat, max: CGFloat, from: CGFloat, to: CGFloat) -> CGFloat {
         return from + (to - from) * ((self - min) / (max - min))
     }
-    
+
 }
