@@ -50,7 +50,7 @@
 		E7BE8DFD1CC57FF2007DADED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Showcase/Assets.xcassets; sourceTree = "<group>"; };
 		E7BE8E001CC57FF2007DADED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E7BE8E021CC57FF2007DADED /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Showcase/Info.plist; sourceTree = "<group>"; };
-		E7BE8E201CC582FE007DADED /* MKJIcons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MKJIcons.framework; path = "/Users/kaspar/Library/Developer/Xcode/DerivedData/MKJIcons-euexcningahwqkeooqmecuavihma/Build/Products/Debug-iphoneos/MKJIcons.framework"; sourceTree = "<absolute>"; };
+		E7BE8E201CC582FE007DADED /* MKJIcons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MKJIcons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
