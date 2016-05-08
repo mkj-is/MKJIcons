@@ -37,6 +37,15 @@ public class TextAlignIcon: AnimatedIcon {
         }
     }
 
+    @IBInspectable public var lines: UInt = 7 {
+        didSet {
+            if lines < 2 {
+                lines = 2
+            }
+            layer.setNeedsDisplay()
+        }
+    }
+
     @IBInspectable public var textAlignment: NSTextAlignment {
         get {
             switch value {
@@ -77,88 +86,20 @@ public class TextAlignIcon: AnimatedIcon {
         let timeOffset: CGFloat = time * (width - shortWidth)
         let shortX: CGFloat = x + timeOffset
 
-        // Bezier Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, x, 34.5)
+        for i in 0...lines - 1 {
 
-        let bezierPath = UIBezierPath(style: self)
-        bezierPath.moveToPoint(CGPoint(x: 0, y: 0))
-        bezierPath.addLineToPoint(CGPoint(x: width, y: 0))
-        bezierPath.stroke()
+            let short = i % 2 == 1
 
-        CGContextRestoreGState(context)
+            CGContextSaveGState(context)
+            CGContextTranslateCTM(context, short ? shortX : x, 34.5 + CGFloat(i) * 30 / CGFloat(lines - 1))
 
+            let bezierPath = UIBezierPath(style: self)
+            bezierPath.moveToPoint(CGPoint(x: 0, y: 0))
+            bezierPath.addLineToPoint(CGPoint(x: short ? shortWidth : width, y: 0))
+            bezierPath.stroke()
 
-        // Bezier 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, shortX, 39.5)
-
-        let bezier2Path = UIBezierPath(style: self)
-        bezier2Path.moveToPoint(CGPoint(x: 0, y: 0))
-        bezier2Path.addLineToPoint(CGPoint(x: shortWidth, y: 0))
-        bezier2Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        // Bezier 3 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, x, 44.5)
-
-        let bezier3Path = UIBezierPath(style: self)
-        bezier3Path.moveToPoint(CGPoint(x: 0, y: 0))
-        bezier3Path.addLineToPoint(CGPoint(x: width, y: -0))
-        bezier3Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        // Bezier 4 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, shortX, 49.5)
-
-        let bezier4Path = UIBezierPath(style: self)
-        bezier4Path.moveToPoint(CGPoint(x: 0, y: 0))
-        bezier4Path.addLineToPoint(CGPoint(x: shortWidth, y: 0))
-        bezier4Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        // Bezier 5 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, x, 54.5)
-
-        let bezier5Path = UIBezierPath(style: self)
-        bezier5Path.moveToPoint(CGPoint(x: 0, y: 0))
-        bezier5Path.addLineToPoint(CGPoint(x: width, y: -0))
-        bezier5Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        // Bezier 6 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, shortX, 59.5)
-
-        let bezier6Path = UIBezierPath(style: self)
-        bezier6Path.moveToPoint(CGPoint(x: 0, y: 0))
-        bezier6Path.addLineToPoint(CGPoint(x: shortWidth, y: 0))
-        bezier6Path.stroke()
-
-        CGContextRestoreGState(context)
-
-
-        // Bezier 7 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, x, 64.5)
-
-        let bezier7Path = UIBezierPath(style: self)
-        bezier7Path.moveToPoint(CGPoint(x: 0, y: 0))
-        bezier7Path.addLineToPoint(CGPoint(x: width, y: -0))
-        bezier7Path.stroke()
-
-        CGContextRestoreGState(context)
+            CGContextRestoreGState(context)
+        }
 
     }
 
