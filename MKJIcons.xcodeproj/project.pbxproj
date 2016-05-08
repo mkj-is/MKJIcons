@@ -19,6 +19,7 @@
 		E79C866F1CC6761B00C3B906 /* DropPinIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */; };
 		E79C86701CC6761B00C3B906 /* SettingsIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */; };
 		E79C86741CC6822200C3B906 /* AnimatedIcon+Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C86731CC6822200C3B906 /* AnimatedIcon+Appearance.swift */; };
+		E7ABD4DC1CDF4B0800823281 /* EllipsisIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7ABD4DB1CDF4B0800823281 /* EllipsisIcon.swift */; };
 		E7BE8DDA1CC57E5E007DADED /* UIColor+Between.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DCB1CC57E5E007DADED /* UIColor+Between.swift */; };
 		E7BE8DDB1CC57E5E007DADED /* UIColor+HSB.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DCC1CC57E5E007DADED /* UIColor+HSB.swift */; };
 		E7BE8DDC1CC57E5E007DADED /* UIColor+IconColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DCD1CC57E5E007DADED /* UIColor+IconColors.swift */; };
@@ -53,6 +54,7 @@
 		E79C866D1CC6761B00C3B906 /* DropPinIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DropPinIcon.swift; sourceTree = "<group>"; };
 		E79C866E1CC6761B00C3B906 /* SettingsIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsIcon.swift; sourceTree = "<group>"; };
 		E79C86731CC6822200C3B906 /* AnimatedIcon+Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Appearance.swift"; sourceTree = "<group>"; };
+		E7ABD4DB1CDF4B0800823281 /* EllipsisIcon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EllipsisIcon.swift; sourceTree = "<group>"; };
 		E7BE8DBF1CC57E30007DADED /* MKJIcons.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MKJIcons.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E7BE8DCB1CC57E5E007DADED /* UIColor+Between.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Between.swift"; sourceTree = "<group>"; };
 		E7BE8DCC1CC57E5E007DADED /* UIColor+HSB.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+HSB.swift"; sourceTree = "<group>"; };
@@ -134,6 +136,7 @@
 		E7BE8DCF1CC57E5E007DADED /* Icons */ = {
 			isa = PBXGroup;
 			children = (
+				E7ABD4DB1CDF4B0800823281 /* EllipsisIcon.swift */,
 				E718A78E1CD0F538004C6B83 /* BikeIcon.swift */,
 				E7BE8DD01CC57E5E007DADED /* BurgerIcon.swift */,
 				E7BE8DD11CC57E5E007DADED /* CheckmarkIcon.swift */,
@@ -273,6 +276,7 @@
 				E79C86741CC6822200C3B906 /* AnimatedIcon+Appearance.swift in Sources */,
 				E734AC201CD24385009809D5 /* EarthIcon.swift in Sources */,
 				E734AC241CD25E89009809D5 /* TextAlignIcon.swift in Sources */,
+				E7ABD4DC1CDF4B0800823281 /* EllipsisIcon.swift in Sources */,
 				E7BE8DE51CC57E5E007DADED /* AnimationFunctions.swift in Sources */,
 				E7BE8DE21CC57E5E007DADED /* StarIcon.swift in Sources */,
 				E7BE8DDD1CC57E5E007DADED /* UIColor+RGB.swift in Sources */,
