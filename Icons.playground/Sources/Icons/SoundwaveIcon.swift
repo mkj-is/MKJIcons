@@ -19,7 +19,7 @@ public class SoundwaveIcon: AnimatedIcon {
         }
     }
 
-    @IBInspectable public var lineCount: Int = 9 {
+    @IBInspectable public var lineCount: UInt = 9 {
         didSet {
             layer.setNeedsDisplay()
         }
