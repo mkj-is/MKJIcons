@@ -19,13 +19,19 @@ public class EarthIcon: AnimatedIcon {
         }
     }
 
-    @IBInspectable public var latitudeCount: Int = 6 {
+    @IBInspectable public var fillColor: UIColor = UIColor.iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var longitudeCount: Int = 10 {
+    @IBInspectable public var latitudeCount: UInt = 6 {
+        didSet {
+            layer.setNeedsDisplay()
+        }
+    }
+
+    @IBInspectable public var longitudeCount: UInt = 10 {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -57,6 +63,7 @@ public class EarthIcon: AnimatedIcon {
         CGContextScaleCTM(context, scale, scale)
 
         strokeColor.setStroke()
+        fillColor.colorWithAlphaComponent(fillAlpha).setFill()
 
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 50, 50)
@@ -66,6 +73,7 @@ public class EarthIcon: AnimatedIcon {
         let circlePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
         circlePath.lineWidth = lineWidth
         circlePath.stroke()
+        circlePath.fill()
 
         // Draw longitudes
         for i in 0...longitudeCount {
