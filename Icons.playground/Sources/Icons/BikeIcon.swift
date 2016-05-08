@@ -60,7 +60,7 @@ public class BikeIcon: AnimatedIcon {
         // First wheel
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 29.5, 64.5)
-        CGContextRotateCTM(context, 90 * CGFloat(M_PI) / 180)
+        CGContextRotateCTM(context, 110 * CGFloat(M_PI) / 180)
 
         let firstWheel = UIBezierPath(style: self)
         firstWheel.moveToPoint(CGPoint(x: -11, y: 0))
@@ -81,7 +81,8 @@ public class BikeIcon: AnimatedIcon {
         // Second wheel
         CGContextSaveGState(context)
         CGContextTranslateCTM(context, 70.5, 64.5)
-        CGContextRotateCTM(context, -90 * CGFloat(M_PI) / 180)
+        CGContextScaleCTM(context, -1, 1)
+        CGContextRotateCTM(context, -110 * CGFloat(M_PI) / 180)
 
         let secondWheel = UIBezierPath(style: self)
         secondWheel.moveToPoint(CGPoint(x: 11, y: 0))
