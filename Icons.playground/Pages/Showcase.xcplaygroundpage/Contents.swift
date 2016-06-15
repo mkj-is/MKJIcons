@@ -3,6 +3,9 @@
 //:
 //: *Designed and developed by Matěj K. Jirásek ([mkj.is](http://mkj.is))*
 //:
+//: [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.png)](https://github.com/Carthage/Carthage)
+//: [![Code Climate](https://img.shields.io/codeclimate/github/kabisaict/flow.svg)](https://codeclimate.com/github/mkj-is/MKJIcons)
+//:
 //: Full documentation is available here: <http://mkj-is.github.io/MKJIcons>
 //:
 //: - [**Go to next chapter.**](@next)
