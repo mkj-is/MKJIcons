@@ -30,6 +30,19 @@ public class AnimatedIcon: UIControl {
         }
     }
 
+    @IBInspectable public var animationAutoreverses: Bool = true {
+        didSet {
+
+            if animationRepeat {
+                animateTo(CGFloat(!Bool(value)))
+            }
+
+            layer.setNeedsDisplay()
+        }
+    }
+
+
+
     // MARK: - Properties
 
     public var colorMode: UIColorMode = .HSB {
@@ -154,7 +167,7 @@ public class AnimatedIcon: UIControl {
 
                 if animationRepeat {
                     animation.repeatCount = Float.infinity
-                    animation.autoreverses = true
+                    animation.autoreverses = animationAutoreverses
                 }
 
                 layer.addAnimation(animation, forKey: nil)
