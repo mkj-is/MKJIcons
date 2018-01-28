@@ -13,7 +13,7 @@ class AnimationLayer: CALayer {
         value = 0.0
     }
 
-    override init(layer: AnyObject) {
+    override init(layer: Any) {
         super.init(layer: layer)
 
         if let layer = layer as? AnimationLayer {
@@ -28,23 +28,20 @@ class AnimationLayer: CALayer {
 
     // MARK: - Animation of the value
 
-    override class func needsDisplayForKey(key: (String!)) -> Bool {
-
-        if key == "value" {
+    override class func needsDisplay(forKey: String) -> Bool {
+        if forKey == "value" {
             return true
         }
-
-        return super.needsDisplayForKey(key)
+        return super.needsDisplay(forKey: forKey)
     }
 
-    override func actionForKey(event: (String!)) -> (CAAction!) {
+    override func action(forKey event: String) -> (CAAction!) {
         if event == "value" {
-            let animation = CABasicAnimation.init(keyPath: event)
-            animation.fromValue = presentationLayer()?.valueForKey(event)
+            let animation = CABasicAnimation(keyPath: event)
+            animation.fromValue = presentation()?.value(forKey: event)
             return animation
         }
-
-        return super.actionForKey(event)
+        return super.action(forKey: event)
     }
 
 }

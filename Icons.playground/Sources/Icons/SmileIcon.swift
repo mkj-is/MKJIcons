@@ -55,13 +55,13 @@ public class SmileIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
-
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
         let strokeColor = UIColor(between: happyColor, and: sadColor, using: colorMode, ratio: time)
         strokeColor.setStroke()
-        let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
+        let fillColor = strokeColor.withAlphaComponent(fillAlpha)
         fillColor.setFill()
 
         // Variable Declarations
@@ -69,11 +69,11 @@ public class SmileIcon: AnimatedIcon {
         let eyeOffset: CGFloat = -eyeMovement / 2.0 + eyeMovement * time
         let lipY: CGFloat = -mouthMovement / 2.0 + time * mouthMovement
 
-        CGContextTranslateCTM(context, 50, 50)
+        context.translateBy(x: 50, y: 50)
 
         // Face Drawing
         if showFace {
-            let facePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
+            let facePath = UIBezierPath(ovalIn: CGRect(x: -20, y: -20, width: 40, height: 40))
             facePath.lineWidth = scaledLineWidth
             facePath.stroke()
             facePath.fill()
@@ -82,33 +82,33 @@ public class SmileIcon: AnimatedIcon {
         strokeColor.setFill()
 
         // Right eye Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, -8, (eyeOffset - 9))
+        context.saveGState()
+        context.translateBy(x: -8, y: (eyeOffset - 9))
 
-        let rightEyePath = UIBezierPath(ovalInRect: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: scaledLineWidth, height: scaledLineWidth))
+        let rightEyePath = UIBezierPath(ovalIn: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: scaledLineWidth, height: scaledLineWidth))
         rightEyePath.fill()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         // Left eye Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 8, (eyeOffset - 9))
+        context.saveGState()
+        context.translateBy(x: 8, y: (eyeOffset - 9))
 
-        let leftEyePath = UIBezierPath(ovalInRect: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: scaledLineWidth, height: scaledLineWidth))
+        let leftEyePath = UIBezierPath(ovalIn: CGRect(x: minusHalfLineWidth, y: minusHalfLineWidth, width: scaledLineWidth, height: scaledLineWidth))
         leftEyePath.fill()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         // Bezier Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 0, 5)
+        context.saveGState()
+        context.translateBy(x: 0, y: 5)
 
         let mouthPath = UIBezierPath(style: self)
-        mouthPath.moveToPoint(CGPoint(x: -10, y: lipY))
-        mouthPath.addCurveToPoint(CGPoint(x: 0, y: 0), controlPoint1: CGPoint(x: -10, y: lipY), controlPoint2: CGPoint(x: -7, y: 0))
-        mouthPath.addCurveToPoint(CGPoint(x: 10, y: lipY), controlPoint1: CGPoint(x: 7, y: -0), controlPoint2: CGPoint(x: 10, y: lipY))
+        mouthPath.move(to: CGPoint(x: -10, y: lipY))
+        mouthPath.addCurve(to: CGPoint(x: 0, y: 0), controlPoint1: CGPoint(x: -10, y: lipY), controlPoint2: CGPoint(x: -7, y: 0))
+        mouthPath.addCurve(to: CGPoint(x: 10, y: lipY), controlPoint1: CGPoint(x: 7, y: -0), controlPoint2: CGPoint(x: 10, y: lipY))
 
         mouthPath.stroke()
 

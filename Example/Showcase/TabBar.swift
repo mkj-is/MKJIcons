@@ -16,12 +16,12 @@ class TabBar: UITabBar {
 
         tintColor = UIColor.iconOrangeColor
 
-        styleChanged(nil)
+        styleChanged(notification: nil)
 
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(styleChanged(_:)), name: Notification.StyleChange.rawValue, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(styleChanged(notification:)), name: Notification.Name.StyleChange, object: nil)
     }
 
-    func styleChanged(notification: NSNotification?) {
+    @objc func styleChanged(notification: NSNotification?) {
 
         var style = Style()
 
@@ -34,12 +34,12 @@ class TabBar: UITabBar {
         let starIcon = StarIcon(frame: iconFrame)
         let settingsIcon = SettingsIcon(frame: iconFrame)
 
-        starIcon.applyStyle(style)
-        settingsIcon.applyStyle(style)
+        starIcon.applyStyle(style: style)
+        settingsIcon.applyStyle(style: style)
 
         if let items = self.items {
             
-            let starImage = starIcon.image(1)
+            let starImage = starIcon.image(at: 1)
             let settingsImage = settingsIcon.image()
             
             items[0].image = starImage

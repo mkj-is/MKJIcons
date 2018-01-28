@@ -49,14 +49,14 @@ public class PlayPauseIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
-
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
         let strokeColor = UIColor(between: playColor, and: pauseColor, using: colorMode, ratio: time)
         strokeColor.setStroke()
 
-        let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
+        let fillColor = strokeColor.withAlphaComponent(fillAlpha)
         fillColor.setFill()
 
         // Variable Declarations
@@ -70,44 +70,44 @@ public class PlayPauseIcon: AnimatedIcon {
         let topPoint = CGPoint(x: offsetX + height / 2.0 * invertedTime, y: -offsetY * time)
         let bottomPoint = CGPoint(x: offsetX + height / 2.0 * invertedTime, y: -offsetMinusY * time)
 
-        CGContextScaleCTM(context, scale, scale)
+        context.scaleBy(x: scale, y: scale)
 
         // Right line Drawing
         if time > 0 {
-            CGContextSaveGState(context)
-            CGContextTranslateCTM(context, 60, 50)
+            context.saveGState()
+            context.translateBy(x: 60, y: 50)
 
             let rightLinePath = UIBezierPath(style: self)
-            rightLinePath.moveToPoint(CGPoint(x: offsetMinusX, y: decreasingOffset))
-            rightLinePath.addLineToPoint(CGPoint(x: offsetX, y: decreasingOffset))
-            rightLinePath.addLineToPoint(CGPoint(x: offsetX, y: decreasingMinusOffset))
-            rightLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: decreasingMinusOffset))
-            rightLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: decreasingOffset))
-            rightLinePath.closePath()
+            rightLinePath.move(to: CGPoint(x: offsetMinusX, y: decreasingOffset))
+            rightLinePath.addLine(to: CGPoint(x: offsetX, y: decreasingOffset))
+            rightLinePath.addLine(to: CGPoint(x: offsetX, y: decreasingMinusOffset))
+            rightLinePath.addLine(to: CGPoint(x: offsetMinusX, y: decreasingMinusOffset))
+            rightLinePath.addLine(to: CGPoint(x: offsetMinusX, y: decreasingOffset))
+            rightLinePath.close()
 
             rightLinePath.stroke()
             rightLinePath.fill()
 
-            CGContextRestoreGState(context)
+            context.restoreGState()
         }
 
 
         // Left line Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 40, 50)
+        context.saveGState()
+        context.translateBy(x: 40, y: 50)
 
         let leftLinePath = UIBezierPath(style: self)
-        leftLinePath.moveToPoint(CGPoint(x: offsetMinusX, y: offsetY))
-        leftLinePath.addLineToPoint(bottomPoint)
-        leftLinePath.addLineToPoint(topPoint)
-        leftLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: offsetMinusY))
-        leftLinePath.addLineToPoint(CGPoint(x: offsetMinusX, y: offsetY))
-        leftLinePath.closePath()
+        leftLinePath.move(to: CGPoint(x: offsetMinusX, y: offsetY))
+        leftLinePath.addLine(to: bottomPoint)
+        leftLinePath.addLine(to: topPoint)
+        leftLinePath.addLine(to: CGPoint(x: offsetMinusX, y: offsetMinusY))
+        leftLinePath.addLine(to: CGPoint(x: offsetMinusX, y: offsetY))
+        leftLinePath.close()
 
         leftLinePath.stroke()
         leftLinePath.fill()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
     }
 
 }

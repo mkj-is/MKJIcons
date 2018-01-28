@@ -64,9 +64,9 @@ extension AnimatedIcon {
         get {
             lineCap.rawValue
             switch lineCap {
-            case .Butt:
+            case .butt:
                 return 0
-            case .Square:
+            case .square:
                 return 1
             default:
                 return 2
@@ -75,11 +75,11 @@ extension AnimatedIcon {
         set(new) {
             switch new {
             case 0:
-                lineCap = .Butt
+                lineCap = .butt
             case 1:
-                lineCap = .Square
+                lineCap = .square
             default:
-                lineCap = .Round
+                lineCap = .round
             }
         }
     }
@@ -87,9 +87,9 @@ extension AnimatedIcon {
     @IBInspectable public var lineJoinStyle: Int {
         get {
             switch lineJoin {
-            case .Bevel:
+            case .bevel:
                 return 0
-            case .Miter:
+            case .miter:
                 return 1
             default:
                 return 2
@@ -98,11 +98,11 @@ extension AnimatedIcon {
         set(new) {
             switch new {
             case 0:
-                lineJoin = .Bevel
+                lineJoin = .bevel
             case 1:
-                lineJoin = .Miter
+                lineJoin = .miter
             default:
-                lineJoin = .Round
+                lineJoin = .round
             }
         }
     }

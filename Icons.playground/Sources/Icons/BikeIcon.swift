@@ -21,26 +21,22 @@ public class BikeIcon: AnimatedIcon {
 
     @IBInspectable public var visible: Bool {
         get {
-            return Bool(value)
+            return value != 0
         }
         set (newValue) {
-            value = CGFloat(newValue)
+            value = newValue ? 0 : 1
         }
     }
 
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
-
-        if time == 0 {
+        guard time != 0, let context = UIGraphicsGetCurrentContext() else {
             return
         }
 
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        CGContextScaleCTM(context, scale, scale)
+        context.clear(CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        context.scaleBy(x: scale, y: scale)
 
         strokeColor.setStroke()
 
@@ -58,84 +54,83 @@ public class BikeIcon: AnimatedIcon {
         let seatLine: CGFloat = three * 38
 
         // First wheel
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 29.5, 64.5)
-        CGContextRotateCTM(context, 110 * CGFloat(M_PI) / 180)
+        context.saveGState()
+        context.translateBy(x: 29.5, y: 64.5)
+        context.rotate(by: 110 * .pi / 180)
 
         let firstWheel = UIBezierPath(style: self)
-        firstWheel.moveToPoint(CGPoint(x: -11, y: 0))
-        firstWheel.addCurveToPoint(CGPoint(x: 0, y: 11), controlPoint1: CGPoint(x: -11, y: 6.08), controlPoint2: CGPoint(x: -6.08, y: 11))
-        firstWheel.addCurveToPoint(CGPoint(x: 11, y: 0), controlPoint1: CGPoint(x: 6.08, y: 11), controlPoint2: CGPoint(x: 11, y: 6.08))
-        firstWheel.addCurveToPoint(CGPoint(x: 0, y: -11), controlPoint1: CGPoint(x: 11, y: -6.08), controlPoint2: CGPoint(x: 6.08, y: -11))
-        firstWheel.addCurveToPoint(CGPoint(x: -11, y: 0), controlPoint1: CGPoint(x: -6.08, y: -11), controlPoint2: CGPoint(x: -11, y: -6.08))
-        firstWheel.closePath()
+        firstWheel.move(to: CGPoint(x: -11, y: 0))
+        firstWheel.addCurve(to: CGPoint(x: 0, y: 11), controlPoint1: CGPoint(x: -11, y: 6.08), controlPoint2: CGPoint(x: -6.08, y: 11))
+        firstWheel.addCurve(to: CGPoint(x: 11, y: 0), controlPoint1: CGPoint(x: 6.08, y: 11), controlPoint2: CGPoint(x: 11, y: 6.08))
+        firstWheel.addCurve(to: CGPoint(x: 0, y: -11), controlPoint1: CGPoint(x: 11, y: -6.08), controlPoint2: CGPoint(x: 6.08, y: -11))
+        firstWheel.addCurve(to: CGPoint(x: -11, y: 0), controlPoint1: CGPoint(x: -6.08, y: -11), controlPoint2: CGPoint(x: -11, y: -6.08))
+        firstWheel.close()
 
-        CGContextSaveGState(context)
-        CGContextSetLineDash(context, 0, [bikeLine, 100], 2)
+        context.saveGState()
+        context.setLineDash(phase: 0, lengths: [bikeLine, 100])
         firstWheel.stroke()
-        CGContextRestoreGState(context)
 
-        CGContextRestoreGState(context)
-
+        context.restoreGState()
+        context.restoreGState()
 
         // Second wheel
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 70.5, 64.5)
-        CGContextScaleCTM(context, -1, 1)
-        CGContextRotateCTM(context, -110 * CGFloat(M_PI) / 180)
+        context.saveGState()
+        context.translateBy(x: 70.5, y: 64.5)
+        context.scaleBy(x: -1, y: 1)
+        context.rotate(by: -110 * .pi / 180)
 
         let secondWheel = UIBezierPath(style: self)
-        secondWheel.moveToPoint(CGPoint(x: 11, y: 0))
-        secondWheel.addCurveToPoint(CGPoint(x: 0, y: 11), controlPoint1: CGPoint(x: 11, y: 6.08), controlPoint2: CGPoint(x: 6.08, y: 11))
-        secondWheel.addCurveToPoint(CGPoint(x: -11, y: 0), controlPoint1: CGPoint(x: -6.08, y: 11), controlPoint2: CGPoint(x: -11, y: 6.08))
-        secondWheel.addCurveToPoint(CGPoint(x: 0, y: -11), controlPoint1: CGPoint(x: -11, y: -6.08), controlPoint2: CGPoint(x: -6.08, y: -11))
-        secondWheel.addCurveToPoint(CGPoint(x: 11, y: 0), controlPoint1: CGPoint(x: 6.08, y: -11), controlPoint2: CGPoint(x: 11, y: -6.08))
-        secondWheel.closePath()
+        secondWheel.move(to: CGPoint(x: 11, y: 0))
+        secondWheel.addCurve(to: CGPoint(x: 0, y: 11), controlPoint1: CGPoint(x: 11, y: 6.08), controlPoint2: CGPoint(x: 6.08, y: 11))
+        secondWheel.addCurve(to: CGPoint(x: -11, y: 0), controlPoint1: CGPoint(x: -6.08, y: 11), controlPoint2: CGPoint(x: -11, y: 6.08))
+        secondWheel.addCurve(to: CGPoint(x: 0, y: -11), controlPoint1: CGPoint(x: -11, y: -6.08), controlPoint2: CGPoint(x: -6.08, y: -11))
+        secondWheel.addCurve(to: CGPoint(x: 11, y: 0), controlPoint1: CGPoint(x: 6.08, y: -11), controlPoint2: CGPoint(x: 11, y: -6.08))
+        secondWheel.close()
 
-        CGContextSaveGState(context)
-        CGContextSetLineDash(context, 0, [bikeLine, 100], 2)
+        context.saveGState()
+        context.setLineDash(phase: 0, lengths: [bikeLine, 100])
         secondWheel.stroke()
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
         // Frame
         if two > 0 {
             let framePath = UIBezierPath(style: self)
-            framePath.moveToPoint(CGPoint(x: 61.5, y: 46.5))
-            framePath.addLineToPoint(CGPoint(x: 37.5, y: 46.5))
-            framePath.addLineToPoint(CGPoint(x: 53.5, y: 65.5))
-            framePath.addLineToPoint(CGPoint(x: 70.5, y: 65.5))
-            framePath.addLineToPoint(CGPoint(x: 61.5, y: 46.5))
-            framePath.closePath()
+            framePath.move(to: CGPoint(x: 61.5, y: 46.5))
+            framePath.addLine(to: CGPoint(x: 37.5, y: 46.5))
+            framePath.addLine(to: CGPoint(x: 53.5, y: 65.5))
+            framePath.addLine(to: CGPoint(x: 70.5, y: 65.5))
+            framePath.addLine(to: CGPoint(x: 61.5, y: 46.5))
+            framePath.close()
 
-            CGContextSaveGState(context)
-            CGContextSetLineDash(context, 0, [frameLine, 400], 2)
+            context.saveGState()
+            context.setLineDash(phase: 0, lengths: [frameLine, 400])
             framePath.stroke()
-            CGContextRestoreGState(context)
+            context.restoreGState()
         }
 
         // Seat and bars
         if three > 0 {
             let bars = UIBezierPath(style: self)
-            bars.moveToPoint(CGPoint(x: 30.5, y: 63.5))
-            bars.addLineToPoint(CGPoint(x: 39.5, y: 41.5))
-            bars.addLineToPoint(CGPoint(x: 30.5, y: 41.5))
+            bars.move(to: CGPoint(x: 30.5, y: 63.5))
+            bars.addLine(to: CGPoint(x: 39.5, y: 41.5))
+            bars.addLine(to: CGPoint(x: 30.5, y: 41.5))
 
-            CGContextSaveGState(context)
-            CGContextSetLineDash(context, 0, [barLine, 100], 2)
+            context.saveGState()
+            context.setLineDash(phase: 0, lengths: [barLine, 100])
             bars.stroke()
-            CGContextRestoreGState(context)
+            context.restoreGState()
 
             let seat = UIBezierPath(style: self)
-            seat.moveToPoint(CGPoint(x: 53.5, y: 65.5))
-            seat.addLineToPoint(CGPoint(x: 64.5, y: 38.5))
-            seat.addLineToPoint(CGPoint(x: 56.5, y: 38.5))
+            seat.move(to: CGPoint(x: 53.5, y: 65.5))
+            seat.addLine(to: CGPoint(x: 64.5, y: 38.5))
+            seat.addLine(to: CGPoint(x: 56.5, y: 38.5))
 
-            CGContextSaveGState(context)
-            CGContextSetLineDash(context, 0, [seatLine, 100], 2)
+            context.saveGState()
+            context.setLineDash(phase: 0, lengths: [seatLine, 100])
             seat.stroke()
-            CGContextRestoreGState(context)
+            context.restoreGState()
         }
 
     }

@@ -29,15 +29,15 @@ public extension UIColor {
     // MARK: - Creating from HSB components
 
     func colorWithHueComponent(hue: CGFloat) -> UIColor {
-        return UIColor(hue: hue % 1, saturation: saturation, brightness: brightness, alpha: alpha)
+        return UIColor(hue: hue.truncatingRemainder(dividingBy: 1), saturation: saturation, brightness: brightness, alpha: alpha)
     }
 
     func colorWithBrightnessComponent(brightness: CGFloat) -> UIColor {
-        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+        return UIColor(hue: hue.truncatingRemainder(dividingBy: 1), saturation: saturation, brightness: brightness, alpha: alpha)
     }
 
     func colorWithSaturationComponent(saturation: CGFloat) -> UIColor {
-        return UIColor(hue: hue, saturation: saturation, brightness: brightness, alpha: alpha)
+        return UIColor(hue: hue.truncatingRemainder(dividingBy: 1), saturation: saturation, brightness: brightness, alpha: alpha)
     }
 
 }

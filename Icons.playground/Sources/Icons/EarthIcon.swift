@@ -55,22 +55,22 @@ public class EarthIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        CGContextScaleCTM(context, scale, scale)
+        context.clear(CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        context.scaleBy(x: scale, y: scale)
 
         strokeColor.setStroke()
-        fillColor.colorWithAlphaComponent(fillAlpha).setFill()
+        fillColor.withAlphaComponent(fillAlpha).setFill()
 
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50, 50)
+        context.saveGState()
+        context.translateBy(x: 50, y: 50)
 
         // Circle Drawing
 
-        let circlePath = UIBezierPath(ovalInRect: CGRect(x: -20, y: -20, width: 40, height: 40))
+        let circlePath = UIBezierPath(ovalIn: CGRect(x: -20, y: -20, width: 40, height: 40))
         circlePath.lineWidth = lineWidth
         circlePath.stroke()
         circlePath.fill()
@@ -85,16 +85,16 @@ public class EarthIcon: AnimatedIcon {
             let controlPointPosition: CGFloat = offset.map(min: 0, max: 1, from: 11, to: -11)
 
             let longitudePath = UIBezierPath(style: self)
-            longitudePath.moveToPoint(CGPoint(x: 0, y: -20))
-            longitudePath.addCurveToPoint(CGPoint(x: linePosition, y: 0), controlPoint1: CGPoint(x: controlPointPosition, y: -20), controlPoint2: CGPoint(x: linePosition, y: -11.05))
-            longitudePath.addCurveToPoint(CGPoint(x: 0, y: 20), controlPoint1: CGPoint(x: linePosition, y: 11.05), controlPoint2: CGPoint(x: controlPointPosition, y: 20))
+            longitudePath.move(to: CGPoint(x: 0, y: -20))
+            longitudePath.addCurve(to: CGPoint(x: linePosition, y: 0), controlPoint1: CGPoint(x: controlPointPosition, y: -20), controlPoint2: CGPoint(x: linePosition, y: -11.05))
+            longitudePath.addCurve(to: CGPoint(x: 0, y: 20), controlPoint1: CGPoint(x: linePosition, y: 11.05), controlPoint2: CGPoint(x: controlPointPosition, y: 20))
 
             longitudePath.stroke()
 
         }
 
         // Draw latitudes
-        let pi = CGFloat(M_PI)
+        let pi: CGFloat = .pi
 
         for i in 0...latitudeCount {
 
@@ -105,8 +105,8 @@ public class EarthIcon: AnimatedIcon {
             let x = sin(i/count * pi) * size / 2
 
             let latitudePath = UIBezierPath(style: self)
-            latitudePath.moveToPoint(CGPoint(x: -x, y: y))
-            latitudePath.addLineToPoint(CGPoint(x: x, y: y))
+            latitudePath.move(to: CGPoint(x: -x, y: y))
+            latitudePath.addLine(to: CGPoint(x: x, y: y))
             latitudePath.stroke()
         }
 

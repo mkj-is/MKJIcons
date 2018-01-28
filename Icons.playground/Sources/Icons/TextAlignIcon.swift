@@ -13,7 +13,7 @@ public class TextAlignIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var strokeColor: UIColor = .white {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -50,18 +50,18 @@ public class TextAlignIcon: AnimatedIcon {
         get {
             switch value {
             case 1:
-                return .Right
+                return .right
             case 0.5:
-                return .Center
+                return .center
             default:
-                return .Left
+                return .left
             }
         }
         set (newValue) {
             switch newValue {
-            case .Right:
+            case .right:
                 value = 1
-            case .Left:
+            case .left:
                 value = 0
             default:
                 value = 0.5
@@ -72,12 +72,12 @@ public class TextAlignIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        CGContextScaleCTM(context, scale, scale)
+        context.clear(CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        context.scaleBy(x: scale, y: scale)
 
         strokeColor.setStroke()
 
@@ -90,15 +90,15 @@ public class TextAlignIcon: AnimatedIcon {
 
             let short = i % 2 == 1
 
-            CGContextSaveGState(context)
-            CGContextTranslateCTM(context, short ? shortX : x, 34.5 + CGFloat(i) * 30 / CGFloat(lines - 1))
+            context.saveGState()
+            context.translateBy(x: short ? shortX : x, y: 34.5 + CGFloat(i) * 30 / CGFloat(lines - 1))
 
             let bezierPath = UIBezierPath(style: self)
-            bezierPath.moveToPoint(CGPoint(x: 0, y: 0))
-            bezierPath.addLineToPoint(CGPoint(x: short ? shortWidth : width, y: 0))
+            bezierPath.move(to: CGPoint(x: 0, y: 0))
+            bezierPath.addLine(to: CGPoint(x: short ? shortWidth : width, y: 0))
             bezierPath.stroke()
 
-            CGContextRestoreGState(context)
+            context.restoreGState()
         }
 
     }

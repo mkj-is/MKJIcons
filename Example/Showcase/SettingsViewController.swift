@@ -13,7 +13,7 @@ class SettingsViewController: ViewController {
     let style = Style()
 
     func update() {
-        NSNotificationCenter.defaultCenter().postNotificationName(Notification.StyleChange.rawValue, object: self, userInfo: ["style": style])
+        NotificationCenter.default.post(name: Notification.Name.StyleChange, object: self, userInfo: ["style": style])
     }
 
 
@@ -50,7 +50,7 @@ class SettingsViewController: ViewController {
     }
 
     @IBAction func animationRepeatChanged(sender: UISwitch) {
-        style.animationRepeat = sender.on
+        style.animationRepeat = sender.isOn
         update()
     }
 

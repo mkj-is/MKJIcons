@@ -4,7 +4,7 @@ struct AnimationFunctions {
 
     // MARK: - Constants
 
-    static let pi = CGFloat(M_PI)
+    static let pi: CGFloat = .pi
 
     // MARK: - Simple functions
 

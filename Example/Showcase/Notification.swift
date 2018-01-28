@@ -8,6 +8,6 @@
 
 import Foundation
 
-enum Notification: String {
-    case StyleChange = "styleChange"
+extension Notification.Name {
+    static let StyleChange = Notification.Name("styleChange")
 }

@@ -53,15 +53,11 @@ public class StarIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
-
-        if time == 0 {
+        guard time > 0, let context = UIGraphicsGetCurrentContext() else {
             return
         }
 
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
-
-        CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        context.clear(CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
 
         // Variable Declarations
         let lineLength: CGFloat = 18.2
@@ -76,38 +72,38 @@ public class StarIcon: AnimatedIcon {
         let inOutPhase = animationInsideDirection ? outerPhase : innerPhase
         let linePhase = animationInsideDirection ? 0 : lineLength
 
-        CGContextScaleCTM(context, scale, scale)
+        context.scaleBy(x: scale, y: scale)
 
         // Path Drawing
         let path = UIBezierPath(style: self)
-        path.moveToPoint(CGPoint(x: 50, y: 27.15))
-        path.addLineToPoint(CGPoint(x: 55.58, y: 44.46))
-        path.addLineToPoint(CGPoint(x: 73.78, y: 44.42))
-        path.addLineToPoint(CGPoint(x: 59.04, y: 55.09))
-        path.addLineToPoint(CGPoint(x: 64.69, y: 72.38))
-        path.addLineToPoint(CGPoint(x: 50, y: 61.65))
-        path.addLineToPoint(CGPoint(x: 35.31, y: 72.38))
-        path.addLineToPoint(CGPoint(x: 40.96, y: 55.09))
-        path.addLineToPoint(CGPoint(x: 26.22, y: 44.42))
-        path.addLineToPoint(CGPoint(x: 44.42, y: 44.46))
-        path.closePath()
+        path.move(to: CGPoint(x: 50, y: 27.15))
+        path.addLine(to: CGPoint(x: 55.58, y: 44.46))
+        path.addLine(to: CGPoint(x: 73.78, y: 44.42))
+        path.addLine(to: CGPoint(x: 59.04, y: 55.09))
+        path.addLine(to: CGPoint(x: 64.69, y: 72.38))
+        path.addLine(to: CGPoint(x: 50, y: 61.65))
+        path.addLine(to: CGPoint(x: 35.31, y: 72.38))
+        path.addLine(to: CGPoint(x: 40.96, y: 55.09))
+        path.addLine(to: CGPoint(x: 26.22, y: 44.42))
+        path.addLine(to: CGPoint(x: 44.42, y: 44.46))
+        path.close()
 
         strokeColor.setStroke()
-        fillColor.colorWithAlphaComponent(time * fillAlpha).setFill()
+        fillColor.withAlphaComponent(time * fillAlpha).setFill()
 
-        CGContextSaveGState(context)
+        context.saveGState()
 
         if time < 1 {
             let calculatedDash = animationCenteredOnCorners ? doubleDash : varyingDash
             let calculatedGap = animationCenteredOnCorners ? doubleGap : varyingGap
-            CGContextSetLineDash(context, animationCenteredOnCorners ? inOutPhase : linePhase, [
+            context.setLineDash(phase: animationCenteredOnCorners ? inOutPhase : linePhase, lengths: [
                 calculatedDash < 0 ? 0 : calculatedDash,
                 calculatedGap < 0 ? 0 : calculatedGap
-                ], 2)
+            ])
         }
         path.fill()
         path.stroke()
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
     }
 

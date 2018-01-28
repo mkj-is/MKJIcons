@@ -13,13 +13,13 @@ public class SettingsIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var primaryColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var primaryColor: UIColor = .white {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var secondaryColor: UIColor = UIColor.lightGrayColor() {
+    @IBInspectable public var secondaryColor: UIColor = .lightGray {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -49,66 +49,67 @@ public class SettingsIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
-
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
         let strokeColor = UIColor(between: primaryColor, and: secondaryColor, using: colorMode, ratio: time)
         strokeColor.setStroke()
-        let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
+        let fillColor = strokeColor.withAlphaComponent(fillAlpha)
         fillColor.setFill()
 
-        CGContextScaleCTM(context, scale, scale)
+        context.scaleBy(x: scale, y: scale)
 
         // Slider 1 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50, 50)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
+        context.saveGState()
+        context.translateBy(x: 50, y: 50)
+        context.rotate(by: -180 * .pi / 180)
 
         let slider1Rect = CGRect(x: -10, y: -25, width: 20, height: 50)
-        CGContextSaveGState(context)
+        context.saveGState()
         UIRectClip(slider1Rect)
-        CGContextTranslateCTM(context, slider1Rect.origin.x, slider1Rect.origin.y)
+        context.translateBy(x: slider1Rect.origin.x, y: slider1Rect.origin.y)
 
         drawSlider(time: time)
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         // Slider 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 65, 50)
+        context.saveGState()
+        context.translateBy(x: 65, y: 50)
 
         let slider2Rect = CGRect(x: -10, y: -25, width: 20, height: 50)
-        CGContextSaveGState(context)
+        context.saveGState()
         UIRectClip(slider2Rect)
-        CGContextTranslateCTM(context, slider2Rect.origin.x, slider2Rect.origin.y)
+        context.translateBy(x: slider2Rect.origin.x, y: slider2Rect.origin.y)
 
         drawSlider(time: time)
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         // Slider 3 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35, 50)
+        context.saveGState()
+        context.translateBy(x: 35, y: 50)
 
         let slider3Rect = CGRect(x: -10, y: -25, width: 20, height: 50)
-        CGContextSaveGState(context)
+        context.saveGState()
         UIRectClip(slider3Rect)
-        CGContextTranslateCTM(context, slider3Rect.origin.x, slider3Rect.origin.y)
+        context.translateBy(x: slider3Rect.origin.x, y: slider3Rect.origin.y)
 
         drawSlider(time: time)
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
     }
 
-    func drawSlider(time time: CGFloat = 1) {
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
+    func drawSlider(time: CGFloat = 1) {
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
         // Variable Declarations
         let handlePosition: CGFloat = 12 + time * 26
@@ -119,8 +120,8 @@ public class SettingsIcon: AnimatedIcon {
         let cornerRadius: CGFloat = roundedHandle ? halfHandleSize : 0
 
         // Handle Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 10, handlePosition)
+        context.saveGState()
+        context.translateBy(x: 10, y: handlePosition)
 
         let handlePath = UIBezierPath(roundedRect: CGRect(x: negativeHalfHandleSize, y: negativeHalfHandleSize, width: handleSize, height: handleSize), cornerRadius: cornerRadius)
 
@@ -131,29 +132,29 @@ public class SettingsIcon: AnimatedIcon {
         handlePath.fill()
         handlePath.stroke()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         // Top line Drawing
         let topLinePath = UIBezierPath(style: self)
-        topLinePath.moveToPoint(CGPoint(x: 10, y: 5))
-        topLinePath.addLineToPoint(CGPoint(x: 10, y: (longLineLength + 12)))
+        topLinePath.move(to: CGPoint(x: 10, y: 5))
+        topLinePath.addLine(to: CGPoint(x: 10, y: (longLineLength + 12)))
 
         topLinePath.stroke()
 
 
         // Bottom line Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 10, 45)
-        CGContextRotateCTM(context, -180 * CGFloat(M_PI) / 180)
+        context.saveGState()
+        context.translateBy(x: 10, y: 45)
+        context.rotate(by: -180 * .pi / 180)
 
         let bottomLine = UIBezierPath(style: self)
-        bottomLine.moveToPoint(CGPoint(x: 0, y: 0))
-        bottomLine.addLineToPoint(CGPoint(x: 0, y: (shortLineLength + 7)))
+        bottomLine.move(to: CGPoint(x: 0, y: 0))
+        bottomLine.addLine(to: CGPoint(x: 0, y: (shortLineLength + 7)))
 
         bottomLine.stroke()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
     }
 
 }

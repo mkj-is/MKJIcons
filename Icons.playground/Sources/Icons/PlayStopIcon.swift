@@ -43,37 +43,37 @@ public class PlayStopIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
-
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
         let strokeColor = UIColor(between: playColor, and: stopColor, using: colorMode, ratio: time)
         strokeColor.setStroke()
 
-        let fillColor = strokeColor.colorWithAlphaComponent(fillAlpha)
+        let fillColor = strokeColor.withAlphaComponent(fillAlpha)
         fillColor.setFill()
 
         // Variable Declarations
         let halfSize = size / 2.0
 
-        CGContextScaleCTM(context, scale, scale)
+        context.scaleBy(x: scale, y: scale)
 
         // Left line Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50, 50)
+        context.saveGState()
+        context.translateBy(x: 50, y: 50)
 
         let leftLinePath = UIBezierPath(style: self)
-        leftLinePath.moveToPoint(CGPoint(x: -halfSize, y: halfSize))
-        leftLinePath.addLineToPoint(CGPoint(x: halfSize, y: halfSize * time))
-        leftLinePath.addLineToPoint(CGPoint(x: halfSize, y: -halfSize * time))
-        leftLinePath.addLineToPoint(CGPoint(x: -halfSize, y: -halfSize))
-        leftLinePath.addLineToPoint(CGPoint(x: -halfSize, y: halfSize))
-        leftLinePath.closePath()
+        leftLinePath.move(to: CGPoint(x: -halfSize, y: halfSize))
+        leftLinePath.addLine(to: CGPoint(x: halfSize, y: halfSize * time))
+        leftLinePath.addLine(to: CGPoint(x: halfSize, y: -halfSize * time))
+        leftLinePath.addLine(to: CGPoint(x: -halfSize, y: -halfSize))
+        leftLinePath.addLine(to: CGPoint(x: -halfSize, y: halfSize))
+        leftLinePath.close()
 
         leftLinePath.stroke()
         leftLinePath.fill()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
     }
 
 }

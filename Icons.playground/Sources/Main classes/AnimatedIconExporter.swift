@@ -12,11 +12,11 @@ public class AnimatedIconExporter {
     var direction: AnimatedIconExporterDirection
     var count: Int
     var frames: [UIImage]
-    var folder: NSURL
+    var folder: URL
 
     // MARK: - Initialization
 
-    public init(icon: AnimatedIcon, folder: NSURL, direction: AnimatedIconExporterDirection = .Forward, count: Int = 50) {
+    public init(icon: AnimatedIcon, folder: URL, direction: AnimatedIconExporterDirection = .Forward, count: Int = 50) {
         self.icon = icon
         self.direction = direction
         self.count = count
@@ -29,7 +29,7 @@ public class AnimatedIconExporter {
     public func export() -> [UIImage] {
         frames = []
         for i in 0...count {
-            frames.append(icon.image(position(i)))
+            frames.append(icon.image(at: position(i: i)))
         }
         return frames
     }
@@ -38,25 +38,30 @@ public class AnimatedIconExporter {
 
         var exported = true
 
-        let name = NSStringFromClass(icon.dynamicType).componentsSeparatedByString(".").last
+        let name = NSStringFromClass(type(of: icon)).components(separatedBy: ".").last
 
-        if !NSFileManager.defaultManager().fileExistsAtPath(folder.path!) {
-            try! NSFileManager.defaultManager().createDirectoryAtURL(folder, withIntermediateDirectories: true, attributes: nil)
+        if !FileManager.default.fileExists(atPath: folder.path) {
+            try! FileManager.default.createDirectory(at: folder, withIntermediateDirectories: true, attributes: nil)
         }
 
-        let formatter = NSDateFormatter()
+        let formatter = DateFormatter()
         formatter.dateFormat = "YYYY-MM-dd_HH-mm-ss"
-        let date = formatter.stringFromDate(NSDate())
+        let date = formatter.string(from: Date())
 
         let images = export()
         for i in 0...(images.count - 1) {
 
             let fileName = String(format: "%@_%@_%03d.png", arguments: [date, name!, i])
-            let filePath = folder.URLByAppendingPathComponent(fileName)
-            let data = UIImagePNGRepresentation(images[i])
+            let filePath = folder.appendingPathComponent(fileName)
 
-            if let data = data {
-                exported = exported && data.writeToURL(filePath, atomically: true)
+            if let data = UIImagePNGRepresentation(images[i]) {
+                do {
+                    try data.write(to: filePath)
+                } catch {
+                    exported = false
+                }
+            } else {
+                exported = false
             }
 
         }
@@ -72,19 +77,21 @@ public class AnimatedIconExporter {
         if direction == .Backward {
             value = 1 - value
         } else if direction == .ForwardAndBack {
-            value = (value % 0.5) * 2 * (value % 1 >= 0.5 ? -1 : 1) + (value % 1 >= 0.5 ? 1 : 0)
+            let truncatedByHalf = value.truncatingRemainder(dividingBy: 0.5)
+            let truncatedByOne = value.truncatingRemainder(dividingBy: 1)
+            value = truncatedByHalf * 2 * (truncatedByOne >= 0.5 ? -1 : 1) + (truncatedByOne >= 0.5 ? 1 : 0)
         }
 
         // Apply animation function
         switch icon.timingFunction {
         case kCAMediaTimingFunctionEaseInEaseOut:
-            value = AnimationFunctions.sinEaseInOut(value)
+            value = AnimationFunctions.sinEaseInOut(x: value)
         case kCAMediaTimingFunctionEaseIn:
-            value = AnimationFunctions.sinEaseOut(value)
+            value = AnimationFunctions.sinEaseOut(x: value)
         case kCAMediaTimingFunctionEaseOut:
-            value = AnimationFunctions.sinEaseIn(value)
+            value = AnimationFunctions.sinEaseIn(x: value)
         default:
-            value = AnimationFunctions.linear(value)
+            value = AnimationFunctions.linear(x: value)
         }
 
         return value

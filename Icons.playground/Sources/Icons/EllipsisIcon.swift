@@ -13,13 +13,13 @@ public class EllipsisIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var strokeColor: UIColor = .white {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var fillColor: UIColor = UIColor.whiteColor() {
+    @IBInspectable public var fillColor: UIColor = .white {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -49,55 +49,55 @@ public class EllipsisIcon: AnimatedIcon {
     // MARK: - Drawing methods
 
     override func draw(time: CGFloat = 0) {
+        guard let context = UIGraphicsGetCurrentContext() else {
+            return
+        }
 
-        // General Declarations
-        let context = UIGraphicsGetCurrentContext()
+        context.clear(CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
+        context.scaleBy(x: scale, y: scale)
 
-        CGContextClearRect(context, CGRect(x: 0, y: 0, width: frame.size.width, height: frame.size.height))
-        CGContextScaleCTM(context, scale, scale)
-
-        fillColor.colorWithAlphaComponent(fillAlpha).setFill()
+        fillColor.withAlphaComponent(fillAlpha).setFill()
         strokeColor.setStroke()
 
         //// Variable Declarations
         let dotOffset: CGFloat = -dotSize / 2.0
-        let yOffset: CGFloat = dotOffset + magnitude * sin(time * 360 * CGFloat(M_PI)/180)
-        let yCenterOffset: CGFloat = dotOffset + magnitude * sin(1.5 * time * 360 * CGFloat(M_PI)/180)
+        let yOffset: CGFloat = dotOffset + magnitude * sin(time * 360 * .pi / 180)
+        let yCenterOffset: CGFloat = dotOffset + magnitude * sin(1.5 * time * 360 * .pi/180)
 
         //// Dot 1 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 35, 50)
+        context.saveGState()
+        context.translateBy(x: 35, y: 50)
 
-        let dot1Path = UIBezierPath(ovalInRect: CGRect(x: dotOffset, y: yOffset, width: dotSize, height: dotSize))
+        let dot1Path = UIBezierPath(ovalIn: CGRect(x: dotOffset, y: yOffset, width: dotSize, height: dotSize))
         dot1Path.lineWidth = lineWidth
         dot1Path.fill()
         dot1Path.stroke()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         //// Dot 2 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 50, 50)
+        context.saveGState()
+        context.translateBy(x: 50, y: 50)
 
-        let dot2Path = UIBezierPath(ovalInRect: CGRect(x: dotOffset, y: yCenterOffset, width: dotSize, height: dotSize))
+        let dot2Path = UIBezierPath(ovalIn: CGRect(x: dotOffset, y: yCenterOffset, width: dotSize, height: dotSize))
         dot2Path.lineWidth = lineWidth
         dot2Path.fill()
         dot2Path.stroke()
 
-        CGContextRestoreGState(context)
+        context.restoreGState()
 
 
         //// Dot 3 Drawing
-        CGContextSaveGState(context)
-        CGContextTranslateCTM(context, 65, 50)
+        context.saveGState()
+        context.translateBy(x: 65, y: 50)
 
-        let dot3Path = UIBezierPath(ovalInRect: CGRect(x: dotOffset, y: yOffset, width: dotSize, height: dotSize))
+        let dot3Path = UIBezierPath(ovalIn: CGRect(x: dotOffset, y: yOffset, width: dotSize, height: dotSize))
         dot3Path.lineWidth = lineWidth
         dot3Path.fill()
         dot3Path.stroke()
         
-        CGContextRestoreGState(context)
+        context.restoreGState()
         
     }
     
