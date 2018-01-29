@@ -20,7 +20,6 @@ public extension AnimatedIcon {
         lineWidth = property
     }
 
-
     public func appearanceFillAlpha() -> CGFloat {
         return fillAlpha
     }
@@ -28,7 +27,6 @@ public extension AnimatedIcon {
     public func setAppearanceFillAlpha(property: CGFloat) {
         fillAlpha = property
     }
-
 
     public func appearanceLineCapStyle() -> Int {
         return lineCapStyle
@@ -38,7 +36,6 @@ public extension AnimatedIcon {
         lineCapStyle = property
     }
 
-
     public func appearanceLineJoinStyle() -> Int {
         return lineJoinStyle
     }
@@ -46,7 +43,6 @@ public extension AnimatedIcon {
     public func setAppearanceLineJoinStyle(property: Int) {
         lineJoinStyle = property
     }
-
 
     public func appearanceAnimationDuration() -> CGFloat {
         return CGFloat(animationDuration)
@@ -56,7 +52,6 @@ public extension AnimatedIcon {
         animationDuration = Double(property)
     }
 
-
     public func appearanceAnimationTimingFunction() -> Int {
         return animationTimingFunction
     }
@@ -65,7 +60,6 @@ public extension AnimatedIcon {
         animationTimingFunction = property
     }
 
-
     public func appearanceAnimationColorMode() -> Int {
         return animationColorMode
     }
@@ -73,7 +67,5 @@ public extension AnimatedIcon {
     public func setAppearanceAnimationColorMode(property: Int) {
         animationColorMode = property
     }
-
-
 
 }

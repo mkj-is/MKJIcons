@@ -90,7 +90,6 @@ public class SmileIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         // Left eye Drawing
         context.saveGState()
         context.translateBy(x: 8, y: (eyeOffset - 9))
@@ -99,7 +98,6 @@ public class SmileIcon: AnimatedIcon {
         leftEyePath.fill()
 
         context.restoreGState()
-
 
         // Bezier Drawing
         context.saveGState()

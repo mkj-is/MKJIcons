@@ -98,7 +98,6 @@ public class DropPinIcon: AnimatedIcon {
             context.restoreGState()
         }
 
-
         // Drop Drawing
 
         let dropPath = UIBezierPath(style: self)

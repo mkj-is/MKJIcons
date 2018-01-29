@@ -74,7 +74,6 @@ public class BurgerIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         // Middle Drawing
         context.saveGState()
         context.translateBy(x: 50, y: 50)
@@ -87,7 +86,6 @@ public class BurgerIcon: AnimatedIcon {
         middlePath.stroke()
 
         context.restoreGState()
-
 
         // Top Drawing
         context.saveGState()

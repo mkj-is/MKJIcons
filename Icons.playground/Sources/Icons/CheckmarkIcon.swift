@@ -58,7 +58,6 @@ public class CheckmarkIcon: AnimatedIcon {
         currentColor.setStroke()
         staticLinePath.stroke()
 
-
         // Animated line Drawing
         let animatedLinePath = UIBezierPath(style: self)
         animatedLinePath.move(to: CGPoint(x: 30, y: 30))

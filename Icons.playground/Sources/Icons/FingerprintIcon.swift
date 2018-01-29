@@ -67,7 +67,6 @@ public class FingerprintIcon: AnimatedIcon {
         bezier3Path.stroke()
         context.restoreGState()
 
-
         // Bezier 4 Drawing
         let bezier4Path = UIBezierPath(style: self)
         bezier4Path.move(to: CGPoint(x: 37.05, y: 69.57))
@@ -81,7 +80,6 @@ public class FingerprintIcon: AnimatedIcon {
         bezier4Path.stroke()
         context.restoreGState()
 
-
         // Bezier 5 Drawing
         let bezier5Path = UIBezierPath(style: self)
         bezier5Path.move(to: CGPoint(x: 61.43, y: 67.24))
@@ -92,7 +90,6 @@ public class FingerprintIcon: AnimatedIcon {
         bezier5Path.stroke()
         context.restoreGState()
 
-
         // Bezier 7 Drawing
         let bezier7Path = UIBezierPath(style: self)
         bezier7Path.move(to: CGPoint(x: 45.67, y: 62.59))
@@ -102,7 +99,6 @@ public class FingerprintIcon: AnimatedIcon {
         context.setLineDash(phase: 0, lengths: [line2Dash, 300])
         bezier7Path.stroke()
         context.restoreGState()
-
 
         // Bezier 8 Drawing
         let bezier8Path = UIBezierPath(style: self)
@@ -115,7 +111,6 @@ public class FingerprintIcon: AnimatedIcon {
         bezier8Path.stroke()
         context.restoreGState()
 
-
         // Bezier 9 Drawing
         let bezier9Path = UIBezierPath(style: self)
         bezier9Path.move(to: CGPoint(x: 33.12, y: 56.63))
@@ -125,7 +120,6 @@ public class FingerprintIcon: AnimatedIcon {
         context.setLineDash(phase: 0, lengths: [line11Dash, 300])
         bezier9Path.stroke()
         context.restoreGState()
-
 
         // Bezier 10 Drawing
         let bezier10Path = UIBezierPath(style: self)
@@ -138,7 +132,6 @@ public class FingerprintIcon: AnimatedIcon {
         bezier10Path.stroke()
         context.restoreGState()
 
-
         // Bezier 11 Drawing
         let bezier11Path = UIBezierPath(style: self)
         bezier11Path.move(to: CGPoint(x: 39.13, y: 31.46))
@@ -150,7 +143,6 @@ public class FingerprintIcon: AnimatedIcon {
         bezier11Path.stroke()
         context.restoreGState()
 
-
         // Bezier 12 Drawing
         let bezier12Path = UIBezierPath(style: self)
         bezier12Path.move(to: CGPoint(x: 64.48, y: 42.8))
@@ -160,7 +152,6 @@ public class FingerprintIcon: AnimatedIcon {
         context.setLineDash(phase: 0, lengths: [line10Dash, 300])
         bezier12Path.stroke()
         context.restoreGState()
-
 
         // Bez 1 Drawing
         let bez1Path = UIBezierPath(style: self)
@@ -174,7 +165,6 @@ public class FingerprintIcon: AnimatedIcon {
         context.setLineDash(phase: 0, lengths: [line3Dash, 300])
         bez1Path.stroke()
         context.restoreGState()
-
 
         // Bezier 6 Drawing
         let bezier6Path = UIBezierPath(style: self)

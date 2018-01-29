@@ -38,13 +38,13 @@ class TabBar: UITabBar {
         settingsIcon.applyStyle(style: style)
 
         if let items = self.items {
-            
+
             let starImage = starIcon.image(at: 1)
             let settingsImage = settingsIcon.image()
-            
+
             items[0].image = starImage
             items[1].image = settingsImage
-            
+
             items[0].selectedImage = starImage
             items[1].selectedImage = settingsImage
         }

@@ -16,7 +16,6 @@ class SettingsViewController: ViewController {
         NotificationCenter.default.post(name: Notification.Name.StyleChange, object: self, userInfo: ["style": style])
     }
 
-
     // MARK: - Interface actions
 
     @IBAction func lineWidthChanged(sender: UISlider) {

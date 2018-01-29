@@ -75,7 +75,6 @@ public class SettingsIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         // Slider 2 Drawing
         context.saveGState()
         context.translateBy(x: 65, y: 50)
@@ -89,7 +88,6 @@ public class SettingsIcon: AnimatedIcon {
         context.restoreGState()
 
         context.restoreGState()
-
 
         // Slider 3 Drawing
         context.saveGState()
@@ -134,14 +132,12 @@ public class SettingsIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         // Top line Drawing
         let topLinePath = UIBezierPath(style: self)
         topLinePath.move(to: CGPoint(x: 10, y: 5))
         topLinePath.addLine(to: CGPoint(x: 10, y: (longLineLength + 12)))
 
         topLinePath.stroke()
-
 
         // Bottom line Drawing
         context.saveGState()

@@ -91,7 +91,6 @@ public class PlayPauseIcon: AnimatedIcon {
             context.restoreGState()
         }
 
-
         // Left line Drawing
         context.saveGState()
         context.translateBy(x: 40, y: 50)

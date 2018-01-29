@@ -84,7 +84,6 @@ public class PlusMinusIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         // Horizontal line Drawing
         context.saveGState()
         context.rotate(by: -verticalAngle * .pi / 180)

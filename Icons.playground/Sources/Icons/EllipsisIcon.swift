@@ -75,7 +75,6 @@ public class EllipsisIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         //// Dot 2 Drawing
         context.saveGState()
         context.translateBy(x: 50, y: 50)
@@ -87,7 +86,6 @@ public class EllipsisIcon: AnimatedIcon {
 
         context.restoreGState()
 
-
         //// Dot 3 Drawing
         context.saveGState()
         context.translateBy(x: 65, y: 50)
@@ -96,9 +94,9 @@ public class EllipsisIcon: AnimatedIcon {
         dot3Path.lineWidth = lineWidth
         dot3Path.fill()
         dot3Path.stroke()
-        
+
         context.restoreGState()
-        
+
     }
-    
+
 }

@@ -41,8 +41,6 @@ public class AnimatedIcon: UIControl {
         }
     }
 
-
-
     // MARK: - Properties
 
     public var colorMode: UIColorMode = .HSB {

@@ -28,6 +28,3 @@ class ShowcaseViewController: ViewController {
         }
     }
 }
-
-
-
