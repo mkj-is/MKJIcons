@@ -1,8 +1,12 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="49e-Tb-3d3">
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--Icons-->
@@ -14,15 +18,16 @@
                         <viewControllerLayoutGuide type="bottom" id="4ug-Mw-9AY"/>
                     </layoutGuides>
                     <scrollView key="view" autoresizesSubviews="NO" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" indicatorStyle="white" id="gDS-a9-8iy">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DyB-Mi-9RK">
-                                <rect key="frame" x="10" y="50" width="300" height="1000"/>
+                                <rect key="frame" x="37.666666666666657" y="0.0" width="300" height="1000"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XCF-OX-bC0" customClass="HeartIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="432" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -42,7 +47,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eKa-PD-toV" customClass="PlayPauseIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="432" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -67,7 +73,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hf2-ID-6cB" customClass="SettingsIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="432" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -89,7 +96,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zsY-OG-LE4" customClass="SettingsIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="108" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -108,7 +116,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qUn-zc-e45" customClass="SmileIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="540" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -128,7 +137,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mGX-de-Q9q" customClass="PlusMinusIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="216" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -148,7 +158,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hrJ-Kw-blv" customClass="StarIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="324" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -169,7 +180,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZPl-c6-gvM" customClass="StarIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="324" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -189,7 +201,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ED3-eP-ysb" customClass="DropPinIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="324" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -209,7 +222,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OON-4C-fX8" customClass="DropPinIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="216" width="100" height="105"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -228,7 +242,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GEo-gU-qNw" customClass="StarIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="108" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -250,7 +265,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3JR-Ph-a9o" customClass="CheckmarkIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="108" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -269,7 +285,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7XK-jR-7Zw" customClass="HeartIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="0.0" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -289,7 +306,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hGV-oJ-bx5" customClass="PlusMinusIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="0.0" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -309,7 +327,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="z6V-92-2Uo" customClass="BurgerIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -328,7 +347,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Q9-Yh-I4U" customClass="StarIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="216" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -349,7 +369,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fun-4V-l5V" customClass="PlayStopIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="540" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -371,7 +392,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vdT-VY-hKO" customClass="SmileIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="540" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -389,7 +411,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zIQ-2m-jVb" customClass="FingerprintIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="648" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -405,7 +428,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XBb-yh-EC8" customClass="PaperclipIcon" customModule="MKJIcons">
                                         <rect key="frame" x="100" y="648" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -421,7 +445,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="284-Bn-DOm" customClass="SoundwaveIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="648" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -449,7 +474,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJX-vt-bYq" customClass="BikeIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="756" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -465,7 +491,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="o4Z-k0-ZIU" customClass="EarthIcon" customModule="MKJIcons">
                                         <rect key="frame" x="108" y="756" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -480,7 +507,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LvQ-hr-odX" customClass="TextAlignIcon" customModule="MKJIcons">
                                         <rect key="frame" x="200" y="756" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -495,7 +523,8 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Vw7-jM-sU3" customClass="EllipsisIcon" customModule="MKJIcons">
                                         <rect key="frame" x="0.0" y="864" width="100" height="100"/>
-                                        <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
                                         <userDefinedRuntimeAttributes>
                                             <userDefinedRuntimeAttribute type="number" keyPath="lineWidth">
                                                 <real key="value" value="2"/>
@@ -509,20 +538,19 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.17647058823529413" green="0.17647058823529413" blue="0.17647058823529413" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.17647058823529413" green="0.17647058823529413" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1000" id="Fr2-Zc-wft"/>
                                     <constraint firstAttribute="width" constant="300" id="Zxk-Qr-vrf"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
-                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="DyB-Mi-9RK" firstAttribute="top" secondItem="Ia1-K6-d13" secondAttribute="bottom" constant="30" id="oXC-cV-cqY"/>
-                            <constraint firstItem="DyB-Mi-9RK" firstAttribute="centerX" secondItem="gDS-a9-8iy" secondAttribute="centerX" id="pDI-cg-UDX"/>
+                            <constraint firstItem="DyB-Mi-9RK" firstAttribute="top" secondItem="gDS-a9-8iy" secondAttribute="top" id="dWl-r6-Cwd"/>
+                            <constraint firstItem="DyB-Mi-9RK" firstAttribute="centerX" secondItem="gDS-a9-8iy" secondAttribute="centerX" id="jZN-Ag-2l8"/>
                         </constraints>
-                        <inset key="scrollIndicatorInsets" minX="0.0" minY="22" maxX="0.0" maxY="52"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="size" keyPath="contentSize">
                                 <size key="value" width="320" height="1050"/>
@@ -533,7 +561,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="419" y="0.0"/>
+            <point key="canvasLocation" x="777" y="160"/>
         </scene>
         <!--Settings-->
         <scene sceneID="wg7-f3-ORb">
@@ -544,12 +572,12 @@
                         <viewControllerLayoutGuide type="bottom" id="Djb-ko-YwX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="1200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wm4-pq-hhk">
-                                <rect key="frame" x="101" y="65" width="118" height="31"/>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="128.66666666666666" y="89" width="118" height="31"/>
+                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4Kn-8g-Rhq"/>
                                     <constraint firstAttribute="width" constant="114" id="tLo-G9-5AU"/>
@@ -559,18 +587,17 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line width" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qva-et-g8v">
-                                <rect key="frame" x="99" y="36" width="122" height="21"/>
+                                <rect key="frame" x="148.33333333333334" y="60" width="78.666666666666657" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="6vD-Tl-bPF"/>
-                                    <constraint firstAttribute="width" constant="122" id="Zsn-BH-Bvr"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="6hH-IG-uwl">
-                                <rect key="frame" x="101" y="309" width="118" height="31"/>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="128.66666666666666" y="333" width="118" height="31"/>
+                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="OYm-S8-GsD"/>
                                     <constraint firstAttribute="height" constant="30" id="aYe-Ks-IGD"/>
@@ -580,29 +607,26 @@
                                 </connections>
                             </slider>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation duration" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayy-Ka-uIF">
-                                <rect key="frame" x="88" y="280" width="145" height="21"/>
+                                <rect key="frame" x="115.33333333333333" y="304" width="144.66666666666669" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="145" id="UCQ-nS-pjD"/>
                                     <constraint firstAttribute="height" constant="21" id="elG-oZ-r03"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line cap style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM4-OS-XKb">
-                                <rect key="frame" x="99" y="115" width="122" height="21"/>
+                                <rect key="frame" x="135" y="139" width="105.33333333333331" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="122" id="MRB-CP-GZu"/>
                                     <constraint firstAttribute="height" constant="21" id="fZV-WJ-3t1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-NF-JSv">
-                                <rect key="frame" x="59" y="144" width="202" height="29"/>
+                                <rect key="frame" x="101.33333333333331" y="168" width="173" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="Pp4-vd-Ary"/>
                                     <constraint firstAttribute="height" constant="28" id="qtQ-4C-LRC"/>
                                 </constraints>
                                 <segments>
@@ -610,25 +634,23 @@
                                     <segment title="Square"/>
                                     <segment title="Round"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="lineCapChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="VcN-1Q-pU2"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line join style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="REc-D0-U45">
-                                <rect key="frame" x="99" y="200" width="122" height="21"/>
+                                <rect key="frame" x="135.66666666666666" y="224" width="104" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="bBb-py-pLf"/>
-                                    <constraint firstAttribute="width" constant="122" id="h4k-eH-7VL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="qrO-WE-Qxq">
-                                <rect key="frame" x="59" y="230" width="202" height="29"/>
+                                <rect key="frame" x="107.33333333333331" y="254" width="161" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="26k-Aq-xGe"/>
                                     <constraint firstAttribute="height" constant="28" id="3WJ-LB-n4R"/>
                                 </constraints>
                                 <segments>
@@ -636,50 +658,47 @@
                                     <segment title="Miter"/>
                                     <segment title="Round"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="lineJoinChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="4Iz-qO-kIU"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Color interpolation" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a18-Ss-XgR">
-                                <rect key="frame" x="89" y="352" width="142" height="21"/>
+                                <rect key="frame" x="117.00000000000001" y="376" width="141.33333333333337" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="BH3-VJ-8Qm"/>
-                                    <constraint firstAttribute="width" constant="142" id="OuQ-T9-rNm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S7V-g5-ywY">
-                                <rect key="frame" x="59" y="383" width="202" height="29"/>
+                                <rect key="frame" x="86.666666666666686" y="407" width="202" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="202" id="acO-ZJ-ycU"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="202" id="acO-ZJ-ycU"/>
                                     <constraint firstAttribute="height" constant="28" id="hFj-c7-hhC"/>
                                 </constraints>
                                 <segments>
                                     <segment title="HSB"/>
                                     <segment title="RGB"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="colorModeChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="q8T-PM-cER"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation curve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBG-vv-OpQ">
-                                <rect key="frame" x="98" y="431" width="124" height="21"/>
+                                <rect key="frame" x="126" y="455" width="123.66666666666669" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="oC1-G7-neK"/>
-                                    <constraint firstAttribute="width" constant="124" id="oNe-R5-MAm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="BmU-KI-qNK">
-                                <rect key="frame" x="55" y="463" width="211" height="29"/>
+                                <rect key="frame" x="82" y="487" width="211" height="29"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="211" id="Dbg-xh-Ljy"/>
                                     <constraint firstAttribute="height" constant="28" id="zxK-cF-LLs"/>
                                 </constraints>
                                 <segments>
@@ -688,27 +707,32 @@
                                     <segment title="Out"/>
                                     <segment title="In/Out"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="animationTimingFunctionChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Yya-4T-tB9"/>
                                 </connections>
                             </segmentedControl>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Repeat animations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtE-pj-1rJ">
-                                <rect key="frame" x="30" y="528" width="142" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lrr-8v-UoV">
-                                <rect key="frame" x="217" y="523" width="51" height="31"/>
-                                <color key="onTintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="thumbTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <connections>
-                                    <action selector="animationRepeatChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="h4J-6U-aEO"/>
-                                </connections>
-                            </switch>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="i23-42-XWh">
+                                <rect key="frame" x="82.333333333333329" y="546" width="210.33333333333337" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat animations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtE-pj-1rJ">
+                                        <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lrr-8v-UoV">
+                                        <rect key="frame" x="161.33333333333331" y="0.0" width="51" height="31"/>
+                                        <color key="onTintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <connections>
+                                            <action selector="animationRepeatChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="h4J-6U-aEO"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="a18-Ss-XgR" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="2Tj-9M-4jA"/>
                             <constraint firstItem="mPh-NF-JSv" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5Ib-kV-FAi"/>
@@ -718,6 +742,7 @@
                             <constraint firstItem="Wm4-pq-hhk" firstAttribute="top" secondItem="Qva-et-g8v" secondAttribute="bottom" constant="8" id="O4e-Ub-h3l"/>
                             <constraint firstItem="nM4-OS-XKb" firstAttribute="top" secondItem="Wm4-pq-hhk" secondAttribute="bottom" constant="20" id="P2e-af-VES"/>
                             <constraint firstItem="qrO-WE-Qxq" firstAttribute="top" secondItem="REc-D0-U45" secondAttribute="bottom" constant="9" id="QFV-h1-cQ6"/>
+                            <constraint firstItem="i23-42-XWh" firstAttribute="top" secondItem="BmU-KI-qNK" secondAttribute="bottom" constant="31" id="TAs-z5-GdD"/>
                             <constraint firstItem="Qva-et-g8v" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="TIu-vz-C7o"/>
                             <constraint firstItem="ayy-Ka-uIF" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="TpL-RI-IIK"/>
                             <constraint firstItem="6hH-IG-uwl" firstAttribute="top" secondItem="ayy-Ka-uIF" secondAttribute="bottom" constant="8" id="U0A-a2-Ldf"/>
@@ -727,6 +752,7 @@
                             <constraint firstItem="BmU-KI-qNK" firstAttribute="top" secondItem="XBG-vv-OpQ" secondAttribute="bottom" constant="11" id="bTL-a3-cgi"/>
                             <constraint firstItem="mPh-NF-JSv" firstAttribute="top" secondItem="nM4-OS-XKb" secondAttribute="bottom" constant="8" id="hla-et-Dwk"/>
                             <constraint firstItem="6hH-IG-uwl" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="kDf-a3-ziI"/>
+                            <constraint firstItem="i23-42-XWh" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="mON-2Q-qO9"/>
                             <constraint firstItem="Qva-et-g8v" firstAttribute="top" secondItem="L7p-HK-0SC" secondAttribute="bottom" constant="16" id="mbZ-13-H9s"/>
                             <constraint firstItem="nM4-OS-XKb" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="olM-uj-lX0"/>
                             <constraint firstItem="BmU-KI-qNK" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="pVM-hA-8Vx"/>
@@ -740,7 +766,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="818" y="0.0"/>
+            <point key="canvasLocation" x="1481" y="160"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
@@ -748,11 +774,10 @@
                 <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="320" height="1200"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA" customClass="TabBar" customModule="Showcase" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
-                        <color key="selectedImageTintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="selectedImageTintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </tabBar>
                     <connections>
                         <segue destination="9pv-A4-QxB" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
@@ -761,7 +786,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="0.0"/>
+            <point key="canvasLocation" x="1139" y="-864"/>
         </scene>
     </scenes>
 </document>
