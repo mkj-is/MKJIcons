@@ -21,29 +21,25 @@ public class AnimatedIcon: UIControl {
 
     @IBInspectable public var animationRepeat: Bool = false {
         didSet {
-
             if animationRepeat {
                 animateTo(goal: CGFloat(!Bool(value)))
             }
-
             layer.setNeedsDisplay()
         }
     }
 
     @IBInspectable public var animationAutoreverses: Bool = true {
         didSet {
-
             if animationRepeat {
                 animateTo(goal: CGFloat(!Bool(value)))
             }
-
             layer.setNeedsDisplay()
         }
     }
 
     // MARK: - Properties
 
-    public var colorMode: UIColorMode = .HSB {
+    public var colorMode: UIColorMode = .hsb {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -63,7 +59,6 @@ public class AnimatedIcon: UIControl {
 
     public var value: CGFloat = 0 {
         didSet {
-
             if oldValue != value {
                 animateTo(goal: value)
             }
@@ -165,7 +160,7 @@ public class AnimatedIcon: UIControl {
                 animation.toValue = goal
 
                 if animationRepeat {
-                    animation.repeatCount = Float.infinity
+                    animation.repeatCount = .infinity
                     animation.autoreverses = animationAutoreverses
                 }
 

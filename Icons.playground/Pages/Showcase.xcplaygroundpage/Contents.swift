@@ -39,7 +39,7 @@
 
 // We need to import basic frameworks so this example can work
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 
 // These are all the icons available
 let checkmark = CheckmarkIcon(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -83,4 +83,4 @@ view.addSubview(textAlign)
 view.addSubview(ellipsis)
 
 // At last we assign the parent view with the icons to assistant editor
-XCPlaygroundPage.currentPage.liveView = view
+PlaygroundPage.current.liveView = view

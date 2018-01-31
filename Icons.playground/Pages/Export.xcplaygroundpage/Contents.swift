@@ -20,14 +20,13 @@
 //:
 
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 
 // We create the icon which will be 100x100 pixels
 let icon = CheckmarkIcon(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
 
 // Then we tell where we would like the sequence to be stored
-let folder = XCPlaygroundSharedDataDirectoryURL
-    .URLByAppendingPathComponent("checkmark_forward")
+let folder = playgroundSharedDataDirectory.appendingPathComponent("checkmark_forward")
 
 // We can tell the exporter how many frames the animation has
 let frameCount = 50

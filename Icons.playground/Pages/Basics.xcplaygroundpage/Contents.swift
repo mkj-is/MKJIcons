@@ -22,14 +22,14 @@
 
 // We need to import basic frameworks so this example can work
 import UIKit
-import XCPlayground
+import PlaygroundSupport
 
 // Then we create the icon
 let icon = BikeIcon(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
 
 // We can set the line parameters
-icon.lineCap = .Round
-icon.lineJoin = .Round
+icon.lineCap = .round
+icon.lineJoin = .round
 icon.lineWidth = 6
 
 // We make the icon to animate longer so we can see the animation in more detail
@@ -37,10 +37,10 @@ icon.animationDuration = 2
 
 // If you animate using HSB the animation will be really colorful
 // (Or you can of course stock with RGB, if you are conservative)
-icon.colorMode = .HSB
+icon.colorMode = .hsb
 
 // We make the icon visible by default, the icon will animate at the beginning!
 icon.visible = true
 
 // Then we assign the icon to assistant editor
-XCPlaygroundPage.currentPage.liveView = icon
+PlaygroundPage.current.liveView = icon

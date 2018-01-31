@@ -14,18 +14,10 @@ extension AnimatedIcon {
 
     @IBInspectable public var animationColorMode: Int {
         get {
-            if colorMode == .HSB {
-                return 0
-            } else {
-                return 1
-            }
+            return colorMode == .hsb ? 0 : 1
         }
-        set(new) {
-            if new < 1 {
-                colorMode = .HSB
-            } else {
-                colorMode = .RGB
-            }
+        set {
+            colorMode = newValue < 1 ? .hsb : .rgb
         }
     }
 
@@ -44,8 +36,8 @@ extension AnimatedIcon {
                 return 0
             }
         }
-        set(new) {
-            switch new {
+        set {
+            switch newValue {
             case 1:
                 timingFunction = kCAMediaTimingFunctionLinear
             case 2:
@@ -62,7 +54,6 @@ extension AnimatedIcon {
 
     @IBInspectable public var lineCapStyle: Int {
         get {
-            lineCap.rawValue
             switch lineCap {
             case .butt:
                 return 0
@@ -95,8 +86,8 @@ extension AnimatedIcon {
                 return 2
             }
         }
-        set(new) {
-            switch new {
+        set {
+            switch newValue {
             case 0:
                 lineJoin = .bevel
             case 1:
