@@ -10,7 +10,6 @@ import UIKit
 import MKJIcons
 
 extension AnimatedIcon {
-
     func applyStyle(style: Style) {
         lineWidth = style.lineWidth
         lineCapStyle = style.lineCap
@@ -20,5 +19,4 @@ extension AnimatedIcon {
         animationDuration = style.animationDuration
         animationRepeat = style.animationRepeat
     }
-
 }

@@ -9,7 +9,7 @@
 import UIKit
 import MKJIcons
 
-class ShowcaseViewController: ViewController {
+final class ShowcaseViewController: ViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

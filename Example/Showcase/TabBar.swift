@@ -9,8 +9,7 @@
 import UIKit
 import MKJIcons
 
-class TabBar: UITabBar {
-
+final class TabBar: UITabBar {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
@@ -22,7 +21,6 @@ class TabBar: UITabBar {
     }
 
     @objc func styleChanged(notification: NSNotification?) {
-
         var style = Style()
 
         if let notification = notification, let userInfo = notification.userInfo, let s = userInfo["style"] as? Style {
@@ -38,7 +36,6 @@ class TabBar: UITabBar {
         settingsIcon.applyStyle(style: style)
 
         if let items = self.items {
-
             let starImage = starIcon.image(at: 1)
             let settingsImage = settingsIcon.image()
 
@@ -48,7 +45,5 @@ class TabBar: UITabBar {
             items[0].selectedImage = starImage
             items[1].selectedImage = settingsImage
         }
-
     }
-
 }

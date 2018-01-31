@@ -8,8 +8,7 @@
 
 import UIKit
 
-class Style {
-
+final class Style {
     var lineCap = 2
     var lineJoin = 2
     var lineWidth: CGFloat = 2
@@ -17,5 +16,4 @@ class Style {
     var animationColorMode = 0
     var animationTimingFunction = 4
     var animationRepeat = false
-
 }
