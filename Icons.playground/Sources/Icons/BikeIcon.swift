@@ -21,10 +21,10 @@ public class BikeIcon: AnimatedIcon {
 
     @IBInspectable public var visible: Bool {
         get {
-            return value != 0
+            return Bool(value)
         }
-        set (newValue) {
-            value = newValue ? 0 : 1
+        set {
+            value = CGFloat(newValue)
         }
     }
 

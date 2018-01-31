@@ -35,7 +35,7 @@ public class PlusMinusIcon: AnimatedIcon {
         get {
             return Bool(value)
         }
-        set (newValue) {
+        set {
             value = CGFloat(newValue)
         }
     }

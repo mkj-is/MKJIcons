@@ -47,7 +47,7 @@ public class SmileIcon: AnimatedIcon {
         get {
             return Bool(value)
         }
-        set (newValue) {
+        set {
             value = CGFloat(newValue)
         }
     }

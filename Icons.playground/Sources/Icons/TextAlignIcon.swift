@@ -57,7 +57,7 @@ public class TextAlignIcon: AnimatedIcon {
                 return .left
             }
         }
-        set (newValue) {
+        set {
             switch newValue {
             case .right:
                 value = 1

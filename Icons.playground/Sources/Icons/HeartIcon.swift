@@ -33,7 +33,7 @@ public class HeartIcon: AnimatedIcon {
         get {
             return Bool(value)
         }
-        set (newValue) {
+        set {
             value = CGFloat(newValue)
         }
     }

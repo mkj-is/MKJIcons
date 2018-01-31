@@ -41,7 +41,7 @@ public class PlayPauseIcon: AnimatedIcon {
         get {
             return Bool(value)
         }
-        set (newValue) {
+        set {
             value = CGFloat(newValue)
         }
     }
