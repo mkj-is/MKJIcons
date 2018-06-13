@@ -9,5 +9,5 @@
 import Foundation
 
 extension Notification.Name {
-    static let StyleChange = Notification.Name("styleChange")
+    static let styleChange = Notification.Name("styleChange")
 }

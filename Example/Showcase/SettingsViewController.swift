@@ -12,8 +12,8 @@ final class SettingsViewController: ViewController {
 
     private let style = Style()
 
-    func update() {
-        NotificationCenter.default.post(name: Notification.Name.StyleChange, object: self, userInfo: ["style": style])
+    private func update() {
+        NotificationCenter.default.post(name: Notification.Name.styleChange, object: self, userInfo: ["style": style])
     }
 
     // MARK: - Interface actions

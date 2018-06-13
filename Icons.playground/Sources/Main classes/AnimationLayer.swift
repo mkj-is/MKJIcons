@@ -23,7 +23,8 @@ class AnimationLayer: CALayer {
     }
 
     required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+        super.init(coder: aDecoder)
+        value = 0.0
     }
 
     // MARK: - Animation of the value
@@ -35,7 +36,7 @@ class AnimationLayer: CALayer {
         return super.needsDisplay(forKey: forKey)
     }
 
-    override func action(forKey event: String) -> (CAAction!) {
+    override func action(forKey event: String) -> CAAction? {
         if event == "value" {
             let animation = CABasicAnimation(keyPath: event)
             animation.fromValue = presentation()?.value(forKey: event)

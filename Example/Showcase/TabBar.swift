@@ -13,14 +13,14 @@ final class TabBar: UITabBar {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
 
-        tintColor = UIColor.iconOrangeColor
+        tintColor = .iconOrangeColor
 
         styleChanged(notification: nil)
 
-        NotificationCenter.default.addObserver(self, selector: #selector(styleChanged(notification:)), name: Notification.Name.StyleChange, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(styleChanged), name: .styleChange, object: nil)
     }
 
-    @objc func styleChanged(notification: NSNotification?) {
+    @objc private func styleChanged(notification: NSNotification?) {
         var style = Style()
 
         if let notification = notification, let userInfo = notification.userInfo, let s = userInfo["style"] as? Style {

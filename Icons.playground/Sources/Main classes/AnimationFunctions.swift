@@ -2,10 +2,6 @@ import UIKit
 
 struct AnimationFunctions {
 
-    // MARK: - Constants
-
-    static let pi: CGFloat = .pi
-
     // MARK: - Simple functions
 
     static func linear(x: CGFloat) -> CGFloat {
@@ -20,7 +16,7 @@ struct AnimationFunctions {
         } else if x >= 1 {
             return 1
         } else {
-            return 1 - sin((x+1) * pi / 2)
+            return 1 - sin((x+1) * .pi / 2)
         }
     }
 
@@ -30,7 +26,7 @@ struct AnimationFunctions {
         } else if x >= 1 {
             return 1
         } else {
-            return sin(x * pi / 2)
+            return sin(x * .pi / 2)
         }
     }
 
@@ -40,7 +36,7 @@ struct AnimationFunctions {
         } else if x >= 1 {
             return 1
         } else {
-            return (1 + sin((-1.0/2.0 + x) * pi)) / 2
+            return (1 + sin((-1.0/2.0 + x) * .pi)) / 2
         }
     }
 

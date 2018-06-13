@@ -1,9 +1,7 @@
 import UIKit
 
 public enum AnimatedIconExporterDirection {
-    case Forward
-    case Backward
-    case ForwardAndBack
+    case forward, backward, forwardAndBack
 }
 
 public class AnimatedIconExporter {
@@ -16,7 +14,7 @@ public class AnimatedIconExporter {
 
     // MARK: - Initialization
 
-    public init(icon: AnimatedIcon, folder: URL, direction: AnimatedIconExporterDirection = .Forward, count: Int = 50) {
+    public init(icon: AnimatedIcon, folder: URL, direction: AnimatedIconExporterDirection = .forward, count: Int = 50) {
         self.icon = icon
         self.direction = direction
         self.count = count
@@ -74,9 +72,9 @@ public class AnimatedIconExporter {
         var value = CGFloat(i) / CGFloat(count)
 
         // Calculate position of animation on timeline
-        if direction == .Backward {
+        if direction == .backward {
             value = 1 - value
-        } else if direction == .ForwardAndBack {
+        } else if direction == .forwardAndBack {
             let truncatedByHalf = value.truncatingRemainder(dividingBy: 0.5)
             let truncatedByOne = value.truncatingRemainder(dividingBy: 1)
             value = truncatedByHalf * 2 * (truncatedByOne >= 0.5 ? -1 : 1) + (truncatedByOne >= 0.5 ? 1 : 0)

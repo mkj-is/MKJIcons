@@ -22,7 +22,7 @@ public class AnimatedIcon: UIControl {
     @IBInspectable public var animationRepeat: Bool = false {
         didSet {
             if animationRepeat {
-                animateTo(goal: CGFloat(!Bool(value)))
+                animate(to: CGFloat(!Bool(value)))
             }
             layer.setNeedsDisplay()
         }
@@ -31,7 +31,7 @@ public class AnimatedIcon: UIControl {
     @IBInspectable public var animationAutoreverses: Bool = true {
         didSet {
             if animationRepeat {
-                animateTo(goal: CGFloat(!Bool(value)))
+                animate(to: CGFloat(!Bool(value)))
             }
             layer.setNeedsDisplay()
         }
@@ -60,7 +60,7 @@ public class AnimatedIcon: UIControl {
     public var value: CGFloat = 0 {
         didSet {
             if oldValue != value {
-                animateTo(goal: value)
+                animate(to: value)
             }
 
             if isEnabled {
@@ -86,13 +86,11 @@ public class AnimatedIcon: UIControl {
     override public init(frame: CGRect) {
         super.init(frame: frame)
         backgroundColor = .clear
-
         setContentsScale()
     }
 
     required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
         setContentsScale()
     }
 
@@ -138,15 +136,11 @@ public class AnimatedIcon: UIControl {
         fatalError("Method must be overriden in subclasses. Do not instantiate this class directly.")
     }
 
-    public func animateTo(goal: CGFloat) {
-
+    public func animate(to goal: CGFloat) {
         if let layer = layer as? AnimationLayer {
-
             #if TARGET_INTERFACE_BUILDER
-
                 layer.value = goal
                 layer.setNeedsDisplay()
-
             #else
 
                 layer.removeAllAnimations()
@@ -170,7 +164,6 @@ public class AnimatedIcon: UIControl {
                 CATransaction.setDisableActions(true)
                 layer.value = goal
                 CATransaction.commit()
-
             #endif
         }
     }
