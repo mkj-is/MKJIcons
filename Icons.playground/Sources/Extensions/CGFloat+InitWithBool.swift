@@ -9,9 +9,7 @@
 import UIKit
 
 extension CGFloat {
-
     init(_ bool: Bool) {
-        self = (bool ? 1 : 0)
+        self = bool ? 1 : 0
     }
-
 }

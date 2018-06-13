@@ -19,11 +19,9 @@ public extension UIColor {
     }
 
     var hsbComponents: UIColorHSBComponents {
-        var hue: CGFloat = 0, saturation: CGFloat = 0, brightness: CGFloat = 0, alpha: CGFloat = 0
-
-        self.getHue(&hue, saturation: &saturation, brightness: &brightness, alpha: &alpha)
-
-        return (hue, saturation, brightness, alpha)
+        var components: UIColorHSBComponents = (0.0, 0.0, 0.0, 0.0)
+        getHue(&components.hue, saturation: &components.saturation, brightness: &components.brightness, alpha: &components.alpha)
+        return components
     }
 
     // MARK: - Creating from HSB components

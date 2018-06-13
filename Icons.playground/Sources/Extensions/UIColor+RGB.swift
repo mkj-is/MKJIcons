@@ -23,11 +23,9 @@ public extension UIColor {
     }
 
     var rgbComponents: UIColorRGBComponents {
-        var red: CGFloat = 0, green: CGFloat = 0, blue: CGFloat = 0, alpha: CGFloat = 0
-
-        self.getRed(&red, green: &green, blue: &blue, alpha: &alpha)
-
-        return (red, green, blue, alpha)
+        var components: UIColorRGBComponents = (0.0, 0.0, 0.0, 0.0)
+        getRed(&components.red, green: &components.green, blue: &components.blue, alpha: &components.alpha)
+        return components
     }
 
     // MARK: - Creating from RGB components

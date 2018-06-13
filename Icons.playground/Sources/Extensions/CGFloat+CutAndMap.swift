@@ -23,5 +23,4 @@ extension CGFloat {
     func map(min: CGFloat, max: CGFloat, from: CGFloat, to: CGFloat) -> CGFloat {
         return from + (to - from) * ((self - min) / (max - min))
     }
-
 }

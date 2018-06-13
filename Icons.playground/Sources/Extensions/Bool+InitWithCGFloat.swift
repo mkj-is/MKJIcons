@@ -9,9 +9,7 @@
 import UIKit
 
 extension Bool {
-
     init(_ float: CGFloat) {
         self = !float.isZero
     }
-
 }

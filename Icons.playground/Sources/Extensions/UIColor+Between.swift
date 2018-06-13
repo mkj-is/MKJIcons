@@ -1,8 +1,7 @@
 import UIKit
 
 public enum UIColorMode {
-    case rgb
-    case hsb
+    case rgb, hsb
 }
 
 typealias UIColorComponents = (CGFloat, CGFloat, CGFloat, CGFloat)
