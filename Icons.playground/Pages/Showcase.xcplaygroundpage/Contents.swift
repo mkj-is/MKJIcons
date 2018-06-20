@@ -64,23 +64,13 @@ let ellipsis = EllipsisIcon(frame: CGRect(x: 0, y: 400, width: 100, height: 100)
 let view = UIView(frame: CGRect(x: 0, y: 0, width: 400, height: 500))
 
 // Then we add them to the large parent view
-view.addSubview(checkmark)
-view.addSubview(burger)
-view.addSubview(heart)
-view.addSubview(star)
-view.addSubview(plus)
-view.addSubview(settings)
-view.addSubview(pin)
-view.addSubview(play)
-view.addSubview(stop)
-view.addSubview(smile)
-view.addSubview(fingerprint)
-view.addSubview(clip)
-view.addSubview(wave)
-view.addSubview(bike)
-view.addSubview(earth)
-view.addSubview(textAlign)
-view.addSubview(ellipsis)
+let icons = [
+    checkmark, burger, heart, star, plus,
+    settings, pin, play, stop, smile,
+    fingerprint, clip, wave, bike, earth,
+    textAlign, ellipsis
+]
+icons.forEach(view.addSubview)
 
 // At last we assign the parent view with the icons to assistant editor
 PlaygroundPage.current.liveView = view
