@@ -33,7 +33,7 @@ let frameCount = 50
 
 // Also, there is an option to export animation going once forward,
 // once backward or forward and back in one export
-let direction = AnimatedIconExporterDirection.ForwardAndBack
+let direction = AnimatedIconExporterDirection.forwardAndBack
 
 // Then we create the exporter and save the result!
 let exporter = AnimatedIconExporter(icon: icon, folder: folder, direction: direction, count: frameCount)
