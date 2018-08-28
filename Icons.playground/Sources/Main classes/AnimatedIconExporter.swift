@@ -52,7 +52,7 @@ public class AnimatedIconExporter {
             let fileName = String(format: "%@_%@_%03d.png", arguments: [date, name!, i])
             let filePath = folder.appendingPathComponent(fileName)
 
-            if let data = UIImagePNGRepresentation(images[i]) {
+            if let data = images[i].pngData() {
                 do {
                     try data.write(to: filePath)
                 } catch {
@@ -81,12 +81,12 @@ public class AnimatedIconExporter {
         }
 
         // Apply animation function
-        switch icon.timingFunction {
-        case kCAMediaTimingFunctionEaseInEaseOut:
+        switch icon.timingFunctionName {
+        case .easeInEaseOut:
             value = AnimationFunctions.sinEaseInOut(x: value)
-        case kCAMediaTimingFunctionEaseIn:
+        case .easeIn:
             value = AnimationFunctions.sinEaseOut(x: value)
-        case kCAMediaTimingFunctionEaseOut:
+        case .easeOut:
             value = AnimationFunctions.sinEaseIn(x: value)
         default:
             value = AnimationFunctions.linear(x: value)

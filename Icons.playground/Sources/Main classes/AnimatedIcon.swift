@@ -55,7 +55,7 @@ public class AnimatedIcon: UIControl {
         }
     }
 
-    public var timingFunction = kCAMediaTimingFunctionEaseInEaseOut
+    public var timingFunctionName: CAMediaTimingFunctionName = .easeInEaseOut
 
     public var value: CGFloat = 0 {
         didSet {
@@ -145,11 +145,11 @@ public class AnimatedIcon: UIControl {
 
                 layer.removeAllAnimations()
 
-                let timing: CAMediaTimingFunction = CAMediaTimingFunction(name: timingFunction)
+                let timingFunction = CAMediaTimingFunction(name: timingFunctionName)
                 let animation = CABasicAnimation(keyPath: "value")
                 animation.duration = animationDuration
-                animation.fillMode = kCAFillModeBoth
-                animation.timingFunction = timing
+                animation.fillMode = .both
+                animation.timingFunction = timingFunction
                 animation.fromValue = layer.value
                 animation.toValue = goal
 
