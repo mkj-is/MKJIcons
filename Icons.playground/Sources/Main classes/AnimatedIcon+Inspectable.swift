@@ -23,14 +23,14 @@ extension AnimatedIcon {
 
     @IBInspectable public var animationTimingFunction: Int {
         get {
-            switch timingFunction {
-            case kCAMediaTimingFunctionLinear:
+            switch timingFunctionName {
+            case .linear:
                 return 1
-            case kCAMediaTimingFunctionEaseIn:
+            case .easeIn:
                 return 2
-            case kCAMediaTimingFunctionEaseOut:
+            case .easeOut:
                 return 3
-            case kCAMediaTimingFunctionEaseInEaseOut:
+            case .easeInEaseOut:
                 return 4
             default:
                 return 0
@@ -39,15 +39,15 @@ extension AnimatedIcon {
         set {
             switch newValue {
             case 1:
-                timingFunction = kCAMediaTimingFunctionLinear
+                timingFunctionName = .linear
             case 2:
-                timingFunction = kCAMediaTimingFunctionEaseIn
+                timingFunctionName = .easeIn
             case 3:
-                timingFunction = kCAMediaTimingFunctionEaseOut
+                timingFunctionName = .easeOut
             case 4:
-                timingFunction = kCAMediaTimingFunctionEaseInEaseOut
+                timingFunctionName = .easeInEaseOut
             default:
-                timingFunction = kCAMediaTimingFunctionDefault
+                timingFunctionName = .default
             }
         }
     }
