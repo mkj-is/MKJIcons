@@ -7,7 +7,4 @@
    <FileRef
       location = "group:Example/Showcase.xcodeproj">
    </FileRef>
-   <FileRef
-      location = "group:MKJIcons.xcodeproj">
-   </FileRef>
 </Workspace>
