@@ -16,6 +16,6 @@ let package = Package(
     targets: [
         .target(
             name: "MKJIcons",
-            dependencies: []),
+            path: "Icons.playground/Sources"),
     ]
 )
