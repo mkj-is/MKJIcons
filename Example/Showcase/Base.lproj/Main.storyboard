@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
-    <device id="retina5_9" orientation="portrait">
-        <adaptation id="fullscreen"/>
-    </device>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina5_9" orientation="portrait" appearance="dark"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -538,14 +536,14 @@
                                         </userDefinedRuntimeAttributes>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" red="0.17647058823529413" green="0.17647058823529413" blue="0.17647058823529413" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1000" id="Fr2-Zc-wft"/>
                                     <constraint firstAttribute="width" constant="300" id="Zxk-Qr-vrf"/>
                                 </constraints>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="tintColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="DyB-Mi-9RK" firstAttribute="top" secondItem="gDS-a9-8iy" secondAttribute="top" id="dWl-r6-Cwd"/>
@@ -577,7 +575,7 @@
                         <subviews>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="2" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Wm4-pq-hhk">
                                 <rect key="frame" x="128.66666666666666" y="89" width="118" height="31"/>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4Kn-8g-Rhq"/>
                                     <constraint firstAttribute="width" constant="114" id="tLo-G9-5AU"/>
@@ -592,12 +590,12 @@
                                     <constraint firstAttribute="height" constant="21" id="6vD-Tl-bPF"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.40000000000000002" minValue="0.0" maxValue="2" translatesAutoresizingMaskIntoConstraints="NO" id="6hH-IG-uwl">
                                 <rect key="frame" x="128.66666666666666" y="333" width="118" height="31"/>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="114" id="OYm-S8-GsD"/>
                                     <constraint firstAttribute="height" constant="30" id="aYe-Ks-IGD"/>
@@ -612,7 +610,7 @@
                                     <constraint firstAttribute="height" constant="21" id="elG-oZ-r03"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Line cap style" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nM4-OS-XKb">
@@ -621,11 +619,11 @@
                                     <constraint firstAttribute="height" constant="21" id="fZV-WJ-3t1"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="mPh-NF-JSv">
-                                <rect key="frame" x="101.33333333333331" y="168" width="173" height="29"/>
+                                <rect key="frame" x="93.666666666666686" y="168" width="188" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="qtQ-4C-LRC"/>
                                 </constraints>
@@ -634,7 +632,7 @@
                                     <segment title="Square"/>
                                     <segment title="Round"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="lineCapChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="VcN-1Q-pU2"/>
                                 </connections>
@@ -645,11 +643,11 @@
                                     <constraint firstAttribute="height" constant="21" id="bBb-py-pLf"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="2" translatesAutoresizingMaskIntoConstraints="NO" id="qrO-WE-Qxq">
-                                <rect key="frame" x="107.33333333333331" y="254" width="161" height="29"/>
+                                <rect key="frame" x="99.666666666666686" y="254" width="176" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="3WJ-LB-n4R"/>
                                 </constraints>
@@ -658,7 +656,7 @@
                                     <segment title="Miter"/>
                                     <segment title="Round"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="lineJoinChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="4Iz-qO-kIU"/>
                                 </connections>
@@ -669,7 +667,7 @@
                                     <constraint firstAttribute="height" constant="21" id="BH3-VJ-8Qm"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S7V-g5-ywY">
@@ -682,22 +680,22 @@
                                     <segment title="HSB"/>
                                     <segment title="RGB"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="colorModeChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="q8T-PM-cER"/>
                                 </connections>
                             </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Animation curve" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XBG-vv-OpQ">
-                                <rect key="frame" x="126" y="455" width="123.66666666666669" height="21"/>
+                                <rect key="frame" x="125.66666666666666" y="455" width="123.66666666666666" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="oC1-G7-neK"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="3" translatesAutoresizingMaskIntoConstraints="NO" id="BmU-KI-qNK">
-                                <rect key="frame" x="82" y="487" width="211" height="29"/>
+                                <rect key="frame" x="72" y="487" width="231" height="29"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="28" id="zxK-cF-LLs"/>
                                 </constraints>
@@ -707,7 +705,7 @@
                                     <segment title="Out"/>
                                     <segment title="In/Out"/>
                                 </segments>
-                                <color key="tintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="tintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <connections>
                                     <action selector="animationTimingFunctionChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="Yya-4T-tB9"/>
                                 </connections>
@@ -718,12 +716,12 @@
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat animations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QtE-pj-1rJ">
                                         <rect key="frame" x="0.0" y="0.0" width="141.33333333333334" height="31"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Lrr-8v-UoV">
                                         <rect key="frame" x="161.33333333333331" y="0.0" width="51" height="31"/>
-                                        <color key="onTintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <color key="onTintColor" systemColor="systemOrangeColor" red="1" green="0.58431372550000005" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="thumbTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <connections>
                                             <action selector="animationRepeatChanged:" destination="8rJ-Kc-sve" eventType="valueChanged" id="h4J-6U-aEO"/>
@@ -732,7 +730,7 @@
                                 </subviews>
                             </stackView>
                         </subviews>
-                        <color key="backgroundColor" red="0.1764705882" green="0.1764705882" blue="0.1764705882" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="a18-Ss-XgR" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="2Tj-9M-4jA"/>
                             <constraint firstItem="mPh-NF-JSv" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="5Ib-kV-FAi"/>
@@ -771,10 +769,10 @@
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
             <objects>
-                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                <tabBarController id="49e-Tb-3d3" customClass="TabBarController" customModule="Showcase" customModuleProvider="target" sceneMemberID="viewController">
                     <nil key="simulatedBottomBarMetrics"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <tabBar key="tabBar" contentMode="scaleToFill" barStyle="black" id="W28-zg-YXA" customClass="TabBar" customModule="Showcase" customModuleProvider="target">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA" customClass="TabBar" customModule="Showcase" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="975" width="768" height="49"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                         <color key="selectedImageTintColor" red="1" green="0.70980392160000005" blue="0.27058823529999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

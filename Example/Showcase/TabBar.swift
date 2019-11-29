@@ -9,24 +9,14 @@
 import UIKit
 import MKJIcons
 
-final class TabBar: UITabBar {
+final class TabBar: UITabBar, StyleUpdateDelegate {
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-
         tintColor = .iconOrangeColor
-
-        styleChanged(notification: nil)
-
-        NotificationCenter.default.addObserver(self, selector: #selector(styleChanged), name: .styleChange, object: nil)
+        styleUpdated()
     }
 
-    @objc private func styleChanged(notification: NSNotification?) {
-        var style = Style()
-
-        if let notification = notification, let userInfo = notification.userInfo, let s = userInfo["style"] as? Style {
-            style = s
-        }
-
+    func styleUpdated(_ style: Style = Style()) {
         let iconFrame = CGRect(x: 0, y: 0, width: 60, height: 60)
 
         let starIcon = StarIcon(frame: iconFrame)

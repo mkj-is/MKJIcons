@@ -8,7 +8,7 @@
 
 import UIKit
 
-final class Style {
+struct Style {
     var lineCap = 2
     var lineJoin = 2
     var lineWidth: CGFloat = 2
@@ -16,4 +16,8 @@ final class Style {
     var animationColorMode = 0
     var animationTimingFunction = 4
     var animationRepeat = false
+}
+
+protocol StyleUpdateDelegate: AnyObject {
+    func styleUpdated(_ style: Style)
 }

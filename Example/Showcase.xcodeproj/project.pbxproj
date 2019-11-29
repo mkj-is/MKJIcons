@@ -8,11 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		E70E4BE823916C4E00E0E4D6 /* MKJIcons in Frameworks */ = {isa = PBXBuildFile; productRef = E70E4BE723916C4E00E0E4D6 /* MKJIcons */; };
-		E710E4041CD60C44002E9031 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = E710E4031CD60C44002E9031 /* Notification.swift */; };
+		E70E4BEA2391701600E0E4D6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E70E4BE92391701600E0E4D6 /* TabBarController.swift */; };
 		E714E8461CCA285C00E18E52 /* AnimatedIcon+Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */; };
 		E796FD1C1CC6AA8A003DC351 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796FD1B1CC6AA8A003DC351 /* TabBar.swift */; };
 		E796FD1E1CC6AEAE003DC351 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = E796FD1D1CC6AEAE003DC351 /* Style.swift */; };
-		E79C86721CC67FBE00C3B906 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E79C86711CC67FBE00C3B906 /* ViewController.swift */; };
 		E7BE8DF51CC57FF2007DADED /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DF41CC57FF2007DADED /* AppDelegate.swift */; };
 		E7BE8DF71CC57FF2007DADED /* ShowcaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DF61CC57FF2007DADED /* ShowcaseViewController.swift */; };
 		E7BE8DF91CC57FF2007DADED /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E7BE8DF81CC57FF2007DADED /* SettingsViewController.swift */; };
@@ -36,15 +35,14 @@
 
 /* Begin PBXFileReference section */
 		E70E4BE423916C2D00E0E4D6 /* MKJIcons */ = {isa = PBXFileReference; lastKnownFileType = folder; name = MKJIcons; path = ..; sourceTree = "<group>"; };
-		E710E4031CD60C44002E9031 /* Notification.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
+		E70E4BE92391701600E0E4D6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "AnimatedIcon+Style.swift"; sourceTree = "<group>"; };
-		E796FD1B1CC6AA8A003DC351 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TabBar.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		E796FD1B1CC6AA8A003DC351 /* TabBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = TabBar.swift; sourceTree = "<group>"; };
 		E796FD1D1CC6AEAE003DC351 /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
-		E79C86711CC67FBE00C3B906 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		E7BE8DF11CC57FF2007DADED /* Showcase.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Showcase.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7BE8DF41CC57FF2007DADED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		E7BE8DF61CC57FF2007DADED /* ShowcaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ShowcaseViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
-		E7BE8DF81CC57FF2007DADED /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SettingsViewController.swift; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		E7BE8DF41CC57FF2007DADED /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = AppDelegate.swift; sourceTree = "<group>"; };
+		E7BE8DF61CC57FF2007DADED /* ShowcaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = ShowcaseViewController.swift; sourceTree = "<group>"; };
+		E7BE8DF81CC57FF2007DADED /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; lineEnding = 0; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		E7BE8DFB1CC57FF2007DADED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E7BE8DFD1CC57FF2007DADED /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Showcase/Assets.xcassets; sourceTree = "<group>"; };
 		E7BE8E001CC57FF2007DADED /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -93,14 +91,13 @@
 		E7BE8DF31CC57FF2007DADED /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				E796FD1D1CC6AEAE003DC351 /* Style.swift */,
+				E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */,
 				E7BE8DF41CC57FF2007DADED /* AppDelegate.swift */,
-				E79C86711CC67FBE00C3B906 /* ViewController.swift */,
 				E7BE8DF61CC57FF2007DADED /* ShowcaseViewController.swift */,
 				E7BE8DF81CC57FF2007DADED /* SettingsViewController.swift */,
 				E796FD1B1CC6AA8A003DC351 /* TabBar.swift */,
-				E796FD1D1CC6AEAE003DC351 /* Style.swift */,
-				E714E8451CCA285C00E18E52 /* AnimatedIcon+Style.swift */,
-				E710E4031CD60C44002E9031 /* Notification.swift */,
+				E70E4BE92391701600E0E4D6 /* TabBarController.swift */,
 			);
 			name = Sources;
 			path = Showcase;
@@ -206,8 +203,7 @@
 				E7BE8DF91CC57FF2007DADED /* SettingsViewController.swift in Sources */,
 				E796FD1E1CC6AEAE003DC351 /* Style.swift in Sources */,
 				E7BE8DF51CC57FF2007DADED /* AppDelegate.swift in Sources */,
-				E710E4041CD60C44002E9031 /* Notification.swift in Sources */,
-				E79C86721CC67FBE00C3B906 /* ViewController.swift in Sources */,
+				E70E4BEA2391701600E0E4D6 /* TabBarController.swift in Sources */,
 				E796FD1C1CC6AA8A003DC351 /* TabBar.swift in Sources */,
 				E7BE8DF71CC57FF2007DADED /* ShowcaseViewController.swift in Sources */,
 			);
