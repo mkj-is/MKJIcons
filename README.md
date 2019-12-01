@@ -5,21 +5,30 @@
 
 Full documentation is available here: <http://mkj-is.github.io/MKJIcons>
 
-
-
+![Animated star](Icons.playground/Pages/Showcase.xcplaygroundpage/Resources/AnimatedStar.gif)
 
 ## Table of contents
 
+* [Installation](#installation)
 * [Showcase](#showcase)
 * [Basics](#basics)
 * [Export](#export)
 
+## Intallation
 
+There minimal requirements needed to be met to install this library:
+
+- iOS 8 or tvOS 9
+- Xcode 11.0
+- Swift 5.0
+
+To install use Xcode 11 and add a package or manually add following line to your `Package.swift` file:
+
+```swift
+.package(url: "https://github.com/mkj-is/MKJIcons.git", from: "0.3.0")
+```
 
 ## Showcase
-
-
-![Animated star](Icons.playground/Pages/Showcase.xcplaygroundpage/Resources/AnimatedStar.gif)
 
 An icon set usable as an iOS framework. This first documentation page
 serves as an reference and showcase of all available icons.
@@ -45,8 +54,6 @@ by default. Do not forget to click the empty places too!**
 
 
 ```swift
-
-
 // We need to import basic frameworks so this example can work
 import UIKit
 import XCPlayground
@@ -92,15 +99,9 @@ view.addSubview(textAlign)
 
 // At last we assign the parent view with the icons to assistant editor
 XCPlaygroundPage.currentPage.liveView = view
-
-
-
 ```
 
-
-
 ## Basics
-
 
 This chapter shows how to configure the icon style and appearance.
 
@@ -111,10 +112,7 @@ then all the icons created after will inherit these properties.
 And the best thing is, that the icons are `IBDesignable`. That means if you add the to your `.xib` or `.storyboard`,
 you can see how they will look in your application and you can prototype the user interface really fast.
 
-
 ```swift
-
-
 // We need to import basic frameworks so this example can work
 import UIKit
 import XCPlayground
@@ -139,15 +137,9 @@ icon.visible = true
 
 // Then we assign the icon to assistant editor
 XCPlaygroundPage.currentPage.liveView = icon
-
-
-
 ```
 
-
-
 ## Export
-
 
 This chapter shows us how to export bitmap image sequences.
 
@@ -158,10 +150,7 @@ and then save the result and that is all!
 **If you are view this documentation in the playground and want to export the icons, then you need to have
 *Shared Playground Data* folder in your user *Documents* folder.**
 
-
 ```swift
-
-
 import UIKit
 import XCPlayground
 
@@ -183,7 +172,4 @@ let direction = AnimatedIconExporterDirection.ForwardAndBack
 let exporter = AnimatedIconExporter(icon: icon, folder: folder, direction: direction, count: frameCount)
 
 exporter.save()
-
-
 ```
-
