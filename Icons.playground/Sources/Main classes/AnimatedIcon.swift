@@ -176,4 +176,11 @@ public class AnimatedIcon: UIControl {
         }
     }
 
+    // MARK: - Dark mode support
+
+    public override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
+        if #available(iOS 12.0, tvOS 10.0, *), traitCollection.userInterfaceStyle != previousTraitCollection?.userInterfaceStyle {
+            layer.setNeedsDisplay()
+        }
+    }
 }

@@ -28,8 +28,7 @@ public extension UIColor {
                 }
                 return .black
             }
-        } else {
-            return .black
         }
+        return .black
     }
 }
