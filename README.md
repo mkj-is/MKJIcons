@@ -5,19 +5,30 @@
 
 Full documentation is available here: <http://mkj-is.github.io/MKJIcons>
 
+![Animated star](Icons.playground/Pages/Showcase.xcplaygroundpage/Resources/AnimatedStar.gif)
 
 ## Table of contents
 
+* [Installation](#installation)
 * [Showcase](#showcase)
 * [Basics](#basics)
 * [Export](#export)
 
+## Intallation
 
+There minimal requirements needed to be met to install this library:
+
+- iOS 8 or tvOS 9
+- Xcode 11.0
+- Swift 5.0
+
+To install use Xcode 11 and add a package or manually add following line to your `Package.swift` file:
+
+```swift
+.package(url: "https://github.com/mkj-is/MKJIcons.git", from: "0.3.0")
+```
 
 ## Showcase
-
-
-![Animated star](Icons.playground/Pages/Showcase.xcplaygroundpage/Resources/AnimatedStar.gif)
 
 An icon set usable as an iOS framework. This first documentation page
 serves as an reference and showcase of all available icons.
