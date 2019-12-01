@@ -13,7 +13,7 @@ public class BurgerIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var burgerColor: UIColor = .white {
+    @IBInspectable public var burgerColor: UIColor = .iconDefault {
         didSet {
             layer.setNeedsDisplay()
         }

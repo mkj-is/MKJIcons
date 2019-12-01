@@ -25,13 +25,13 @@ public class PlayPauseIcon: AnimatedIcon {
         }
     }
 
-    @IBInspectable public var playColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var playColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var pauseColor: UIColor = UIColor.iconOrangeColor {
+    @IBInspectable public var pauseColor: UIColor = .iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
         }

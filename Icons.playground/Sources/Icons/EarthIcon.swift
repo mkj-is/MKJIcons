@@ -13,13 +13,13 @@ public class EarthIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var strokeColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var fillColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var fillColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }

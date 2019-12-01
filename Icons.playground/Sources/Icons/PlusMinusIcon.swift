@@ -13,13 +13,13 @@ public class PlusMinusIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var plusColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var plusColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var minusColor: UIColor = UIColor.iconRedColor {
+    @IBInspectable public var minusColor: UIColor = .iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
