@@ -11,11 +11,11 @@ let package = Package(
     products: [
         .library(
             name: "MKJIcons",
-            targets: ["MKJIcons"]),
+            targets: ["MKJIcons"])
     ],
     targets: [
         .target(
             name: "MKJIcons",
-            path: "Icons.playground/Sources"),
+            path: "Icons.playground/Sources")
     ]
 )
