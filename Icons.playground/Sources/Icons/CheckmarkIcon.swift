@@ -13,12 +13,12 @@ public class CheckmarkIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var checkmarkColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var checkmarkColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var crossColor: UIColor = UIColor.iconRedColor {
+    @IBInspectable public var crossColor: UIColor = .iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }

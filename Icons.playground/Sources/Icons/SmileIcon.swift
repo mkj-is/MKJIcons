@@ -13,13 +13,13 @@ public class SmileIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var sadColor: UIColor = UIColor.iconRedColor {
+    @IBInspectable public var sadColor: UIColor = .iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var happyColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var happyColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }

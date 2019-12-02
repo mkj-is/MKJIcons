@@ -13,7 +13,7 @@ public class BikeIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = UIColor.iconOrangeColor {
+    @IBInspectable public var strokeColor: UIColor = .iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
         }
@@ -132,7 +132,5 @@ public class BikeIcon: AnimatedIcon {
             seat.stroke()
             context.restoreGState()
         }
-
     }
-
 }

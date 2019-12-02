@@ -13,13 +13,13 @@ public class EllipsisIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = .white {
+    @IBInspectable public var strokeColor: UIColor = .iconDefault {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var fillColor: UIColor = .white {
+    @IBInspectable public var fillColor: UIColor = .iconDefault {
         didSet {
             layer.setNeedsDisplay()
         }

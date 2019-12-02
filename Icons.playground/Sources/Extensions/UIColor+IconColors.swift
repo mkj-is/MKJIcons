@@ -20,4 +20,15 @@ public extension UIColor {
         return iconRedColor.colorWithHueComponent(hue: iconRedColor.hue + 0.4)
     }
 
+    static var iconDefault: UIColor {
+        if #available(iOS 13.0, tvOS 10.0, *) {
+            return UIColor { traits in
+                if traits.userInterfaceStyle == .dark {
+                    return .white
+                }
+                return .black
+            }
+        }
+        return .black
+    }
 }

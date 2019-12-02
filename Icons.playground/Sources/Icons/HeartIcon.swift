@@ -13,12 +13,12 @@ public class HeartIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = UIColor.iconRedColor {
+    @IBInspectable public var strokeColor: UIColor = .iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor: UIColor = UIColor.iconRedColor {
+    @IBInspectable public var fillColor: UIColor = .iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }

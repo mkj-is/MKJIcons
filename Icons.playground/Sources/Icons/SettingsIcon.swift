@@ -13,7 +13,7 @@ public class SettingsIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var primaryColor: UIColor = .white {
+    @IBInspectable public var primaryColor: UIColor = .iconDefault {
         didSet {
             layer.setNeedsDisplay()
         }

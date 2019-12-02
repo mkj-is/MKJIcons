@@ -13,7 +13,7 @@ public class PaperclipIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = .white {
+    @IBInspectable public var strokeColor: UIColor = .iconDefault {
         didSet {
             layer.setNeedsDisplay()
         }

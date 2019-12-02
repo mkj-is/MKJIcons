@@ -13,12 +13,12 @@ public class StarIcon: AnimatedIcon {
 
     // MARK: - Inspectable properties
 
-    @IBInspectable public var strokeColor: UIColor = UIColor.iconOrangeColor {
+    @IBInspectable public var strokeColor: UIColor = .iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
-    @IBInspectable public var fillColor: UIColor = UIColor.iconOrangeColor {
+    @IBInspectable public var fillColor: UIColor = .iconOrangeColor {
         didSet {
             layer.setNeedsDisplay()
         }

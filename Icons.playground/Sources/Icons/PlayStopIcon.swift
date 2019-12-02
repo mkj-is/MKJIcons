@@ -19,13 +19,13 @@ public class PlayStopIcon: AnimatedIcon {
         }
     }
 
-    @IBInspectable public var playColor: UIColor = UIColor.iconLightGreenColor {
+    @IBInspectable public var playColor: UIColor = .iconLightGreenColor {
         didSet {
             layer.setNeedsDisplay()
         }
     }
 
-    @IBInspectable public var stopColor: UIColor = UIColor.iconRedColor {
+    @IBInspectable public var stopColor: UIColor = .iconRedColor {
         didSet {
             layer.setNeedsDisplay()
         }
